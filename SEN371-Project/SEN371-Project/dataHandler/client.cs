@@ -14,7 +14,7 @@ namespace SEN371_Project.dataHandler
         string cusBussinessName;
         string cusRepresentativeName;
         string cusPhonenumber;
-         string CusID;
+        string cusID;
 
         public client(string cusName, string cusSurname, string cusService, string cusPhonenumber, string cusID)
         {
@@ -22,14 +22,14 @@ namespace SEN371_Project.dataHandler
             this.cusSurname = cusSurname;
             this.cusService = cusService;
             this.cusPhonenumber = cusPhonenumber;
-            this.CusID = cusID;
+            this.cusID = cusID;
         }
         public client(string cusBussinessName, string cusRepresentativeName, string cusPhonenumber, string cusID)
         {
             this.cusBussinessName = cusBussinessName;
             this.cusRepresentativeName = cusRepresentativeName;
             this.cusPhonenumber = cusPhonenumber;
-            this.CusID = cusID;
+            this.cusID = cusID;
         }
         public string CusName { get => cusName; set => cusName = value; }
         public string CusSurname { get => cusSurname; set => cusSurname = value; }

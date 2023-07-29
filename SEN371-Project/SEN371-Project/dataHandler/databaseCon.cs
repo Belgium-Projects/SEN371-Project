@@ -11,15 +11,20 @@ namespace SEN371_Project.Connection
     internal class databaseCon
     {
          static string connectionString = @"";
-        SqlConnection connection = new SqlConnection(connectionString);
+        SqlConnection connection = new SqlConnection(ConnectionString);
         SqlCommand command;
         SqlDataReader reader;
 
-       public  void Connection()
+        public static string ConnectionString { get => connectionString; set => connectionString = value; }
+        public SqlConnection Connection1 { get => connection; set => connection = value; }
+        public SqlCommand Command { get => command; set => command = value; }
+        public SqlDataReader Reader { get => reader; set => reader = value; }
+
+        public  void Connection()
         {
             try
             {
-                connection.Open();
+                Connection1.Open();
             }
             catch(Exception e)
             {
@@ -31,7 +36,7 @@ namespace SEN371_Project.Connection
         {
             try
             {
-                connection.Close();
+                Connection1.Close();
             }
             catch (Exception ex)
             {

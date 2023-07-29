@@ -20,7 +20,7 @@ namespace SEN371_Project.dataHandler
             this.empSurname = empSurname;
             this.empRole = empRole;
         }
-         bool canAcces(int CusID, string RoleNeeded)
+         bool canAcces(int cusID, string RoleNeeded)
         {
             return true;
         }

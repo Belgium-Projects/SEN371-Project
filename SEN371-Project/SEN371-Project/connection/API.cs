@@ -31,6 +31,7 @@ namespace SEN371_Project.Connection
         }
         public API(string empName, string empId, string empSurname, string empRole) : base(empName, empId, empSurname, empRole)
         {
+
         }
         string connectionString;
 
