@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace SEN371_Project.Data
 {
-    abstract class DataLog : Business
+    abstract class dataLog : databaseCon
     {
-        databaseCon Connection = new databaseCon();
+        
         public abstract void saveToDB();
         public abstract void deleteFromDB();
         public abstract void updateFromDB();

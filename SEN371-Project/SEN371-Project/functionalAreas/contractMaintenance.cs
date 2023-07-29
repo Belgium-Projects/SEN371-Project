@@ -9,9 +9,19 @@ using System.Threading.Tasks;
 
 namespace SEN371_Project.FunctionalAreas
 {
-    internal class contractMaintenance : DataLog
+    internal class contractMaintenance : dataLog
     {
-   
+       
+        public void avalabilityContract()
+        {
+
+        }
+        public void defineServices()
+        {
+
+        }
+
+        public void contractPerformnace() { }
         public override void deleteFromDB()
         {
             throw new NotImplementedException();

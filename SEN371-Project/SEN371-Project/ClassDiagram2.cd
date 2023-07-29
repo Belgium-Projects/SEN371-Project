@@ -1,70 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="SEN371_Project.Connection.API">
-    <Position X="1" Y="0.5" Width="2" />
+    <Position X="0.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgBEAgAAgAAAAAAEAABKACAAAAAAAAAEAA=</HashCode>
       <FileName>connection\API.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN371_Project.Connection.VoIP">
-    <Position X="1" Y="5" Width="1.75" />
+    <Position X="12" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AEAAAAEAAAAAAAAAAEAAAAAAEAAAAAAAABAAAAAAAAA=</HashCode>
+      <HashCode>AMAAEAGAABAAAAAAAEACAAAAEgAABAACARQAAgEAAAA=</HashCode>
       <FileName>connection\VoIP.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN371_Project.dataHandler.Employee">
-    <Position X="3.25" Y="0.5" Width="1.5" />
+    <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAABAAAAAAAAAAIAAABCAAAAQAAAABAAAAAQAAAAA=</HashCode>
       <FileName>dataHandler\Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN371_Project.Data.DataLog">
-    <Position X="8.5" Y="0.75" Width="1.5" />
+    <Position X="7.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAEAAAACAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>gAAAAAAAAAAAAAAAAAACAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>dataHandler\DataLog.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SEN371_Project.FunctionalAreas.CallCentre">
-    <Position X="3" Y="5" Width="2.25" />
+  <Class Name="SEN371_Project.FunctionalAreas.callCentre">
+    <Position X="1.25" Y="5.25" Width="2.25" />
+    <InheritanceLine Type="SEN371_Project.Data.DataLog" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.31" />
+        <Point X="8.5" Y="4.765" />
+        <Point X="2.375" Y="4.765" />
+        <Point X="2.375" Y="5.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>gAABBAAAAIAAIAAAAAACAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>functionalAreas\callCentre.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN371_Project.FunctionalAreas.clientMange">
-    <Position X="5.5" Y="5" Width="1.75" />
+    <Position X="3.75" Y="5.25" Width="1.75" />
+    <InheritanceLine Type="SEN371_Project.Data.DataLog" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.31" />
+        <Point X="8.5" Y="4.775" />
+        <Point X="4.625" Y="4.775" />
+        <Point X="4.625" Y="5.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAABCAICgAAAAAAAAEAAAAAIAAAA=</HashCode>
+      <HashCode>gAAAAAAAAAAAAAAAAABCAIAgAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>functionalAreas\clientMange.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN371_Project.FunctionalAreas.contractMaintenance">
-    <Position X="7.5" Y="5" Width="1.5" />
+    <Position X="6" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="SEN371_Project.Data.DataLog" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.31" />
+        <Point X="8.5" Y="4.765" />
+        <Point X="6.75" Y="4.765" />
+        <Point X="6.75" Y="5.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAACAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>gAAAAAgAAAAAAAAAAAACAACgAAAAAAAAEAAAAAIAAAA=</HashCode>
       <FileName>functionalAreas\contractMaintenance.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN371_Project.FunctionalAreas.manager">
-    <Position X="9.25" Y="5" Width="1.5" />
+    <Position X="7.75" Y="5" Width="1.5" />
+    <InheritanceLine Type="SEN371_Project.Data.DataLog" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.31" />
+        <Point X="8.5" Y="4.775" />
+        <Point X="8.5" Y="4.775" />
+        <Point X="8.5" Y="5" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAACAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>gAABAAAAAAAABAAAAACiAACgAAAAAAAAAAAAEAIAAAA=</HashCode>
       <FileName>functionalAreas\manager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN371_Project.serviceDept">
-    <Position X="11" Y="5" Width="1.5" />
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="SEN371_Project.Data.DataLog" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.31" />
+        <Point X="8.5" Y="4.794" />
+        <Point X="10.25" Y="4.794" />
+        <Point X="10.25" Y="5.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAABAAAAACCAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>functionalAreas\serviceDept.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SEN371_Project.dataHandler.client">
-    <Position X="10.25" Y="0.5" Width="1.75" />
+    <Position X="9.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AEAAAABAAAAAAAQABAAEAAQAAAAAgASAACAEgAAAAgA=</HashCode>
       <FileName>dataHandler\client.cs</FileName>

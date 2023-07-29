@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace SEN371_Project.dataHandler
 {
-    internal abstract class Employee
+    internal abstract class employee
     {
         string empName;
         string empId;
         string empSurname;
         string empRole;
 
-        public Employee(string empName, string empId, string empSurname, string empRole)
+        public employee(string empName, string empId, string empSurname, string empRole)
         {
             this.empName = empName;
             this.empId = empId;
             this.empSurname = empSurname;
             this.empRole = empRole;
         }
-         bool canAcces(int cusID, string RoleNeeded)
+         bool canAcces(int empRole, string RoleNeeded)
         {
             return true;
         }

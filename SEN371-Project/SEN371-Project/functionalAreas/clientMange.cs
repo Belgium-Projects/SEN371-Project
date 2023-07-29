@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace SEN371_Project.FunctionalAreas
 {
-    internal class clientMange : DataLog
+    internal class clientMange : dataLog
     {
-       
+        
+
         public override void deleteFromDB()
         {
             throw new NotImplementedException();
@@ -25,11 +26,7 @@ namespace SEN371_Project.FunctionalAreas
         {
 
         }
-        public void avalabilityContract()
-        {
-
-        }
-        public void contractPerformnace() { }
+      
         public void manamgnentInfo()
         {
 

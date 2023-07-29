@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SEN371_Project.Connection
 {
-    internal class API : Employee
+    internal class API : employee
     {
         string ResourceURL;
         string accessToken;

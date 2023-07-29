@@ -10,7 +10,7 @@ namespace SEN371_Project.Connection
 {
     internal class databaseCon
     {
-         static string connectionString = @"";
+        static string connectionString = @"";
         SqlConnection connection = new SqlConnection(ConnectionString);
         SqlCommand command;
         SqlDataReader reader;

@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace SEN371_Project
 {
-    internal class serviceDept : DataLog
+    internal class serviceDept : dataLog
     {
+      
         public void serviceRequest() { }
         public override void deleteFromDB()
         {

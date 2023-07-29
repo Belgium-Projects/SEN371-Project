@@ -4,15 +4,18 @@ using SEN371_Project.dataHandler;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SEN371_Project.FunctionalAreas
 {
-    internal class CallCentre : DataLog
+    internal class callCentre : dataLog
     {
+       
         public override void deleteFromDB()
         {
+           
             throw new NotImplementedException();
         }
 

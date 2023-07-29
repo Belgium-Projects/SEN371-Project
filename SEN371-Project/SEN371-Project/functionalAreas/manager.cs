@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace SEN371_Project.FunctionalAreas
 {
-    internal class manager : DataLog
+    internal class manager : dataLog
     {
-       
+     
         public override void deleteFromDB()
         {
             throw new NotImplementedException();
@@ -31,5 +31,16 @@ namespace SEN371_Project.FunctionalAreas
         {
             throw new NotImplementedException();
         }
+        public void serviceRequest() { }
+        public void closeService()
+        {
+
+        }
+        public void contractPerformnace() { }
+        public void employyeKPI() { }
+        public void callHistory() { }
+        public void reassignJobs() { }
+        public void escalteJobs() { }
+
     }
 }
