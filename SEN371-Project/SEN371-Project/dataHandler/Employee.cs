@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SEN371_Project.dataHandler
 {
-    internal abstract class employee
+    internal  class employee
     {
         string empName;
         string empId;
@@ -20,6 +20,7 @@ namespace SEN371_Project.dataHandler
             this.empSurname = empSurname;
             this.empRole = empRole;
         }
+        //Checks if employee can access function
          bool canAcces(int empRole, string RoleNeeded)
         {
             return true;

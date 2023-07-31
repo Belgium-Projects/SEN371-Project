@@ -11,27 +11,51 @@ namespace SEN371_Project
 {
     internal class serviceDept : dataLog
     {
-      
-        public void serviceRequest() { }
+      //Receive service request
+        public void serviceRequest() { 
+            throw new NotImplementedException(); 
+        }
+        //Assign request 
+        public void assignRequest()
+        {
+            throw new NotImplementedException();
+        }
+        //Trackjob returns a status on job
+        public string TrackJobs()
+        {
+            throw new NotImplementedException();
+    }
         public override void deleteFromDB()
         {
             throw new NotImplementedException();
         }
-
+        //override to add ticket
         public override void saveToDB()
         {
             throw new NotImplementedException();
         }
+        //Closes services request
         public void closeService()
         {
-
+            throw new NotImplementedException();
         }
+        //Returns client who request ticket 
         public override List<client> selectFromDB()
         {
             throw new NotImplementedException();
         }
-
+        //add notes and update ticket
         public override void updateFromDB()
+        {
+            throw new NotImplementedException();
+        }
+        //Re- assign jobs
+        public void reAssign()
+        {
+            throw new NotImplementedException();
+        }
+        //Escalte jobs
+        public void escaltejob()
         {
             throw new NotImplementedException();
         }

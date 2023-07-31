@@ -8,13 +8,13 @@ namespace SEN371_Project.dataHandler
 {
     internal class client
     {
-        string cusName;
-        string cusSurname;
-        string cusService;
-        string cusBussinessName;
-        string cusRepresentativeName;
-        string cusPhonenumber;
-        string cusID;
+       private string cusName;
+       private string cusSurname;
+       private string cusService;
+       private string cusBussinessName;
+       private string cusRepresentativeName;
+       private string cusPhonenumber;
+       private string cusID;
 
         public client(string cusName, string cusSurname, string cusService, string cusPhonenumber, string cusID)
         {

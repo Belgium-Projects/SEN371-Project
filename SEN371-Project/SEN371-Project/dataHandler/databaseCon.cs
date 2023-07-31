@@ -10,16 +10,19 @@ namespace SEN371_Project.Connection
 {
     internal class databaseCon
     {
-        static string connectionString = @"";
-        SqlConnection connection = new SqlConnection(ConnectionString);
-        SqlCommand command;
-        SqlDataReader reader;
+        //Connection and sql commands
+        private static string connectionString = @"";
+        private SqlConnection connection = new SqlConnection(ConnectionString);
+        private SqlCommand command;
+        private SqlDataReader reader;
 
+        //Encapsulation 
         public static string ConnectionString { get => connectionString; set => connectionString = value; }
         public SqlConnection Connection1 { get => connection; set => connection = value; }
         public SqlCommand Command { get => command; set => command = value; }
         public SqlDataReader Reader { get => reader; set => reader = value; }
 
+        //Methods
         public  void Connection()
         {
             try

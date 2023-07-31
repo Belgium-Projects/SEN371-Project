@@ -53,6 +53,7 @@
     <Compile Include="connection\VoIP.cs" />
     <Compile Include="dataHandler\DataLog.cs" />
     <Compile Include="dataHandler\Employee.cs" />
+    <Compile Include="dataHandler\Services.cs" />
     <Compile Include="functionalAreas\callCentre.cs" />
     <Compile Include="functionalAreas\clientMange.cs" />
     <Compile Include="functionalAreas\contractMaintenance.cs" />

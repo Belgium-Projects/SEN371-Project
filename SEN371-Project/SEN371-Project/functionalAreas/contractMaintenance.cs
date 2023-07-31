@@ -11,32 +11,37 @@ namespace SEN371_Project.FunctionalAreas
 {
     internal class contractMaintenance : dataLog
     {
-       
+        //Manage availability of contract types
+
         public void avalabilityContract()
         {
+            throw new NotImplementedException();
 
         }
+        //Define service levels
         public void defineServices()
         {
-
+            throw new NotImplementedException();
         }
-
-        public void contractPerformnace() { }
+        //View performance of contract types
+        public void contractPerformnace() {
+            throw new NotImplementedException();
+        }
         public override void deleteFromDB()
         {
             throw new NotImplementedException();
         }
-
+        //Define services offered
         public override void saveToDB()
         {
             throw new NotImplementedException();
         }
-
+        
         public override List<client> selectFromDB()
         {
             throw new NotImplementedException();
         }
-
+        //Manage availability of contract types
         public override void updateFromDB()
         {
             throw new NotImplementedException();
