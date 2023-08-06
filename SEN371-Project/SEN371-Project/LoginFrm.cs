@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEN371_Project.FunctionalAreas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace SEN371_Project
         public LoginDashboard()
         {
             InitializeComponent();
+        }
+
+        private void LoginDashboard_Load(object sender, EventArgs e)
+        {
+         
         }
     }
 }

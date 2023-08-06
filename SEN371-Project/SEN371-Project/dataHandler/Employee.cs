@@ -20,6 +20,7 @@ namespace SEN371_Project.dataHandler
             this.empSurname = empSurname;
             this.empRole = empRole;
         }
+        
         //Checks if employee can access function
          bool canAcces(int empRole, string RoleNeeded)
         {

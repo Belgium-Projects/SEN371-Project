@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connection\API.cs" />
-    <Compile Include="dataHandler\Business.cs" />
     <Compile Include="dataHandler\client.cs" />
     <Compile Include="dataHandler\databaseCon.cs" />
     <Compile Include="connection\VoIP.cs" />
@@ -57,7 +56,6 @@
     <Compile Include="functionalAreas\callCentre.cs" />
     <Compile Include="functionalAreas\clientMange.cs" />
     <Compile Include="functionalAreas\contractMaintenance.cs" />
-    <Compile Include="functionalAreas\ICallCentre.cs" />
     <Compile Include="functionalAreas\manager.cs" />
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
