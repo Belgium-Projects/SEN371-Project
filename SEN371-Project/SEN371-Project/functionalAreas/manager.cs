@@ -22,7 +22,7 @@ namespace SEN371_Project.FunctionalAreas
             throw new NotImplementedException();
         }
         //Return tickets from client 
-        public override List<client> selectFromDB()
+        public override List<client> selectFromDB(int clientID)
         {
             throw new NotImplementedException();
         }

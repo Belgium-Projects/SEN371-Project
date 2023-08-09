@@ -3,6 +3,7 @@ using SEN371_Project.Data;
 using SEN371_Project.dataHandler;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -18,10 +19,10 @@ namespace SEN371_Project.FunctionalAreas
         private string starttime;
      
         //save service ticket to db
-        public  void saveDatata(int customerID,string notes,string datestart , int servicesID,int priority)
+        public  void logTicket(int customerID,int employeeid,string notes,string datestart , int servicesID,int priority)
         {
             Connection();
-            string jobs = $"insert into Jobs(CustomerID,Notes,status,DateStarted,ServiceID,Priority) values({customerID},'{notes}','Not yet started','{datestart}',{servicesID},'{priority}');";
+            string jobs = $"Insert into Jobs(CustomerID,EmployeeID,DateStarted,Notes,Priority,ServiceID,status)values({customerID},{employeeid},'{datestart}','{notes}','{priority}',{servicesID},'active');";
             try
             {
                 Command = new System.Data.SqlClient.SqlCommand(jobs , Connection1);
@@ -32,7 +33,11 @@ namespace SEN371_Project.FunctionalAreas
             {
                 MessageBox.Show(ex.Message);
             }
-            Disconnect();
+            finally
+            {
+                Disconnect();
+            }
+         
         }
         //View customer agreement
         public Services cusAgreement(int id)
@@ -46,16 +51,21 @@ namespace SEN371_Project.FunctionalAreas
                 Reader = Command.ExecuteReader();
                 while (Reader.Read())
                 {
-                    Services s = new Services(int.Parse(Reader[1].ToString()), Reader[2].ToString(), Reader[3].ToString(),int.Parse( Reader[4].ToString()),int.Parse( Reader[5].ToString()), Reader[6].ToString(), Reader[7].ToString(), Reader[8].ToString());
-                    return s;
+                    Services Service = new Services(int.Parse(Reader[1].ToString()), Reader[2].ToString(), Reader[3].ToString(),int.Parse( Reader[4].ToString()),int.Parse( Reader[5].ToString()), Reader[6].ToString(), Reader[7].ToString(), Reader[8].ToString());
+                    return Service;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            Disconnect();
-            return null; 
+            finally
+            {
+                Disconnect();
+              
+            }
+            return null;
+           
         }
         //Return customer call logs
         public List<string> callHistory(int id)
@@ -80,8 +90,13 @@ namespace SEN371_Project.FunctionalAreas
 
                 MessageBox.Show(ex.Message);
             }
-            Disconnect();
-            return calllogs;
+            finally
+            {
+                Disconnect();
+               
+            }
+            return null;
+           
         }
       
         //anwsers call
@@ -100,12 +115,17 @@ namespace SEN371_Project.FunctionalAreas
             {
                 Command = new System.Data.SqlClient.SqlCommand(insert,Connection1);
                 Command.ExecuteNonQuery();
-                MessageBox.Show("Inserted");
-            }
+
+            }                //MessageBox.Show("Inserted");
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                Disconnect();
+            }
+            
         }
         public override void saveToDB()
         {
@@ -121,10 +141,95 @@ namespace SEN371_Project.FunctionalAreas
         {
             throw new NotImplementedException();
         }
-
-        public override List<client> selectFromDB()
+        public bool isBusinessCustomer(int clientID)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                string businessCheck = $"Select count(customerID) from BusinessCustomer where CustomerID ={clientID}";
+                Connection();
+                Command = new System.Data.SqlClient.SqlCommand(businessCheck, Connection1);
+                Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    if (int.Parse(Reader[0].ToString()) == 0)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                Disconnect();
+                return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+        public override List<client> selectFromDB(int clientID)
+        {
+           
+            List<client> CustomerInfo = new List<client>();
+            try
+            {
+                if (isBusinessCustomer(clientID))
+                {
+                    //Is a business CLient 
+                    Connection();
+                    string getRep = $"Select * from BusinessRole br inner join BusinessCustomer bc on br.BusinessRoleID = bc.BusinessRoleID where CustomerID ={clientID}";
+                    Command =new SqlCommand(getRep, Connection1);
+                    Reader = Command.ExecuteReader();
+                    List<string> businessRep = new List<string>();
+                    while (Reader.Read())
+                    {
+                        businessRep.Add($"{Reader[0]},{Reader[1]},{Reader[2]},{Reader[3]},{Reader[4]}");
+                        
+                    }
+                    Disconnect();
+                    Connection();
+                    string getclientInfo = $"Select * from customer where CustomerID ={clientID}";
+                    Command = new SqlCommand(getclientInfo, Connection1);
+                    Reader = Command.ExecuteReader();
+                    while (Reader.Read())
+                    {
+                        CustomerInfo.Add(new client(Reader[2].ToString(), businessRep, Reader[4].ToString(), Reader[0].ToString()));
+                    }
+                    Disconnect();
+                    return CustomerInfo;
+                }
+                else
+                {
+                    //Returns individula person
+                    Connection();
+                    string getclientInfo = $"Select * from customer where CustomerID ={clientID}";
+                    Command = new SqlCommand(getclientInfo, Connection1);
+                    Reader = Command.ExecuteReader();
+                    while (Reader.Read())
+                    {
+                        CustomerInfo.Add(new client(Reader[1].ToString(), Reader[2].ToString(), Reader[3].ToString(), Reader[4].ToString(), Reader[0].ToString())); ;
+                    }
+                    Disconnect();
+                    return CustomerInfo;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+          
+            return null;
         }
     }
 }

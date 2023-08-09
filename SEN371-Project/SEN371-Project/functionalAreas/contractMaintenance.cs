@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SEN371_Project.FunctionalAreas
 {
@@ -13,9 +14,21 @@ namespace SEN371_Project.FunctionalAreas
     {
         //Manage availability of contract types
 
-        public void avalabilityContract()
+        public void avalabilityContract(string newAvalabilityStatus, int Servicesid)
         {
-            throw new NotImplementedException();
+            string Change = $"update Packages set [Availability] = '{newAvalabilityStatus}' where PackagesID = {Servicesid}";
+            Connection();
+            try
+            {
+                Command = new System.Data.SqlClient.SqlCommand(Change, Connection1);
+                Command.ExecuteNonQuery();
+                MessageBox.Show($"Availability of {Servicesid} has been changed to {newAvalabilityStatus}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Disconnect();
 
         }
         //Define service levels
@@ -37,12 +50,13 @@ namespace SEN371_Project.FunctionalAreas
             throw new NotImplementedException();
         }
         
-        public override List<client> selectFromDB()
+        //Manage availability of contract types
+        public override void updateFromDB()
         {
             throw new NotImplementedException();
         }
-        //Manage availability of contract types
-        public override void updateFromDB()
+
+        public override List<client> selectFromDB(int client)
         {
             throw new NotImplementedException();
         }

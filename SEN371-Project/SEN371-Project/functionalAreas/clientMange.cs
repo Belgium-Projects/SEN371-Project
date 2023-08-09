@@ -32,12 +32,13 @@ namespace SEN371_Project.FunctionalAreas
         {
             throw new NotImplementedException();
         }
-        public override List<client> selectFromDB()
+
+        public override void updateFromDB()
         {
             throw new NotImplementedException();
         }
 
-        public override void updateFromDB()
+        public override List<client> selectFromDB(int client)
         {
             throw new NotImplementedException();
         }

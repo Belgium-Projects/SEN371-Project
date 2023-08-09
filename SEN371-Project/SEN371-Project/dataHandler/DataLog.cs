@@ -18,7 +18,7 @@ namespace SEN371_Project.Data
         //Update form the db
         public abstract void updateFromDB();
         //return a list of client 
-        public abstract List<client> selectFromDB();
+        public abstract List<client> selectFromDB(int client);
         
     }
 }

@@ -20,7 +20,8 @@ namespace SEN371_Project
 
         private void LoginDashboard_Load(object sender, EventArgs e)
         {
-         
+            callCentre obj = new callCentre();
+            obj.logTicket(1,1,"supertest", "09/08/2023", 1, 'H');
         }
     }
 }

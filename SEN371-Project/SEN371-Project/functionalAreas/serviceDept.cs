@@ -40,7 +40,7 @@ namespace SEN371_Project
             throw new NotImplementedException();
         }
         //Returns client who request ticket 
-        public override List<client> selectFromDB()
+        public override List<client> selectFromDB(int clientID)
         {
             throw new NotImplementedException();
         }
