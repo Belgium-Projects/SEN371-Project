@@ -68,11 +68,11 @@ namespace SEN371_Project.FunctionalAreas
            
         }
         //Return customer call logs
-        public List<string> callHistory(int id)
+        public List<string> callHistory(int clientID)
         {
             //returns a calllog in this format customersid,customername+surname,employeeID,Employeename+surname+starttime,endtime,duration-in seconds 
             List<string> calllogs = new List<string>();
-            string Calldetails = $"select * from InteractionHistory where CustomerID = {id}";
+            string Calldetails = $"select * from InteractionHistory where CustomerID = {clientID}";
             Connection();
             try
             {
@@ -83,7 +83,7 @@ namespace SEN371_Project.FunctionalAreas
                 {
                     calllogs.Add($"{Reader[0]},{Reader[1]},{Reader[2]},,{Reader[3]},{Reader[4]},{Reader[5]},{Reader[6]}");
                 }
-              
+                return calllogs;
             }
             catch (Exception ex)
             {

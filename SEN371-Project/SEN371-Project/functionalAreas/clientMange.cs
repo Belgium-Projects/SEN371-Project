@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SEN371_Project.FunctionalAreas
 {
@@ -21,6 +22,27 @@ namespace SEN371_Project.FunctionalAreas
         public override void saveToDB()
         {
             throw new NotImplementedException();
+        }
+        public void BusinessClient(string companyName,int packagesID,string phoneNumber ,string Email,string street , string city ,string zip)
+        {
+            string newClient = $"";
+            Connection();
+            try
+            {
+                Command = new System.Data.SqlClient.SqlCommand(newClient, Connection1);
+                Command.ExecuteNonQuery();
+                MessageBox.Show("Customer Entered");
+                //Need way of adding Customer rep
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+                Disconnect();
+            }
         }
       //Capture details of service agreements with client
         public void serviceAgreement()
