@@ -1,4 +1,5 @@
-﻿using SEN371_Project.FunctionalAreas;
+﻿using SEN371_Project.Connection;
+using SEN371_Project.FunctionalAreas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,7 @@ namespace SEN371_Project
 
         private void LoginDashboard_Load(object sender, EventArgs e)
         {
-            clientMange obj = new clientMange();
-            obj.manamgnentInfo();
+          
         }
 
         

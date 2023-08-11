@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 // Resource for REST API for powerbi 
 //https://github.com/microsoft/PowerBI-CSharp
 
@@ -13,8 +16,8 @@ namespace SEN371_Project.Connection
     internal class API : employee
     {
         string ResourceURL;
-        string accessToken;
-        string tokenCredentials;
+        string accessToken= "ACd526795df293545a79b4b8eba0ad52d4";
+        string tokenCredentials = "6eb99d5e0edf6ace80614ab6223fb68c";
         string applicationID;
 
         //establish connection
@@ -23,9 +26,27 @@ namespace SEN371_Project.Connection
             throw new NotImplementedException();
         }
         //Gets access token of the employee
-        public void GetAccessToken(int employeeID)
+        public void GetAccessToken()
         {
-            throw new NotImplementedException();
+            try
+            {
+            
+                //TwilioClient.Init(accessToken, tokenCredentials);
+
+                //var messageOptions = new CreateMessageOptions(
+                //  new PhoneNumber("+27818150525"));
+                //messageOptions.From = new PhoneNumber("+13135138498");
+                //messageOptions.Body = "This thing changed";
+
+
+                //var message = MessageResource.Create(messageOptions);
+                //MessageBox.Show("Message Send");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
         //Configure api service
         public void configureServices()
