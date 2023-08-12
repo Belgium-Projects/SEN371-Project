@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../Web Font Kit/stylesheet.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="Website Pages/register.html">Register</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Website Pages/login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="Website Images/Content Images/Slide Mic.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="Website Images/Content Images/Slide Speakers.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="Website Images/Content Images/Slide Soundboard.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
+    <div class="container">
+        <h1>Welcome To Our Home Page</h1>
+        <p>
+            Our Mission is to support our sound community in setting up their new sound systems.<br />
+            We also help you maintain and solve any issues you might face.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="Website Images/Content Images/Sound Setup.jpg" alt="Sound" style="width: 40%;" class="imge">
+                <div class="container">
+                    <p><button class="button">Sound Setup</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="Website Images/Content Images/Sound Maintenance.jpg" alt="Sound" style="width:40%" class="imge">
+                <div class="container">
+                    <p><button class="button">Sound Maintenance</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="Website Images/Content Images/Sound Troubleshooting.jpg" alt="Sound" style="width:40%" class="imge">
+                <div class="container">
+                    <p><button class="button">Sound Troubleshooting</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
