@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Twilio.TwiML.Voice;
 
 namespace SEN371_Project.FunctionalAreas
 {
@@ -17,14 +19,45 @@ namespace SEN371_Project.FunctionalAreas
     {
         //CRUD operations 
         private string starttime;
+       
      
-        //save service ticket to db
-        public  void logTicket(int customerID,int employeeid,string notes,string datestart , int servicesID,int priority)
+        //save service JOB to db if employee is not linked will send sms to tech 
+        public  void logJob(int customerID,int employeeid,string notes,string datestart , int servicesID,string priority)
         {
-            Connection();
-            string jobs = $"Insert into Jobs(CustomerID,EmployeeID,DateStarted,Notes,Priority,ServiceID,status)values({customerID},{employeeid},'{datestart}','{notes}','{priority}',{servicesID},'active');";
             try
             {
+                string jobs;
+                if (employeeid == 0)
+                {
+                    string customerinfo = $"Select name,Surname,Street,City from Customer where CustomerID = {customerID}";
+                    string servicesinfo = $"Select ServicesID,Task,Description,ToolsMaterials,MaintancesType from Service where ServicesID ={servicesID}";
+                    string message = "This job is not assignend or on anyones schedule pls see to it being fixed thank you details: ";
+                    
+                    API smsObject = new API();
+                    jobs = $"Insert into Jobs(CustomerID,DateStarted,Notes,Priority,ServiceID,status)values({customerID},'{datestart}','{notes}','{priority}',{servicesID},'active');";
+                    Connection();
+                    Command = new SqlCommand(customerinfo, Connection1);
+                    Reader = Command.ExecuteReader();
+                    while (Reader.Read())
+                    {
+                        message += $"Customer name = {Reader[0]} , Customer Surname =  {Reader[1]} , Customer address = {Reader[2]} {Reader[3]} ";
+                    }
+                    Disconnect();
+                    Connection();
+                    Command = new SqlCommand(servicesinfo, Connection1);
+                    Reader = Command.ExecuteReader();
+                    while (Reader.Read())
+                    {
+                        message += $"Servies Info = ServiesID={Reader[0]} ,Task = {Reader[1]} ,Description = {Reader[2]} ,Toolsmaterials ={Reader[3]} ,MaintancesType = {Reader[4]} ";
+                    }
+                    Disconnect();
+                    smsObject.smsAPIInvoke(message+$"Job: priortiy = {priority},notes = {notes} , datestart = {datestart} ");
+                }
+                else
+                {
+                 jobs  = $"Insert into Jobs(CustomerID,EmployeeID,DateStarted,Notes,Priority,ServiceID,status)values({customerID},{employeeid},'{datestart}','{notes}','{priority}',{servicesID},'active');";
+                }
+                Connection();
                 Command = new System.Data.SqlClient.SqlCommand(jobs , Connection1);
                 Command.ExecuteNonQuery();
                 MessageBox.Show("Ticket saved ");
@@ -37,7 +70,6 @@ namespace SEN371_Project.FunctionalAreas
             {
                 Disconnect();
             }
-         
         }
         //View customer agreement
         public Services cusAgreement(int id)

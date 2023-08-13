@@ -13,40 +13,40 @@ using Twilio.Types;
 
 namespace SEN371_Project.Connection
 {
-    internal class API : employee
+    internal class API 
     {
-        string ResourceURL;
+
+        string resourceURL;
         string accessToken= "ACd526795df293545a79b4b8eba0ad52d4";
         string tokenCredentials = "6eb99d5e0edf6ace80614ab6223fb68c";
+        string employeePhone = "+27818150525";
         string applicationID;
+        //Sends info to the employee if job not assigned
+        public void smsAPIInvoke(string messagesend)
+        {
+            try
+            {
+                ////Token and Credentials
+                //TwilioClient.Init(accessToken, tokenCredentials);
+                ////API info Header and body
+                //var messageOptions = new CreateMessageOptions(
+                //  new PhoneNumber(employeePhone));
+                //messageOptions.From = new PhoneNumber("+13135138498");
+                //messageOptions.Body = messagesend;
+                ////invoke API 
+                //var message = MessageResource.Create(messageOptions);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
         //establish connection
         public void Startup()
         {
             throw new NotImplementedException();
-        }
-        //Gets access token of the employee
-        public void GetAccessToken()
-        {
-            try
-            {
-            
-                //TwilioClient.Init(accessToken, tokenCredentials);
-
-                //var messageOptions = new CreateMessageOptions(
-                //  new PhoneNumber("+27818150525"));
-                //messageOptions.From = new PhoneNumber("+13135138498");
-                //messageOptions.Body = "This thing changed";
-
-
-                //var message = MessageResource.Create(messageOptions);
-                //MessageBox.Show("Message Send");
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
         }
         //Configure api service
         public void configureServices()
@@ -58,13 +58,18 @@ namespace SEN371_Project.Connection
         {
             throw new NotImplementedException();
         }
-        public API(string empName, string empId, string empSurname, string empRole) : base(empName, empId, empSurname, empRole)
-        {
+        //public API(string empName, string empId, string empSurname, string empRole) : base(empName, empId, empSurname, empRole)
+        //{
 
-        }
+        //}
         string connectionString;
+
+
+
+
+
         //Encapsulation 
-        public string ResourceURL1 { get => ResourceURL; set => ResourceURL = value; }
+        public string ResourceURL { get => resourceURL; set => resourceURL = value; }
         public string AccessToken { get => accessToken; set => accessToken = value; }
         public string TokenCredentials { get => tokenCredentials; set => tokenCredentials = value; }
         public string ApplicationID { get => applicationID; set => applicationID = value; }
