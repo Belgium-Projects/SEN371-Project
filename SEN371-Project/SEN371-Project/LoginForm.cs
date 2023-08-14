@@ -14,16 +14,16 @@ namespace SEN371_Project
 {
     public partial class frmLogin : Form
     {
-      //  private Employee emp;
+        private Employee emp;
         public frmLogin()
         {
             InitializeComponent();
-        /*    emp = new Employee
+            emp = new Employee
             {
                 Username = "sampleUser",
                 Salt = GenerateSalt(), // Generate a random salt for the user
                 HashedPassword = HashPassword("samplePassword", GenerateSalt()) // Hash the password with the salt
-            };*/
+            };
         }
 
         // Helper method to generate a random salt
@@ -47,6 +47,37 @@ namespace SEN371_Project
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmRegister b = new frmRegister();
+            b.Show();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            bool isValid = emp.ValidateCredentials(username, password);
+
+            if (isValid)
+            {
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmServices a = new frmServices();
+                a.Show();
+                }
+            else
+            {
+                MessageBox.Show("Invalid username or password. Login failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void frmLogin_Load(object sender, EventArgs e)
         {
             clientMange obj = new clientMange();
@@ -55,30 +86,6 @@ namespace SEN371_Project
             check.Add("Driver,Bob,Susanson,+278130523");
 
             obj.BusinessClient("Premier", 2, "255 This street", "Gotham", "3333", check);
-        }
-
-        private void btnLogin_Click_1(object sender, EventArgs e)
-        {
-
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-            /*bool isValid = emp.ValidateCredentials(username, password);
-
-            if (isValid)
-            {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                frmApplication a = new frmApplication();
-                a.Show();
-                }
-            else
-            {
-                MessageBox.Show("Invalid username or password. Login failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-            frmApplication a = new frmApplication();
-            a.Show();
-            frmLogin b = new frmLogin();
-            b.Close();
         }
     }
   }

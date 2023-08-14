@@ -30,12 +30,12 @@ namespace SEN371_Project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,25 +54,24 @@ namespace SEN371_Project
             this.panel1.Size = new System.Drawing.Size(273, 190);
             this.panel1.TabIndex = 1;
             // 
-            // label4
+            // btnQuit
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(96, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Logged out";
+            this.btnQuit.BackColor = System.Drawing.Color.Lime;
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnQuit.Location = new System.Drawing.Point(100, 145);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(87, 37);
+            this.btnQuit.TabIndex = 0;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "You can quit the application now";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(111, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 19);
+            this.label1.TabIndex = 1;
             // 
             // label2
             // 
@@ -84,26 +83,6 @@ namespace SEN371_Project
             this.label2.TabIndex = 2;
             this.label2.Text = "Have a good day!";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 19);
-            this.label1.TabIndex = 1;
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.BackColor = System.Drawing.Color.Lime;
-            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnQuit.Location = new System.Drawing.Point(100, 145);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(87, 37);
-            this.btnQuit.TabIndex = 0;
-            this.btnQuit.Text = "Quit";
-            this.btnQuit.UseVisualStyleBackColor = false;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -114,6 +93,26 @@ namespace SEN371_Project
             this.pictureBox1.Size = new System.Drawing.Size(860, 594);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(219, 19);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "You can quit the application now";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(96, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 19);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Logged out";
             // 
             // pictureBox2
             // 

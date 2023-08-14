@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SEN371_Project
 {
-    public partial class frmClose : Form
+    public partial class frmManagement : Form
     {
-        public frmClose()
+        public frmManagement()
         {
             InitializeComponent();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
