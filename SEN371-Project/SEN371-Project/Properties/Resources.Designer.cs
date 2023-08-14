@@ -63,6 +63,26 @@ namespace SEN371_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _104300714_john_chambers_pindrop_3539755681 {
+            get {
+                object obj = ResourceManager.GetObject("104300714-john-chambers-pindrop-3539755681", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8a720004f629af85320f020fa2627e6e_3608888290 {
+            get {
+                object obj = ResourceManager.GetObject("8a720004f629af85320f020fa2627e6e-3608888290", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Premier_Service_Solutions_540_110_px_Final {
             get {
                 object obj = ResourceManager.GetObject("Premier Service Solutions 540_110 px_Final", resourceCulture);
@@ -73,9 +93,39 @@ namespace SEN371_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap th_3744567738 {
+            get {
+                object obj = ResourceManager.GetObject("th-3744567738", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tony_Hawk_137489040 {
+            get {
+                object obj = ResourceManager.GetObject("Tony-Hawk-137489040", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wall_1846965_1280 {
             get {
                 object obj = ResourceManager.GetObject("wall-1846965_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wall_UnSat__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Wall_UnSat (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

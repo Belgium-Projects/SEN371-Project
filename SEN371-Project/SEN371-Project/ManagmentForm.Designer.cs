@@ -29,58 +29,31 @@ namespace SEN371_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnDepartment = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClient = new System.Windows.Forms.Button();
-            this.btnWork = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnTransferCall = new System.Windows.Forms.Button();
             this.btnAssign = new System.Windows.Forms.Button();
             this.btnLogIssue = new System.Windows.Forms.Button();
             this.btnViewIssue = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.btnClient = new System.Windows.Forms.Button();
+            this.btnWork = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.Premier_Service_Solutions_540_110_px_Final;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SEN371_Project.Properties.Resources.wall_1846965_1280;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 60);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(967, 491);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(684, 1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(117, 58);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
             // 
             // btnHome
             // 
@@ -119,13 +92,22 @@ namespace SEN371_Project
             this.panel2.Size = new System.Drawing.Size(621, 450);
             this.panel2.TabIndex = 7;
             // 
-            // pictureBox4
+            // panel3
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(207, 15);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(143, 58);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Location = new System.Drawing.Point(18, 144);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(587, 294);
+            this.panel3.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(257, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
             // 
             // panel1
             // 
@@ -139,24 +121,14 @@ namespace SEN371_Project
             this.panel1.Size = new System.Drawing.Size(226, 365);
             this.panel1.TabIndex = 8;
             // 
-            // btnClient
+            // label1
             // 
-            this.btnClient.Location = new System.Drawing.Point(369, 6);
-            this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(104, 48);
-            this.btnClient.TabIndex = 9;
-            this.btnClient.Text = "Client";
-            this.btnClient.UseVisualStyleBackColor = true;
-            this.btnClient.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnWork
-            // 
-            this.btnWork.Location = new System.Drawing.Point(479, 6);
-            this.btnWork.Name = "btnWork";
-            this.btnWork.Size = new System.Drawing.Size(104, 48);
-            this.btnWork.TabIndex = 10;
-            this.btnWork.Text = "Work";
-            this.btnWork.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 15);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "label1";
             // 
             // btnTransferCall
             // 
@@ -194,30 +166,62 @@ namespace SEN371_Project
             this.btnViewIssue.Text = "View Issues";
             this.btnViewIssue.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // btnClient
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 15);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "label1";
+            this.btnClient.Location = new System.Drawing.Point(369, 6);
+            this.btnClient.Name = "btnClient";
+            this.btnClient.Size = new System.Drawing.Size(104, 48);
+            this.btnClient.TabIndex = 9;
+            this.btnClient.Text = "Client";
+            this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label2
+            // btnWork
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(257, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.btnWork.Location = new System.Drawing.Point(479, 6);
+            this.btnWork.Name = "btnWork";
+            this.btnWork.Size = new System.Drawing.Size(104, 48);
+            this.btnWork.TabIndex = 10;
+            this.btnWork.Text = "Work";
+            this.btnWork.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // pictureBox4
             // 
-            this.panel3.Location = new System.Drawing.Point(18, 144);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(587, 294);
-            this.panel3.TabIndex = 3;
+            this.pictureBox4.Location = new System.Drawing.Point(207, 15);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(143, 58);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Image = global::SEN371_Project.Properties.Resources.Tony_Hawk_137489040;
+            this.pictureBox3.Location = new System.Drawing.Point(722, 1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SEN371_Project.Properties.Resources.Wall_UnSat__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 60);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(967, 491);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.Premier_Service_Solutions_540_110_px_Final;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmManagement
             // 
@@ -238,14 +242,14 @@ namespace SEN371_Project
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmManagement";
             this.Text = "Management Page";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
