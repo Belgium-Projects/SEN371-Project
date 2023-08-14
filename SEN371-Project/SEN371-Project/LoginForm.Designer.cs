@@ -81,7 +81,7 @@ namespace SEN371_Project
             this.lblPass.AutoSize = true;
             this.lblPass.Location = new System.Drawing.Point(121, 111);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(59, 15);
+            this.lblPass.Size = new System.Drawing.Size(81, 19);
             this.lblPass.TabIndex = 4;
             this.lblPass.Text = "Password";
             // 
@@ -98,7 +98,7 @@ namespace SEN371_Project
             this.lblUser.AutoSize = true;
             this.lblUser.Location = new System.Drawing.Point(118, 23);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(62, 15);
+            this.lblUser.Size = new System.Drawing.Size(83, 19);
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Username";
             // 
@@ -125,7 +125,7 @@ namespace SEN371_Project
             this.lblCopy.AutoSize = true;
             this.lblCopy.Location = new System.Drawing.Point(406, 495);
             this.lblCopy.Name = "lblCopy";
-            this.lblCopy.Size = new System.Drawing.Size(40, 15);
+            this.lblCopy.Size = new System.Drawing.Size(55, 19);
             this.lblCopy.TabIndex = 7;
             this.lblCopy.Text = "label3";
             // 
@@ -149,7 +149,7 @@ namespace SEN371_Project
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(933, 519);
@@ -162,6 +162,7 @@ namespace SEN371_Project
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmLogin";
             this.Text = "Login Page";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);

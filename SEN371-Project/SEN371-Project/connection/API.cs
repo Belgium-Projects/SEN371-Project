@@ -17,9 +17,9 @@ namespace SEN371_Project.Connection
     {
 
         string resourceURL;
-        string accessToken= "ACd526795df293545a79b4b8eba0ad52d4";
-        string tokenCredentials = "6eb99d5e0edf6ace80614ab6223fb68c";
-        string employeePhone = "+27818150525";
+         string accessToken= "ACd526795df293545a79b4b8eba0ad52d4";
+         string tokenCredentials = "6eb99d5e0edf6ace80614ab6223fb68c";
+         string employeePhone = "+27818150525";
         string applicationID;
         //Sends info to the employee if job not assigned
         public void smsAPIInvoke(string messagesend)

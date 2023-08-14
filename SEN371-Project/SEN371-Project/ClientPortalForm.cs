@@ -26,5 +26,10 @@ namespace SEN371_Project
         {
 
         }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
