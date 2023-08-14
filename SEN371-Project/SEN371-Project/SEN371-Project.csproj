@@ -69,11 +69,17 @@
     <Compile Include="dataHandler\DataLog.cs" />
     <Compile Include="dataHandler\Employee.cs" />
     <Compile Include="dataHandler\Services.cs" />
-    <Compile Include="HomeForm.cs">
+    <Compile Include="ClosingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeForm.Designer.cs">
-      <DependentUpon>HomeForm.cs</DependentUpon>
+    <Compile Include="ClosingForm.Designer.cs">
+      <DependentUpon>ClosingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceForm.Designer.cs">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
@@ -87,11 +93,11 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientPortalForm.cs">
+    <Compile Include="AccountsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientPortalForm.Designer.cs">
-      <DependentUpon>ClientPortalForm.cs</DependentUpon>
+    <Compile Include="AccountsForm.Designer.cs">
+      <DependentUpon>AccountsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagmentForm.cs">
       <SubType>Form</SubType>
@@ -106,8 +112,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="functionalAreas\serviceDept.cs" />
-    <EmbeddedResource Include="HomeForm.resx">
-      <DependentUpon>HomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClosingForm.resx">
+      <DependentUpon>ClosingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceForm.resx">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
@@ -115,8 +124,8 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientPortalForm.resx">
-      <DependentUpon>ClientPortalForm.cs</DependentUpon>
+    <EmbeddedResource Include="AccountsForm.resx">
+      <DependentUpon>AccountsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagmentForm.resx">
       <DependentUpon>ManagmentForm.cs</DependentUpon>
@@ -151,6 +160,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Premier Service Solutions 540_110 px_Final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8a720004f629af85320f020fa2627e6e-3608888290.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104300714-john-chambers-pindrop-3539755681.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tony-Hawk-137489040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th-3744567738.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wall_UnSat %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
