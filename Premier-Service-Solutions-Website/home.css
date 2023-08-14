@@ -9,11 +9,63 @@ body {
     font-family: 'hermeneus_oneregular', Arial, sans-serif;
 }
 
+#RegisterBody {
+    background-color: #11D80080;
+    color: #161616;
+    padding: 2px 45px;
+    /*margin-top: 30px;*/
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    border: 3px solid #FFFFFF;
+    cursor: pointer;
+}
+
 .container {
     text-align: center;
     padding: 20px;
-    border: 2px solid white;
+    background-color: #9A9A9A70;
+    border: 5px solid #D9D9D9;
+    border-radius: 12px;
+    margin-bottom: 1.5%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'hepta_slabextralight', Arial, sans-serif;
+    color: black;
 }
+    
+    #subCon1{
+        margin-top: -2.8%;
+        font-size: 16px;
+        font-weight: 900;
+    }    
+    
+    #subCon2{
+        margin-top: -1.5%;
+        margin-bottom: 1.5%;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+.serviceContainer {
+    text-align: center;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .row div {
+        display: inline;
+        margin-bottom: 4.8%;
+    }
 
 #PSSLogo {
     width: 270px;
@@ -101,7 +153,11 @@ body {
     }
 
         .top-nav a:hover {
-            color: #97e0ff;
+            background-color: #D9D9D920;
+        }
+
+        .current a {
+            background-color: #9A9A9A70;
         }
 /*/////////////////*/
 
@@ -130,6 +186,11 @@ img {
     margin-top: 1.5%;
     border: 5px solid #D9D9D9;
     border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .SlideImg {
@@ -172,6 +233,13 @@ img {
     padding: 8px 12px;
     position: absolute;
     top: 0;
+}
+
+.dots {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
 }
 
 /* The dots/bullets/indicators */
@@ -237,41 +305,61 @@ html {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-.container {
-    padding: 0 16px;
-}
+/*.container {*/
+    /*padding: 0 16px;*/
+/*}
 
     .container::after, .row::after {
         content: "";
         clear: both;
         display: table;
-    }
+    }*/
 
 
 .button {
     border: none;
     outline: 0;
     display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
+    /*padding: 8px;*/
+    border: 5px solid #D9D9D9;
+    border-radius: 7px;
+    background-color: #9A9A9A80;
+    color: black;
     text-align: center;
     cursor: pointer;
-    width: 100%;
+    font-size: 22px;
 }
+    
+    #But1{
+        min-width: 50%;
+    }
+
+    #But2{
+        min-width: 70%;
+    }
+
+    #But3{
+        min-width: 80%;
+    }
 
     .button:hover {
-        background-color: #555;
+        background-color: #3C5A70;
     }
 
 .imge {
+    width: 50%;
+    height: 10.5vw;
     border-radius: 50%;
+    border: 5px solid #D9D9D9;
     margin-left: auto;
     margin-right: auto;
     display: block; /* This centers the image */
+    overflow: hidden
 }
+
 /*///////////////////////////*/
 /* Background Panel */
 
