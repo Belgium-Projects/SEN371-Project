@@ -11,7 +11,7 @@ namespace SEN371_Project.Connection
     internal class databaseCon
     {
         //Connection and sql commands
-        private static string connectionString = @"Data Source = (local);Initial catalog =PremierServiceSolutions ;Integrated security = SSPI";
+        private static string connectionString = @"Data Source = Mthokozisi-2\SQLEXPRESS;Initial catalog =PremierServiceSolutions ;Integrated security = SSPI";
         private static SqlConnection connection = new SqlConnection(ConnectionString);
         private SqlCommand command;
         private SqlDataReader reader;

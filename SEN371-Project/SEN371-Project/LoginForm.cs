@@ -62,7 +62,6 @@ namespace SEN371_Project
 
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-
             /*bool isValid = emp.ValidateCredentials(username, password);
 
             if (isValid)
@@ -75,10 +74,10 @@ namespace SEN371_Project
             {
                 MessageBox.Show("Invalid username or password. Login failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }*/
+            this.Hide();
             frmApplication a = new frmApplication();
             a.Show();
-            frmLogin b = new frmLogin();
-            b.Close();
+            
         }
     }
   }
