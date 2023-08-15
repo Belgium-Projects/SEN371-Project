@@ -69,7 +69,7 @@ namespace SEN371_Project
 
         }
 
-        private bool IsValidEmail(string email)
+        private bool isValidEmail(string email)
         {
 
             string regexPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
@@ -97,7 +97,16 @@ namespace SEN371_Project
             return true;
         }
 
+        private bool isValidAddress()
+        {
+            return true;
+        }
         private bool isValidZipCode()
+        {
+            return true;
+        }
+
+        private bool isValidBusinessName()
         {
             return true;
         }
@@ -123,11 +132,40 @@ namespace SEN371_Project
                 return;
             }
 
-            if (!IsValidEmail(email))
+            if (!isValidPhoneNumber(phoneNumber))
             {
                 MessageBox.Show("Invalid email address.", "Validation Error");
                 return;
             }
+
+            if (!isValidEmail(email))
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
+
+            if (!isValidDateOfBirth())
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
+
+            if (!isValidAddress())
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
+
+            if(!isValidZipCode())
+            {
+
+            }
+
+            if(!isValidBusinessName())
+            {
+
+            }
+
         }
     }
 }
