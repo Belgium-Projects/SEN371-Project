@@ -99,26 +99,70 @@ namespace SEN371_Project
         {
             return true;
         }
+        private bool isValidAddress()
+        {
+            return true;
+        }
+
+        private bool isValidBusinessName()
+        {
+            return true;
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            string username = txtFirstName.Text.Trim();
+            string firstName = txtFirstName.Text.Trim();
             string email = txtEmail.Text.Trim();
             string lastName = txtLastName.Text.Trim();
             string phoneNumber = txtPhoneNumber.Text.Trim();
             string address = txtAddress.Text.Trim();
             string zipCode = txtZipCode.Text.Trim();
             string bussinessName = txtBusinessName.Text.Trim();
-            if (string.IsNullOrEmpty(username) || isValidFirstName(username))
+
+            if (string.IsNullOrEmpty(firstName))
             {
                 MessageBox.Show("Username is required.", "Validation Error");
                 return;
             }
+            else if (!isValidFirstName(firstName))
+            {
+                MessageBox.Show("Username can only contain valid characters", "Validation Error");
+                return;
+            }
+            if(!isValidLastName(lastName))
+            {
 
-            if (IsValidEmail(email))
+            }
+            if (!isValidPhoneNumber(phoneNumber))
             {
                 MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
+            if (!isValidDateOfBirth())
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
+
+            if (!isValidAddress())
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
+
+            if (!isValidZipCode())
+            {
+                return;
+            }
+
+            if (!isValidBusinessName())
+            {
                 return;
             }
         }
