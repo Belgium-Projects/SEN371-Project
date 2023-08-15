@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SEN371_Project
 {
@@ -47,11 +48,59 @@ namespace SEN371_Project
         {
             throw new NotImplementedException();
         }
-        //Trackjob returns a status on job
-        public string TrackJobs()
+        public List<string> employeeAvailabe()
         {
-            throw new NotImplementedException();
-    }
+            Connection();
+            List<string> empAvaialbe = new List<string>();
+            try
+            {
+                string getemp = $"Select EmployeeID,Name,Surname from Employee where Department = 'Service Department' and Availability = 'Yes';";
+                Command = new System.Data.SqlClient.SqlCommand(getemp, Connection1);
+                Reader = Command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    empAvaialbe.Add($"{Reader[0]} , {Reader[1]} , {Reader[2]} ");
+                }
+                return empAvaialbe;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+        //Trackjob returns a status on job
+        public List<string> TrackJobs(int jobID)
+        {
+            List<string> returnJobs = new List<string>();
+            try
+            {
+                Connection();
+                string jobs = $"select * from jobs where JobsID ={jobID}" ;
+                Command = new System.Data.SqlClient.SqlCommand(jobs, Connection1);
+                Reader = Command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    returnJobs.Add($"{Reader[0].ToString()}, {Reader[1].ToString()}, {Reader[2].ToString()}, {Reader[3].ToString()}, {Reader[4].ToString()}, {Reader[5].ToString()}, {Reader[6].ToString()}, {Reader[7].ToString()}, {Reader[8].ToString()}");
+                }
+                return returnJobs;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
+            return returnJobs;
+        }
         public override void deleteFromDB()
         {
             throw new NotImplementedException();
@@ -62,9 +111,25 @@ namespace SEN371_Project
             throw new NotImplementedException();
         }
         //Closes services request
-        public void closeService()
+        public void closeService(string jobid)
         {
-            throw new NotImplementedException();
+            Connection();
+            try
+            {
+                string closeRequest = $"update Jobs set Status = 'Done',DateEnded ='{DateTime.Now.ToString("MM/dd/yyyy")}' where JobsID = {jobid}";
+                Command = new System.Data.SqlClient.SqlCommand(closeRequest, Connection1);
+                Command.ExecuteNonQuery();
+                MessageBox.Show("Job has been closed");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
         //Returns client who request ticket 
         public override List<client> selectFromDB(int clientID)
@@ -77,14 +142,46 @@ namespace SEN371_Project
             throw new NotImplementedException();
         }
         //Re- assign jobs
-        public void reAssign()
+        public void reAssign(string empid,string job)
         {
-            throw new NotImplementedException();
+            Connection();
+            try
+            {
+                string update = $"update Jobs set EmployeeID = {empid} where JobsID = {job}";
+                Command = new System.Data.SqlClient.SqlCommand(update,Connection1);
+                Command.ExecuteNonQuery();
+                MessageBox.Show("Job is now assigned to :" + empid);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
         //Escalte jobs
-        public void escaltejob()
+        public void escaltejob(string jobID,string escalte)
         {
-            throw new NotImplementedException();
+            Connection();
+            try
+            {
+                string update = $"update Jobs set Priority = '{escalte}' where JobsID = {jobID}";
+                Command = new System.Data.SqlClient.SqlCommand(update, Connection1);
+                Command.ExecuteNonQuery();
+                MessageBox.Show("Job is now escalted to : " + escalte);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
     }
 }
