@@ -54,7 +54,7 @@ namespace SEN371_Project
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.lblEmpName = new System.Windows.Forms.Label();
@@ -171,7 +171,7 @@ namespace SEN371_Project
             this.panel9.Controls.Add(this.txtAddress);
             this.panel9.Controls.Add(this.label15);
             this.panel9.Controls.Add(this.txtFirstName);
-            this.panel9.Controls.Add(this.button6);
+            this.panel9.Controls.Add(this.btnSave);
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.button7);
             this.panel9.Location = new System.Drawing.Point(51, 61);
@@ -299,16 +299,16 @@ namespace SEN371_Project
             this.txtFirstName.Size = new System.Drawing.Size(191, 22);
             this.txtFirstName.TabIndex = 7;
             // 
-            // button6
+            // btnSave
             // 
-            this.button6.BackColor = System.Drawing.Color.Lime;
-            this.button6.Location = new System.Drawing.Point(213, 273);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(136, 35);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Save";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.btnSave.BackColor = System.Drawing.Color.Lime;
+            this.btnSave.Location = new System.Drawing.Point(213, 273);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(136, 35);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label16
             // 
@@ -395,7 +395,7 @@ namespace SEN371_Project
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label lblEmpName;

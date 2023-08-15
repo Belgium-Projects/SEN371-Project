@@ -60,24 +60,6 @@ namespace SEN371_Project
         private void button6_Click(object sender, EventArgs e)
         {
 
-            string username = txtFirstName.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string lastName = txtLastName.Text.Trim();
-            string phoneNumber = txtPhoneNumber.Text.Trim();
-            string address = txtAddress.Text.Trim();
-            string zipCode = txtZipCode.Text.Trim();
-            string bussinessName = txtBusinessName.Text.Trim();
-            if (string.IsNullOrEmpty(username) || isValidFirstName(username))
-            {
-                MessageBox.Show("Username is required.", "Validation Error");
-                return;
-            }
-
-            if (IsValidEmail(email))
-            {
-                MessageBox.Show("Invalid email address.", "Validation Error");
-                return;
-            }
         }
 
         private void pnlWork_Paint(object sender, PaintEventArgs e)
@@ -118,9 +100,27 @@ namespace SEN371_Project
             return true;
         }
 
-        private void button6_Click_1(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
+            string username = txtFirstName.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string lastName = txtLastName.Text.Trim();
+            string phoneNumber = txtPhoneNumber.Text.Trim();
+            string address = txtAddress.Text.Trim();
+            string zipCode = txtZipCode.Text.Trim();
+            string bussinessName = txtBusinessName.Text.Trim();
+            if (string.IsNullOrEmpty(username) || isValidFirstName(username))
+            {
+                MessageBox.Show("Username is required.", "Validation Error");
+                return;
+            }
+
+            if (IsValidEmail(email))
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
         }
     }
 }
