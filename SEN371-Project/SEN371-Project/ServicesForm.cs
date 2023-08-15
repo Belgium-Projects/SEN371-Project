@@ -54,6 +54,9 @@ namespace SEN371_Project
         {
             if (txtJobid.Text != "")
             {
+                string temp = txtJobid.Text;
+                dgvAlljobs.Rows.Clear();
+                txtJobid.Text = temp;
                 ClearPannel();
                 lblEmployeeID.Show();
                 btnSubmitEmp.Show();
@@ -128,7 +131,9 @@ namespace SEN371_Project
             if (txtJobid.Text == "" || txtJobid.Text == null)
             {
                 ClearPannel();
+                
                 dgvAlljobs.Show();
+                
                 dgvAlljobs.ColumnCount = 9;
                 dgvAlljobs.ColumnHeadersVisible = true;
 
@@ -153,6 +158,15 @@ namespace SEN371_Project
                 {
                     List<string> itembreakdown = item.Split(',').ToList();
                     dgvAlljobs.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
+                }
+                if(dgvAlljobs.RowCount > 0) {
+                    lbTrackJob.Hide();
+                    lblEmployeeID.Hide();
+                    btnSubmitEmp.Hide();
+                    cbEmployeeID.Hide();
+                    cbescalte.Hide();
+                    lblEscalte.Hide();
+                    btnescalte1.Hide();
                 }
             }
         }

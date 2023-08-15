@@ -182,7 +182,7 @@ namespace SEN371_Project
                 return;
             }
 
-            if (!isValidAddress())
+            else if (!isValidAddress())
             {
                 MessageBox.Show("Invalid  address.", "Validation Error");
                 return;
@@ -194,7 +194,7 @@ namespace SEN371_Project
                 return;
             }
 
-            if (!isValidZipCode(zipCode))
+            else if (!isValidZipCode(zipCode))
             {
                 MessageBox.Show("Invalid  zip code.", "Validation Error");
                 return;
@@ -205,7 +205,7 @@ namespace SEN371_Project
                 MessageBox.Show("A business name is required.", "Validation Error");
                 return;
             }
-            if (!isValidBusinessName())
+            else if (!isValidBusinessName())
             {
                 MessageBox.Show("Invalid  business name.", "Validation Error");
                 return;

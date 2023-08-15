@@ -30,10 +30,15 @@ namespace SEN371_Project
         private void InitializeComponent()
         {
             this.pnlDept = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtJobid = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnescalte1 = new System.Windows.Forms.Button();
+            this.lblEscalte = new System.Windows.Forms.Label();
+            this.cbescalte = new System.Windows.Forms.ComboBox();
             this.btnSubmitEmp = new System.Windows.Forms.Button();
             this.cbEmployeeID = new System.Windows.Forms.ComboBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
@@ -45,11 +50,11 @@ namespace SEN371_Project
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnDepartment = new System.Windows.Forms.Button();
             this.pnlClientButtons = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.btnescalte = new System.Windows.Forms.Button();
@@ -57,19 +62,14 @@ namespace SEN371_Project
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbescalte = new System.Windows.Forms.ComboBox();
-            this.lblEscalte = new System.Windows.Forms.Label();
-            this.btnescalte1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.pnlDept.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).BeginInit();
             this.pnlClientButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +87,25 @@ namespace SEN371_Project
             this.pnlDept.Name = "pnlDept";
             this.pnlDept.Size = new System.Drawing.Size(744, 546);
             this.pnlDept.TabIndex = 40;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(515, 56);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(105, 41);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "Close Job";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Job ID:";
             // 
             // txtJobid
             // 
@@ -131,6 +150,34 @@ namespace SEN371_Project
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(691, 406);
             this.panel6.TabIndex = 6;
+            // 
+            // btnescalte1
+            // 
+            this.btnescalte1.Location = new System.Drawing.Point(373, 204);
+            this.btnescalte1.Name = "btnescalte1";
+            this.btnescalte1.Size = new System.Drawing.Size(131, 47);
+            this.btnescalte1.TabIndex = 11;
+            this.btnescalte1.Text = "Escalate";
+            this.btnescalte1.UseVisualStyleBackColor = true;
+            this.btnescalte1.Click += new System.EventHandler(this.btnescalte1_Click);
+            // 
+            // lblEscalte
+            // 
+            this.lblEscalte.AutoSize = true;
+            this.lblEscalte.Location = new System.Drawing.Point(381, 112);
+            this.lblEscalte.Name = "lblEscalte";
+            this.lblEscalte.Size = new System.Drawing.Size(47, 16);
+            this.lblEscalte.TabIndex = 10;
+            this.lblEscalte.Text = "Escalte";
+            // 
+            // cbescalte
+            // 
+            this.cbescalte.FormattingEnabled = true;
+            this.cbescalte.Location = new System.Drawing.Point(373, 144);
+            this.cbescalte.Name = "cbescalte";
+            this.cbescalte.Size = new System.Drawing.Size(263, 24);
+            this.cbescalte.TabIndex = 9;
+            this.cbescalte.Text = "...";
             // 
             // btnSubmitEmp
             // 
@@ -246,6 +293,17 @@ namespace SEN371_Project
             this.pnlClientButtons.Size = new System.Drawing.Size(226, 365);
             this.pnlClientButtons.TabIndex = 50;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox8.Image = global::SEN371_Project.Properties.Resources.download__2_;
+            this.pictureBox8.Location = new System.Drawing.Point(27, 27);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(52, 43);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 46;
+            this.pictureBox8.TabStop = false;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -288,17 +346,6 @@ namespace SEN371_Project
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 47;
             this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox8.Image = global::SEN371_Project.Properties.Resources.download__2_;
-            this.pictureBox8.Location = new System.Drawing.Point(27, 27);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(52, 43);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 46;
-            this.pictureBox8.TabStop = false;
             // 
             // label3
             // 
@@ -369,53 +416,6 @@ namespace SEN371_Project
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // cbescalte
-            // 
-            this.cbescalte.FormattingEnabled = true;
-            this.cbescalte.Location = new System.Drawing.Point(373, 144);
-            this.cbescalte.Name = "cbescalte";
-            this.cbescalte.Size = new System.Drawing.Size(263, 24);
-            this.cbescalte.TabIndex = 9;
-            this.cbescalte.Text = "...";
-            // 
-            // lblEscalte
-            // 
-            this.lblEscalte.AutoSize = true;
-            this.lblEscalte.Location = new System.Drawing.Point(381, 112);
-            this.lblEscalte.Name = "lblEscalte";
-            this.lblEscalte.Size = new System.Drawing.Size(47, 16);
-            this.lblEscalte.TabIndex = 10;
-            this.lblEscalte.Text = "Escalte";
-            // 
-            // btnescalte1
-            // 
-            this.btnescalte1.Location = new System.Drawing.Point(373, 204);
-            this.btnescalte1.Name = "btnescalte1";
-            this.btnescalte1.Size = new System.Drawing.Size(131, 47);
-            this.btnescalte1.TabIndex = 11;
-            this.btnescalte1.Text = "Escalate";
-            this.btnescalte1.UseVisualStyleBackColor = true;
-            this.btnescalte1.Click += new System.EventHandler(this.btnescalte1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Job ID:";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(515, 56);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 41);
-            this.btnClose.TabIndex = 13;
-            this.btnClose.Text = "Close Job";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // frmServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -442,10 +442,10 @@ namespace SEN371_Project
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).EndInit();
             this.pnlClientButtons.ResumeLayout(false);
             this.pnlClientButtons.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
