@@ -20,7 +20,32 @@ namespace SEN371_Project.FunctionalAreas
         //CRUD operations 
         private string starttime;
        
-     
+     public List<string> returnServices(string customerid)
+        {
+            Connection();
+            List<string> returnService = new List<string>();
+            try
+            {
+                string Service = $"select s.ServicesID,s.Task from Customer c inner join Packages p on c.PackagesID = p.PackagesID inner join ServiceinPackages sp on p.PackagesID = sp.packagesID inner join Service s on sp.ServicesID = s.ServicesID where CustomerID ={customerid}";
+                Command = new SqlCommand(Service,Connection1);
+                Reader = Command.ExecuteReader();
+                while(Reader.Read())
+                {
+                    returnService.Add($"{Reader[0]} , {Reader[1]}");
+                }
+                return returnService;
+
+             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
         //save service JOB to db if employee is not linked will send sms to tech 
         public  void logJob(int customerID,int employeeid,string notes,string datestart , int servicesID,string priority)
         {
