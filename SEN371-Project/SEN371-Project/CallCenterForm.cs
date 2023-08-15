@@ -231,21 +231,30 @@ namespace SEN371_Project
             switch (selectedOption)
             {
                 case "Services Department":
-                    // Open Form1
+                    
                     frmServices form1 = new frmServices();
                     form1.Show();
+                    this.Hide();
+                    MessageBox.Show("Transferred Succefully Services Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
 
                 case "Packages Department":
                     // Open Form2
+                    
                     frmPackages form2 = new frmPackages();
                     form2.Show();
+                    this.Hide();
+                    MessageBox.Show("Transferred Succefully Packages Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     break;
 
                 case "Management Department":
                     // Open Form3
+                    
                     frmCallCentre form3 = new frmCallCentre();
                     form3.Show();
+                    this.Hide();
+                    MessageBox.Show("Transferred Succefully Management Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
             }
         }
@@ -256,6 +265,7 @@ namespace SEN371_Project
             cbRedirect.Items.Add("Services Department");
             cbRedirect.Items.Add("Packages Department");
             cbRedirect.Items.Add("Management Department");
+           
             // Set default selected index
             cbRedirect.SelectedIndex = -1;
             lblEmpName.Text = obj2.EmpName;

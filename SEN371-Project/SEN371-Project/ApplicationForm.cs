@@ -23,7 +23,7 @@ namespace SEN371_Project
             //add management function here
              employee obj = new employee();
             lblEmpName.Text = obj.EmpName;
-
+            panel9.BackColor = Color.FromArgb(128, Color.AliceBlue);
         }
         private void btnWork_Click(object sender, EventArgs e)
         {
