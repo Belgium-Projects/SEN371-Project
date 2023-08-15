@@ -18,9 +18,6 @@ namespace SEN371_Project.dataHandler
         public static string empSurname;
         public static string empRole;
         public static string empPhoneNumber;
-       
-         private string HashedPassword;
-
         //public employee(string empName, string empId, string empSurname, string empRole, string empPhoneNumber,string empUsername, string empPassword)
         //{
         //    this.empName = empName;

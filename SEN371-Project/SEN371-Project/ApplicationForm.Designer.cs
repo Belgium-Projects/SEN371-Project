@@ -77,7 +77,7 @@ namespace SEN371_Project
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(919, 7);
+            this.btnLogOut.Location = new System.Drawing.Point(677, 2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(114, 48);
             this.btnLogOut.TabIndex = 6;
@@ -109,7 +109,7 @@ namespace SEN371_Project
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Image = global::SEN371_Project.Properties.Resources.Tony_Hawk_137489040;
-            this.pictureBox3.Location = new System.Drawing.Point(834, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(271, 21);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(79, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,18 +137,20 @@ namespace SEN371_Project
             // 
             // pnlClient
             // 
+            this.pnlClient.Controls.Add(this.lblEmpName);
             this.pnlClient.Controls.Add(this.label4);
             this.pnlClient.Controls.Add(this.panel9);
-            this.pnlClient.Location = new System.Drawing.Point(324, 80);
+            this.pnlClient.Controls.Add(this.pictureBox3);
+            this.pnlClient.Location = new System.Drawing.Point(123, 66);
             this.pnlClient.Name = "pnlClient";
-            this.pnlClient.Size = new System.Drawing.Size(668, 428);
+            this.pnlClient.Size = new System.Drawing.Size(668, 459);
             this.pnlClient.TabIndex = 33;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(228, 22);
+            this.label4.Location = new System.Drawing.Point(226, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(217, 19);
             this.label4.TabIndex = 9;
@@ -174,7 +176,7 @@ namespace SEN371_Project
             this.panel9.Controls.Add(this.btnSave);
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.button7);
-            this.panel9.Location = new System.Drawing.Point(51, 61);
+            this.panel9.Location = new System.Drawing.Point(49, 121);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(578, 331);
             this.panel9.TabIndex = 6;
@@ -331,10 +333,10 @@ namespace SEN371_Project
             // lblEmpName
             // 
             this.lblEmpName.AutoSize = true;
-            this.lblEmpName.Location = new System.Drawing.Point(120, 102);
+            this.lblEmpName.Location = new System.Drawing.Point(286, 3);
             this.lblEmpName.Name = "lblEmpName";
             this.lblEmpName.Size = new System.Drawing.Size(40, 15);
-            this.lblEmpName.TabIndex = 34;
+            this.lblEmpName.TabIndex = 35;
             this.lblEmpName.Text = "label1";
             // 
             // frmApplication
@@ -342,14 +344,12 @@ namespace SEN371_Project
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1028, 670);
-            this.Controls.Add(this.lblEmpName);
+            this.ClientSize = new System.Drawing.Size(795, 670);
             this.Controls.Add(this.pnlClient);
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnDepartment);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,7 +364,6 @@ namespace SEN371_Project
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
