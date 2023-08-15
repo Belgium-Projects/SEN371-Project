@@ -1,4 +1,5 @@
-﻿using SEN371_Project.FunctionalAreas;
+﻿using SEN371_Project.dataHandler;
+using SEN371_Project.FunctionalAreas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,16 +15,25 @@ namespace SEN371_Project
 {
     public partial class frmLogin : Form
     {
-      //  private Employee emp;
+        private employee emp;
         public frmLogin()
-        {
+        { 
+          
             InitializeComponent();
-        /*    emp = new Employee
-            {
-                Username = "sampleUser",
-                Salt = GenerateSalt(), // Generate a random salt for the user
-                HashedPassword = HashPassword("samplePassword", GenerateSalt()) // Hash the password with the salt
-            };*/
+            emp = new employee(
+            "EmployeeName",
+            "EmployeeID",
+            "EmployeeSurname",
+            "EmployeeRole",
+            "EmployeePhoneNumber",
+            "sampleUser",
+            HashPassword("samplePassword", GenerateSalt()) // Hash the password with the salt
+        );
+        }
+
+        private string HashPassword(string v1, string v2)
+        {
+            throw new NotImplementedException();
         }
 
         // Helper method to generate a random salt
@@ -62,22 +72,21 @@ namespace SEN371_Project
 
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            /*bool isValid = emp.ValidateCredentials(username, password);
+            bool isValid = emp.ValidateCredentials(username, password);
 
             if (isValid)
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
                 frmApplication a = new frmApplication();
                 a.Show();
                 }
             else
             {
                 MessageBox.Show("Invalid username or password. Login failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-            this.Hide();
-            frmApplication a = new frmApplication();
-            a.Show();
-            
+                txtUsername.Clear();
+                txtPassword.Clear();
+            }
         }
     }
   }

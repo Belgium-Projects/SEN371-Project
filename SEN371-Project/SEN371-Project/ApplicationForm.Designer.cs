@@ -125,9 +125,10 @@ namespace SEN371_Project
             this.pnlWork.Controls.Add(this.panel3);
             this.pnlWork.Controls.Add(this.label2);
             this.pnlWork.Controls.Add(this.pictureBox4);
-            this.pnlWork.Location = new System.Drawing.Point(259, 138);
+            this.pnlWork.Controls.Add(this.pnlDept);
+            this.pnlWork.Location = new System.Drawing.Point(287, 80);
             this.pnlWork.Name = "pnlWork";
-            this.pnlWork.Size = new System.Drawing.Size(676, 73);
+            this.pnlWork.Size = new System.Drawing.Size(676, 434);
             this.pnlWork.TabIndex = 7;
             // 
             // panel3
@@ -164,7 +165,7 @@ namespace SEN371_Project
             this.pnlWorkButtons.Controls.Add(this.btnViewIssue);
             this.pnlWorkButtons.Location = new System.Drawing.Point(12, 81);
             this.pnlWorkButtons.Name = "pnlWorkButtons";
-            this.pnlWorkButtons.Size = new System.Drawing.Size(230, 267);
+            this.pnlWorkButtons.Size = new System.Drawing.Size(230, 341);
             this.pnlWorkButtons.TabIndex = 8;
             // 
             // label1
@@ -270,7 +271,7 @@ namespace SEN371_Project
             this.pnlDeptButton.Controls.Add(this.btnJob);
             this.pnlDeptButton.Controls.Add(this.btnViewServices);
             this.pnlDeptButton.Controls.Add(this.button1);
-            this.pnlDeptButton.Location = new System.Drawing.Point(289, 340);
+            this.pnlDeptButton.Location = new System.Drawing.Point(12, 80);
             this.pnlDeptButton.Name = "pnlDeptButton";
             this.pnlDeptButton.Size = new System.Drawing.Size(209, 222);
             this.pnlDeptButton.TabIndex = 32;
@@ -336,9 +337,9 @@ namespace SEN371_Project
             this.pnlDept.Controls.Add(this.label12);
             this.pnlDept.Controls.Add(this.label10);
             this.pnlDept.Controls.Add(this.panel6);
-            this.pnlDept.Location = new System.Drawing.Point(259, 81);
+            this.pnlDept.Location = new System.Drawing.Point(18, 0);
             this.pnlDept.Name = "pnlDept";
-            this.pnlDept.Size = new System.Drawing.Size(753, 66);
+            this.pnlDept.Size = new System.Drawing.Size(744, 507);
             this.pnlDept.TabIndex = 31;
             // 
             // label12
@@ -394,9 +395,9 @@ namespace SEN371_Project
             this.pnlClientButtons.Controls.Add(this.button5);
             this.pnlClientButtons.Controls.Add(this.button4);
             this.pnlClientButtons.Controls.Add(this.button3);
-            this.pnlClientButtons.Location = new System.Drawing.Point(14, 378);
+            this.pnlClientButtons.Location = new System.Drawing.Point(14, 81);
             this.pnlClientButtons.Name = "pnlClientButtons";
-            this.pnlClientButtons.Size = new System.Drawing.Size(207, 279);
+            this.pnlClientButtons.Size = new System.Drawing.Size(207, 266);
             this.pnlClientButtons.TabIndex = 34;
             // 
             // label3
@@ -439,9 +440,9 @@ namespace SEN371_Project
             // 
             this.pnlClient.Controls.Add(this.label4);
             this.pnlClient.Controls.Add(this.panel9);
-            this.pnlClient.Location = new System.Drawing.Point(259, 201);
+            this.pnlClient.Location = new System.Drawing.Point(324, 80);
             this.pnlClient.Name = "pnlClient";
-            this.pnlClient.Size = new System.Drawing.Size(668, 75);
+            this.pnlClient.Size = new System.Drawing.Size(668, 428);
             this.pnlClient.TabIndex = 33;
             // 
             // label4
@@ -473,7 +474,7 @@ namespace SEN371_Project
             this.panel9.Controls.Add(this.button6);
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.button7);
-            this.panel9.Location = new System.Drawing.Point(45, 87);
+            this.panel9.Location = new System.Drawing.Point(51, 61);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(578, 331);
             this.panel9.TabIndex = 6;
@@ -631,11 +632,10 @@ namespace SEN371_Project
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1028, 563);
+            this.ClientSize = new System.Drawing.Size(1028, 670);
             this.Controls.Add(this.pnlClientButtons);
             this.Controls.Add(this.pnlClient);
             this.Controls.Add(this.pnlDeptButton);
-            this.Controls.Add(this.pnlDept);
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.pnlWorkButtons);

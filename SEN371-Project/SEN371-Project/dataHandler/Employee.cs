@@ -31,17 +31,6 @@ namespace SEN371_Project.dataHandler
             this.empPassword = empPassword;
 
         }
-
-        public bool ValidateCredentials(string username, string password)
-        {
-            if (username == Username && HashPassword(password, Salt) == HashedPassword)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        // Helper method to hash the password with salt
         private static string HashPassword(string password, string salt)
         {
             using (var sha256 = SHA256.Create())
@@ -52,6 +41,20 @@ namespace SEN371_Project.dataHandler
             }
         }
 
+        public bool ValidateCredentials(string username, string password)
+        {
+            if (username == empUsername && HashPassword(password, Salt) == HashedPassword)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        // Helper method to hash the password with salt
+     
         //Checks if employee can access function
         bool canAcces(int empRole, string RoleNeeded)
         {

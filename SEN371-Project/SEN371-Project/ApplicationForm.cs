@@ -18,43 +18,51 @@ namespace SEN371_Project
         }
         private void frmManagement_Load(object sender, EventArgs e)
         {
-            int newWidth = 207;
-            int newHeight = 279;
-
+            //add management function here
             pnlDept.Hide();
             pnlDeptButton.Hide();
 
             pnlWork.Hide();
             pnlWorkButtons.Hide();
 
-
-            pnlClientButtons.Width = newWidth;
-            pnlClientButtons.Height = newHeight;
-            pnlClientButtons.Left = 12;
-            pnlClientButtons.Top = 60;
-            pnlClient.Width = 900;
-            pnlClient.Height = 350;
-            pnlClient.Left=150;
-            pnlClient.Top = 60;
         }
         private void btnWork_Click(object sender, EventArgs e)
         {
-            int newWidth = 200;
-            int newHeight = 150;
+
+            pnlWork.Show();
+            pnlWorkButtons.Show();
+
+            pnlClient.Hide();
+            pnlClientButtons.Hide();
+            
+            pnlDept.Hide();
+            pnlDeptButton.Hide();
 
         }
 
         private void btnDepartment_Click(object sender, EventArgs e)
         {
-            int newWidth = 200;
-            int newHeight = 150;
+            pnlDept.Show();
+            pnlDeptButton.Show();
+
+            pnlClient.Hide();
+            pnlClientButtons.Hide();
+
+            pnlWork.Hide();
+            pnlWorkButtons.Hide();
 
         }
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            int newWidth = 350;
-            int newHeight = 150;
+            pnlClientButtons.Show();
+            pnlWork.Show();
+
+            pnlDept.Hide();
+            pnlDeptButton.Hide();
+
+            pnlWork.Hide();
+            pnlWorkButtons.Hide();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
