@@ -17,7 +17,7 @@ namespace SEN371_Project
         public frmCallCentre()
         {
             InitializeComponent();
-           
+
         }
         callCentre obj = new callCentre();
         employee obj2 = new employee();
@@ -46,7 +46,7 @@ namespace SEN371_Project
             CBPriority.Items.Add("High");
             CBPriority.Items.Add("Medium");
             CBPriority.Items.Add("Low");
-           
+
             try
             {
                 if (txtCustomerID.Text != null)
@@ -231,7 +231,7 @@ namespace SEN371_Project
             switch (selectedOption)
             {
                 case "Services Department":
-                    
+
                     frmServices form1 = new frmServices();
                     form1.Show();
                     this.Hide();
@@ -240,7 +240,7 @@ namespace SEN371_Project
 
                 case "Packages Department":
                     // Open Form2
-                    
+
                     frmPackages form2 = new frmPackages();
                     form2.Show();
                     this.Hide();
@@ -250,7 +250,7 @@ namespace SEN371_Project
 
                 case "Management Department":
                     // Open Form3
-                    
+
                     frmCallCentre form3 = new frmCallCentre();
                     form3.Show();
                     this.Hide();
@@ -265,12 +265,27 @@ namespace SEN371_Project
             cbRedirect.Items.Add("Services Department");
             cbRedirect.Items.Add("Packages Department");
             cbRedirect.Items.Add("Management Department");
-           
+            chkSimulateCall.Checked = false;
+
             // Set default selected index
             cbRedirect.SelectedIndex = -1;
             lblEmpName.Text = obj2.EmpName;
             //MessageBox.Show(obj.returnall()[0]);
 
         }
-    }
+
+        private void chkSimulateCall_CheckedChanged(object sender, EventArgs e)
+        {           
+
+            if (chkSimulateCall.Checked)
+            {
+              frmSimulator a=new   frmSimulator();
+               a.Show();
+               this.Hide();
+            }
+       
+        }
+
+      
+    } 
 }

@@ -37,7 +37,6 @@ namespace SEN371_Project
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pngCall = new System.Windows.Forms.PictureBox();
             this.CBService1 = new System.Windows.Forms.ComboBox();
             this.btnredirect = new System.Windows.Forms.Button();
             this.lblRedirect = new System.Windows.Forms.Label();
@@ -64,14 +63,16 @@ namespace SEN371_Project
             this.button9 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pngCall = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chkSimulateCall = new System.Windows.Forms.CheckBox();
             this.pnlWork.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pngCall)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pngCall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +106,7 @@ namespace SEN371_Project
             // 
             // pnlWork
             // 
+            this.pnlWork.Controls.Add(this.chkSimulateCall);
             this.pnlWork.Controls.Add(this.label2);
             this.pnlWork.Controls.Add(this.txtCustomerID);
             this.pnlWork.Controls.Add(this.lblTitle);
@@ -162,17 +164,6 @@ namespace SEN371_Project
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(729, 416);
             this.panel3.TabIndex = 3;
-            // 
-            // pngCall
-            // 
-            this.pngCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pngCall.Image = global::SEN371_Project.Properties.Resources.download__6_;
-            this.pngCall.Location = new System.Drawing.Point(124, 103);
-            this.pngCall.Name = "pngCall";
-            this.pngCall.Size = new System.Drawing.Size(79, 51);
-            this.pngCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pngCall.TabIndex = 64;
-            this.pngCall.TabStop = false;
             // 
             // CBService1
             // 
@@ -428,6 +419,17 @@ namespace SEN371_Project
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // pngCall
+            // 
+            this.pngCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pngCall.Image = global::SEN371_Project.Properties.Resources.download__6_;
+            this.pngCall.Location = new System.Drawing.Point(124, 103);
+            this.pngCall.Name = "pngCall";
+            this.pngCall.Size = new System.Drawing.Size(79, 51);
+            this.pngCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pngCall.TabIndex = 64;
+            this.pngCall.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SEN371_Project.Properties.Resources.Wall_UnSat__1_;
@@ -447,6 +449,19 @@ namespace SEN371_Project
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
+            // 
+            // chkSimulateCall
+            // 
+            this.chkSimulateCall.AutoSize = true;
+            this.chkSimulateCall.Font = new System.Drawing.Font("Traditional Arabic", 9.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSimulateCall.Location = new System.Drawing.Point(607, 26);
+            this.chkSimulateCall.Name = "chkSimulateCall";
+            this.chkSimulateCall.Size = new System.Drawing.Size(86, 24);
+            this.chkSimulateCall.TabIndex = 54;
+            this.chkSimulateCall.Text = "Press Me!!";
+            this.chkSimulateCall.UseVisualStyleBackColor = true;
+            this.chkSimulateCall.CheckedChanged += new System.EventHandler(this.chkSimulateCall_CheckedChanged);
             // 
             // frmCallCentre
             // 
@@ -475,11 +490,11 @@ namespace SEN371_Project
             this.pnlWork.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pngCall)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pngCall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -524,5 +539,6 @@ namespace SEN371_Project
         private System.Windows.Forms.ListBox lbServices;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pngCall;
+        private System.Windows.Forms.CheckBox chkSimulateCall;
     }
 }

@@ -73,9 +73,49 @@ namespace SEN371_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1491254392_falsecrossrejectdecline_82951 {
+            get {
+                object obj = ResourceManager.GetObject("1491254392-falsecrossrejectdecline_82951", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1491254392_falsecrossrejectdecline_829511 {
+            get {
+                object obj = ResourceManager.GetObject("1491254392-falsecrossrejectdecline_829511", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8a720004f629af85320f020fa2627e6e_3608888290 {
             get {
                 object obj = ResourceManager.GetObject("8a720004f629af85320f020fa2627e6e-3608888290", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap accept_icon_icons_com_71800 {
+            get {
+                object obj = ResourceManager.GetObject("accept_icon-icons.com_71800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap call_incoming_phone_icon_193514 {
+            get {
+                object obj = ResourceManager.GetObject("call_incoming_phone_icon_193514", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
