@@ -99,9 +99,10 @@ namespace SEN371_Project
             return dobInput >= minimumDate && dobInput <= maximumDate;
         }
 
-        private bool isValidZipCode()
+        private bool isValidZipCode(string zipCode)
         {
-            return true;
+            string zaZipRegex = @"^\d{4,5}$";
+            return Regex.IsMatch(zipCode, zaZipRegex);
         }
         private bool isValidAddress()
         {
@@ -193,7 +194,7 @@ namespace SEN371_Project
                 return;
             }
 
-            if (!isValidZipCode())
+            if (!isValidZipCode(zipCode))
             {
                 MessageBox.Show("Invalid  zip code.", "Validation Error");
                 return;
