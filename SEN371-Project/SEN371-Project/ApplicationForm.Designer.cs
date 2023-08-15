@@ -36,13 +36,6 @@ namespace SEN371_Project
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlDeptButton = new System.Windows.Forms.Panel();
-            this.btnCall = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnJob = new System.Windows.Forms.Button();
-            this.btnViewServices = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlClient = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -67,7 +60,6 @@ namespace SEN371_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlDeptButton.SuspendLayout();
             this.pnlClient.SuspendLayout();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
@@ -141,75 +133,6 @@ namespace SEN371_Project
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // pnlDeptButton
-            // 
-            this.pnlDeptButton.Controls.Add(this.btnCall);
-            this.pnlDeptButton.Controls.Add(this.label13);
-            this.pnlDeptButton.Controls.Add(this.label9);
-            this.pnlDeptButton.Controls.Add(this.btnJob);
-            this.pnlDeptButton.Controls.Add(this.btnViewServices);
-            this.pnlDeptButton.Controls.Add(this.button1);
-            this.pnlDeptButton.Location = new System.Drawing.Point(12, 80);
-            this.pnlDeptButton.Name = "pnlDeptButton";
-            this.pnlDeptButton.Size = new System.Drawing.Size(225, 379);
-            this.pnlDeptButton.TabIndex = 32;
-            // 
-            // btnCall
-            // 
-            this.btnCall.Location = new System.Drawing.Point(37, 308);
-            this.btnCall.Name = "btnCall";
-            this.btnCall.Size = new System.Drawing.Size(159, 40);
-            this.btnCall.TabIndex = 12;
-            this.btnCall.Text = "Tranfer Call";
-            this.btnCall.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(65, 47);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 22);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Options:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(50, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 22);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Peter Jones";
-            // 
-            // btnJob
-            // 
-            this.btnJob.Location = new System.Drawing.Point(37, 238);
-            this.btnJob.Name = "btnJob";
-            this.btnJob.Size = new System.Drawing.Size(159, 40);
-            this.btnJob.TabIndex = 9;
-            this.btnJob.Text = "Assign Job";
-            this.btnJob.UseVisualStyleBackColor = true;
-            // 
-            // btnViewServices
-            // 
-            this.btnViewServices.Location = new System.Drawing.Point(37, 89);
-            this.btnViewServices.Name = "btnViewServices";
-            this.btnViewServices.Size = new System.Drawing.Size(159, 40);
-            this.btnViewServices.TabIndex = 8;
-            this.btnViewServices.Text = "View Services";
-            this.btnViewServices.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(37, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Log Issue";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // pnlClient
             // 
@@ -410,7 +333,6 @@ namespace SEN371_Project
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1028, 670);
             this.Controls.Add(this.pnlClient);
-            this.Controls.Add(this.pnlDeptButton);
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.btnLogOut);
@@ -425,8 +347,6 @@ namespace SEN371_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlDeptButton.ResumeLayout(false);
-            this.pnlDeptButton.PerformLayout();
             this.pnlClient.ResumeLayout(false);
             this.pnlClient.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -444,13 +364,6 @@ namespace SEN371_Project
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Button btnWork;
-        private System.Windows.Forms.Panel pnlDeptButton;
-        private System.Windows.Forms.Button btnCall;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnJob;
-        private System.Windows.Forms.Button btnViewServices;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlClient;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel9;

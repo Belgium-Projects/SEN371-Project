@@ -26,7 +26,7 @@ namespace SEN371_Project
         private void btnWork_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmJobs a = new frmJobs();
+            frmCallCentre a = new frmCallCentre();
             a.Show();
 
         }
@@ -65,7 +65,7 @@ namespace SEN371_Project
             string address = txtAddress.Text.Trim();
             string zipCode = txtZipCode.Text.Trim();
             string bussinessName = txtBusinessName.Text.Trim();
-            if (string.IsNullOrEmpty(username) && isValidFirstName(username))
+            if (string.IsNullOrEmpty(username) || isValidFirstName(username))
             {
                 MessageBox.Show("Username is required.", "Validation Error");
                 return;

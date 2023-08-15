@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SEN371_Project
 {
-    public partial class frmPackages : Form
+    public partial class frmClient : Form
     {
-        public frmPackages()
+        public frmClient()
         {
             InitializeComponent();
+        }
+
+        private void frmClient_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

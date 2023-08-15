@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SEN371_Project
 {
-    public partial class TechniciansForm : Form
+    public partial class ClientMaintenanceForm : Form
     {
-        public TechniciansForm()
+        public ClientMaintenanceForm()
         {
             InitializeComponent();
         }
