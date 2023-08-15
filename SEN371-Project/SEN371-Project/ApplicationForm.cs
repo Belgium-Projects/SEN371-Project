@@ -87,12 +87,16 @@ namespace SEN371_Project
         }
         private bool isValidPhoneNumber(string phoneNumber)
         {
-            string phoneNumberRegex = @"^(\+27 | 0)[6 - 8][0 - 9]{ 8}$";
+            string phoneNumberRegex = @"^(\+27|0)[6-8][0-9]{8}$";
             return Regex.IsMatch(phoneNumber, phoneNumberRegex);
         }
-        private bool isValidDateOfBirth()
+        private bool isValidDateOfBirth(DateTime dobInput)
         {
-            return true;
+            DateTime currentDate = DateTime.Now;
+            DateTime minimumDate = currentDate.AddYears(-100);
+            DateTime maximumDate = currentDate.AddYears(-5);
+
+            return dobInput >= minimumDate && dobInput <= maximumDate;
         }
 
         private bool isValidZipCode()
@@ -119,7 +123,7 @@ namespace SEN371_Project
             string address = txtAddress.Text.Trim();
             string zipCode = txtZipCode.Text.Trim();
             string bussinessName = txtBusinessName.Text.Trim();
-
+            DateTime dateOfBirth = dateDateOfBirth.Value;
             if (string.IsNullOrEmpty(firstName))
             {
                 MessageBox.Show("Username is required.", "Validation Error");
@@ -136,7 +140,7 @@ namespace SEN371_Project
             }
             if (!isValidPhoneNumber(phoneNumber))
             {
-                MessageBox.Show("Invalid email address.", "Validation Error");
+                MessageBox.Show("Invalid phone number.", "Validation Error");
                 return;
             }
             if (!IsValidEmail(email))
@@ -144,25 +148,27 @@ namespace SEN371_Project
                 MessageBox.Show("Invalid email address.", "Validation Error");
                 return;
             }
-            if (!isValidDateOfBirth())
+            if (!isValidDateOfBirth(dateOfBirth))
             {
-                MessageBox.Show("Invalid email address.", "Validation Error");
+                MessageBox.Show("Invalid Date Of Birth.", "Validation Error");
                 return;
             }
 
             if (!isValidAddress())
             {
-                MessageBox.Show("Invalid email address.", "Validation Error");
+                MessageBox.Show("Invalid  address.", "Validation Error");
                 return;
             }
 
             if (!isValidZipCode())
             {
+                MessageBox.Show("Invalid  zip code.", "Validation Error");
                 return;
             }
 
             if (!isValidBusinessName())
             {
+                MessageBox.Show("Invalid  business name.", "Validation Error");
                 return;
             }
         }
