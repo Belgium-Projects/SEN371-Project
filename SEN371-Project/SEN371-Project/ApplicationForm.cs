@@ -19,29 +19,50 @@ namespace SEN371_Project
         private void frmManagement_Load(object sender, EventArgs e)
         {
             //add management function here
-         
+            pnlDept.Hide();
+            pnlDeptButton.Hide();
+
+            pnlWork.Hide();
+            pnlWorkButtons.Hide();
 
         }
         private void btnWork_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmJobs a = new frmJobs();
-            a.Show();
+
+            pnlWork.Show();
+            pnlWorkButtons.Show();
+
+            pnlClient.Hide();
+            pnlClientButtons.Hide();
+            
+            pnlDept.Hide();
+            pnlDeptButton.Hide();
 
         }
 
         private void btnDepartment_Click(object sender, EventArgs e)
         {
-           
+            pnlDept.Show();
+            pnlDeptButton.Show();
+
+            pnlClient.Hide();
+            pnlClientButtons.Hide();
+
+            pnlWork.Hide();
+            pnlWorkButtons.Hide();
 
         }
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmClient a = new frmClient();
-            a.Show();
+            pnlClientButtons.Show();
+            pnlWork.Show();
 
+            pnlDept.Hide();
+            pnlDeptButton.Hide();
+
+            pnlWork.Hide();
+            pnlWorkButtons.Hide();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -52,15 +73,6 @@ namespace SEN371_Project
             a.Show();
            
             
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-             }
-
-        private void pnlWork_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
