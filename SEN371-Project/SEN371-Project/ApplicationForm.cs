@@ -99,9 +99,10 @@ namespace SEN371_Project
             return dobInput >= minimumDate && dobInput <= maximumDate;
         }
 
-        private bool isValidZipCode()
+        private bool isValidZipCode(string zipCode)
         {
-            return true;
+            string zaZipRegex = @"^\d{4,5}$";
+            return Regex.IsMatch(zipCode, zaZipRegex);
         }
         private bool isValidAddress()
         {
@@ -126,31 +127,58 @@ namespace SEN371_Project
             DateTime dateOfBirth = dateDateOfBirth.Value;
             if (string.IsNullOrEmpty(firstName))
             {
-                MessageBox.Show("Username is required.", "Validation Error");
+                MessageBox.Show("First Name is required.", "Validation Error");
                 return;
             }
             else if (!isValidFirstName(firstName))
             {
-                MessageBox.Show("Username can only contain valid characters", "Validation Error");
+                MessageBox.Show("First Name can only contain valid characters", "Validation Error");
                 return;
             }
-            if(!isValidLastName(lastName))
+            if(string.IsNullOrEmpty(lastName))
             {
-
+                MessageBox.Show("Last Name is required.", "Validation Error");
+                return;
             }
-            if (!isValidPhoneNumber(phoneNumber))
+            else if(!isValidLastName(lastName))
+            {
+                MessageBox.Show("Last Name can only contain valid characters.", "Validation Error");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(phoneNumber))
+            {
+                MessageBox.Show("A phone number is required.", "Validation Error");
+                return;
+            }
+
+            else if (!isValidPhoneNumber(phoneNumber))
             {
                 MessageBox.Show("Invalid phone number.", "Validation Error");
                 return;
             }
-            if (!IsValidEmail(email))
+
+            if (string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("An email is required.", "Validation Error");
+                return;
+            }
+
+            else if (!IsValidEmail(email))
             {
                 MessageBox.Show("Invalid email address.", "Validation Error");
                 return;
             }
+            
             if (!isValidDateOfBirth(dateOfBirth))
             {
                 MessageBox.Show("Invalid Date Of Birth.", "Validation Error");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(address))
+            {
+                MessageBox.Show("Invalid  address.", "Validation Error");
                 return;
             }
 
@@ -160,12 +188,23 @@ namespace SEN371_Project
                 return;
             }
 
-            if (!isValidZipCode())
+            if (string.IsNullOrEmpty(zipCode))
+            {
+                MessageBox.Show("Zip Code is required.", "Validation Error");
+                return;
+            }
+
+            if (!isValidZipCode(zipCode))
             {
                 MessageBox.Show("Invalid  zip code.", "Validation Error");
                 return;
             }
 
+            if (string.IsNullOrEmpty(bussinessName))
+            {
+                MessageBox.Show("A business name is required.", "Validation Error");
+                return;
+            }
             if (!isValidBusinessName())
             {
                 MessageBox.Show("Invalid  business name.", "Validation Error");
