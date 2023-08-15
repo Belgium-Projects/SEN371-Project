@@ -1,4 +1,5 @@
-﻿using SEN371_Project.FunctionalAreas;
+﻿using SEN371_Project.dataHandler;
+using SEN371_Project.FunctionalAreas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,8 @@ namespace SEN371_Project
             manager obj = new manager();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = obj.returnall();
+            employee obj2 = new employee();
+            lblEmpName.Text = obj2.EmpName;
             //MessageBox.Show(obj.returnall()[0]);
         }
 

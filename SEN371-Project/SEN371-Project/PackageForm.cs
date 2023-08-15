@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEN371_Project.dataHandler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace SEN371_Project
         public frmPackages()
         {
             InitializeComponent();
+        }
+
+        private void frmPackages_Load(object sender, EventArgs e)
+        {
+            employee obj = new employee();
+            lblEmpName.Text = obj.EmpName;
         }
     }
 }

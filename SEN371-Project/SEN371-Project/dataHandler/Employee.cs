@@ -14,12 +14,11 @@ namespace SEN371_Project.dataHandler
     {
            
       public static string empName;
-        public string empId;
-        public string empSurname;
-        public string empRole;
-        public string empPhoneNumber;
-        public string empUsername;
-        public string empPassword;
+        public static string empId;
+        public static string empSurname;
+        public static string empRole;
+        public static string empPhoneNumber;
+       
          private string HashedPassword;
 
         //public employee(string empName, string empId, string empSurname, string empRole, string empPhoneNumber,string empUsername, string empPassword)
@@ -65,7 +64,9 @@ namespace SEN371_Project.dataHandler
                         //MessageBox.Show(Reader[0].ToString() + "=" + username + ',' + Reader[1].ToString() + "=" + hashedPass);
                         //MessageBox.Show("YEah");
                         empName = Reader[3].ToString();
-
+                        empId = Reader[0].ToString();
+                        empSurname = Reader[2].ToString();
+                        empPhoneNumber = Reader[4].ToString();
                          flag = true;
                     }
                     else
