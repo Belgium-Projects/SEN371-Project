@@ -15,6 +15,31 @@ namespace SEN371_Project
         public void serviceRequest() { 
             throw new NotImplementedException(); 
         }
+        //public List<Jobs> returnJobs()
+        //{
+        //    List<Jobs> returnJobs = new List<Jobs>();
+        //    try
+        //    {
+        //        Connection();
+        //        string jobs = $"Select * from Jobs";
+        //        Command = new System.Data.SqlClient.SqlCommand(jobs,Connection1);
+        //        Reader = Command.ExecuteReader();
+
+        //        while (Reader.Read())
+        //        {
+        //            //returnJobs.Add(new Jobs(Reader[0]))
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //    finally
+        //    {
+        //        Disconnect();
+        //    }
+        //}
         //Assign request 
         public void assignRequest()
         {

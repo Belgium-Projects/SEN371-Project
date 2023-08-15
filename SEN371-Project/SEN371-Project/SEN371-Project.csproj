@@ -68,6 +68,7 @@
     <Compile Include="connection\VoIP.cs" />
     <Compile Include="dataHandler\DataLog.cs" />
     <Compile Include="dataHandler\Employee.cs" />
+    <Compile Include="dataHandler\Jobs.cs" />
     <Compile Include="dataHandler\Services.cs" />
     <Compile Include="ClosingForm.cs">
       <SubType>Form</SubType>

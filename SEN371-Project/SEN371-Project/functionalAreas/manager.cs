@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SEN371_Project.FunctionalAreas
 {
@@ -22,6 +23,33 @@ namespace SEN371_Project.FunctionalAreas
             throw new NotImplementedException();
         }
         //Return tickets from client 
+        public List<Jobs> returnall()
+        {
+           
+            List<Jobs> allJobs = new List<Jobs>();
+            try
+            {
+                Connection();
+                string job = "select * from jobs";
+                Command = new System.Data.SqlClient.SqlCommand(job,Connection1);
+                Reader = Command.ExecuteReader();
+                while (Reader.Read()) { 
+                allJobs.Add(new Jobs(Reader[0].ToString(), Reader[1].ToString(), Reader[2].ToString(), Reader[7].ToString(), Reader[3].ToString(), Reader[4].ToString(), Reader[5].ToString(), Reader[6].ToString(), Reader[8].ToString()));
+                  
+                }
+                return allJobs;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+            return allJobs;
+        }
         public override List<client> selectFromDB(int clientID)
         {
             throw new NotImplementedException();

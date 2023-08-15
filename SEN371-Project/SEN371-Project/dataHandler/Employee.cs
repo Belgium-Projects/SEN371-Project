@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SEN371_Project.dataHandler
 {
@@ -20,37 +21,70 @@ namespace SEN371_Project.dataHandler
         string empPassword;
         private string HashedPassword;
 
-        public employee(string empName, string empId, string empSurname, string empRole, string empPhoneNumber,string empUsername, string empPassword)
-        {
-            this.empName = empName;
-            this.empId = empId;
-            this.empSurname = empSurname;
-            this.empRole = empRole;
-            this.empPhoneNumber = empPhoneNumber;
-            this.empUsername = empUsername;
-            this.empPassword = empPassword;
+        //public employee(string empName, string empId, string empSurname, string empRole, string empPhoneNumber,string empUsername, string empPassword)
+        //{
+        //    this.empName = empName;
+        //    this.empId = empId;
+        //    this.empSurname = empSurname;
+        //    this.empRole = empRole;
+        //    this.empPhoneNumber = empPhoneNumber;
+        //    this.empUsername = empUsername;
+        //    this.empPassword = empPassword;
 
-        }
-        private static string HashPassword(string password, string salt)
+        //}
+        public  string HashPassword(string password)
         {
             using (var sha256 = SHA256.Create())
             {
-                byte[] saltedPassword = Encoding.UTF8.GetBytes(password + salt);
+                byte[] saltedPassword = Encoding.UTF8.GetBytes(password + "123");
                 byte[] hashBytes = sha256.ComputeHash(saltedPassword);
                 return Convert.ToBase64String(hashBytes);
             }
+            
         }
 
         public bool ValidateCredentials(string username, string password)
         {
-            if (username == empUsername && HashPassword(password, Salt) == HashedPassword)
+            bool flag = false;
+            try
             {
-                return true;
+                Connection();
+                string hashedPass = HashPassword(password);
+               
+                string getAccountInfo = $"Select Username ,Password from Employee where Username = '{username}' and Password = '{hashedPass}';";
+               
+           
+                Command = new System.Data.SqlClient.SqlCommand(getAccountInfo, Connection1);
+                Reader = Command.ExecuteReader();
+                while(Reader.Read())
+                {
+                   
+                    if (Reader[0].ToString() == username && Reader[1].ToString() == hashedPass)
+                    {
+                        MessageBox.Show(Reader[0].ToString() + "=" + username + ',' + Reader[1].ToString() + "=" + hashedPass);
+                        //MessageBox.Show("YEah");
+
+                        flag = true;
+                    }
+                    else
+                    {
+
+                        MessageBox.Show(Reader[0].ToString()+"="+ username + ',' + Reader[1].ToString()+"="+hashedPass);
+                        flag = false;
+                    }
+                }
+                
             }
-            else
+            catch (Exception ex)
             {
-                return false;
+                MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                Disconnect();
+
+            }
+            return flag;
         }
 
         // Helper method to hash the password with salt

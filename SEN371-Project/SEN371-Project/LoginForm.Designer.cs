@@ -31,13 +31,13 @@ namespace SEN371_Project
         {
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,15 +62,25 @@ namespace SEN371_Project
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Location = new System.Drawing.Point(309, 115);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(295, 290);
+            this.panel1.Size = new System.Drawing.Size(295, 302);
             this.panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(96, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 22);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Please Login!";
             // 
             // lblPass
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Location = new System.Drawing.Point(118, 153);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(59, 15);
+            this.lblPass.Size = new System.Drawing.Size(81, 19);
             this.lblPass.TabIndex = 4;
             this.lblPass.Text = "Password";
             // 
@@ -87,7 +97,7 @@ namespace SEN371_Project
             this.lblUser.AutoSize = true;
             this.lblUser.Location = new System.Drawing.Point(115, 65);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(62, 15);
+            this.lblUser.Size = new System.Drawing.Size(83, 19);
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Username";
             // 
@@ -120,19 +130,9 @@ namespace SEN371_Project
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(96, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 19);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Please Login!";
-            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(893, 477);
