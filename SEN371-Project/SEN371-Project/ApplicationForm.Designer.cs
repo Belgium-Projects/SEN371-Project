@@ -61,7 +61,7 @@ namespace SEN371_Project
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -170,7 +170,7 @@ namespace SEN371_Project
             this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(65, 47);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 22);
+            this.label13.Size = new System.Drawing.Size(101, 26);
             this.label13.TabIndex = 11;
             this.label13.Text = "Options:";
             // 
@@ -180,7 +180,7 @@ namespace SEN371_Project
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(50, 22);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 22);
+            this.label9.Size = new System.Drawing.Size(131, 26);
             this.label9.TabIndex = 10;
             this.label9.Text = "Peter Jones";
             // 
@@ -226,7 +226,7 @@ namespace SEN371_Project
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(228, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(217, 19);
+            this.label4.Size = new System.Drawing.Size(272, 23);
             this.label4.TabIndex = 9;
             this.label4.Text = "Please enter client Information";
             // 
@@ -247,7 +247,7 @@ namespace SEN371_Project
             this.panel9.Controls.Add(this.txtAddress);
             this.panel9.Controls.Add(this.label15);
             this.panel9.Controls.Add(this.txtFirstName);
-            this.panel9.Controls.Add(this.button6);
+            this.panel9.Controls.Add(this.btnSave);
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.button7);
             this.panel9.Location = new System.Drawing.Point(51, 61);
@@ -259,7 +259,7 @@ namespace SEN371_Project
             // 
             this.dateDateOfBirth.Location = new System.Drawing.Point(337, 38);
             this.dateDateOfBirth.Name = "dateDateOfBirth";
-            this.dateDateOfBirth.Size = new System.Drawing.Size(197, 22);
+            this.dateDateOfBirth.Size = new System.Drawing.Size(197, 26);
             this.dateDateOfBirth.TabIndex = 21;
             // 
             // label7
@@ -267,7 +267,7 @@ namespace SEN371_Project
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(106, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 15);
+            this.label7.Size = new System.Drawing.Size(119, 19);
             this.label7.TabIndex = 20;
             this.label7.Text = "Phone Number";
             // 
@@ -275,7 +275,7 @@ namespace SEN371_Project
             // 
             this.txtEmail.Location = new System.Drawing.Point(44, 245);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(191, 22);
+            this.txtEmail.Size = new System.Drawing.Size(191, 26);
             this.txtEmail.TabIndex = 19;
             // 
             // label8
@@ -283,7 +283,7 @@ namespace SEN371_Project
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(404, 139);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 15);
+            this.label8.Size = new System.Drawing.Size(76, 19);
             this.label8.TabIndex = 18;
             this.label8.Text = "Zip Code";
             // 
@@ -291,7 +291,7 @@ namespace SEN371_Project
             // 
             this.txtBusinessName.Location = new System.Drawing.Point(337, 245);
             this.txtBusinessName.Name = "txtBusinessName";
-            this.txtBusinessName.Size = new System.Drawing.Size(197, 22);
+            this.txtBusinessName.Size = new System.Drawing.Size(197, 26);
             this.txtBusinessName.TabIndex = 17;
             // 
             // label5
@@ -299,7 +299,7 @@ namespace SEN371_Project
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(106, 218);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.Size = new System.Drawing.Size(54, 19);
             this.label5.TabIndex = 16;
             this.label5.Text = "Email";
             // 
@@ -307,7 +307,7 @@ namespace SEN371_Project
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(44, 170);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(191, 22);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(191, 26);
             this.txtPhoneNumber.TabIndex = 15;
             // 
             // label6
@@ -315,7 +315,7 @@ namespace SEN371_Project
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(404, 86);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(68, 19);
             this.label6.TabIndex = 14;
             this.label6.Text = "Address";
             // 
@@ -323,7 +323,7 @@ namespace SEN371_Project
             // 
             this.txtZipCode.Location = new System.Drawing.Point(337, 170);
             this.txtZipCode.Name = "txtZipCode";
-            this.txtZipCode.Size = new System.Drawing.Size(197, 22);
+            this.txtZipCode.Size = new System.Drawing.Size(197, 26);
             this.txtZipCode.TabIndex = 13;
             // 
             // label11
@@ -331,7 +331,7 @@ namespace SEN371_Project
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(106, 86);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 15);
+            this.label11.Size = new System.Drawing.Size(87, 19);
             this.label11.TabIndex = 12;
             this.label11.Text = "Last Name";
             // 
@@ -339,7 +339,7 @@ namespace SEN371_Project
             // 
             this.txtLastName.Location = new System.Drawing.Point(44, 105);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(191, 22);
+            this.txtLastName.Size = new System.Drawing.Size(191, 26);
             this.txtLastName.TabIndex = 11;
             // 
             // label14
@@ -347,7 +347,7 @@ namespace SEN371_Project
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(404, 218);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 15);
+            this.label14.Size = new System.Drawing.Size(120, 19);
             this.label14.TabIndex = 10;
             this.label14.Text = "Business Name";
             // 
@@ -364,7 +364,7 @@ namespace SEN371_Project
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(106, 20);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 15);
+            this.label15.Size = new System.Drawing.Size(93, 19);
             this.label15.TabIndex = 8;
             this.label15.Text = "First Name";
             // 
@@ -372,25 +372,26 @@ namespace SEN371_Project
             // 
             this.txtFirstName.Location = new System.Drawing.Point(44, 38);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(191, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(191, 26);
             this.txtFirstName.TabIndex = 7;
             // 
-            // button6
+            // btnSave
             // 
-            this.button6.BackColor = System.Drawing.Color.Lime;
-            this.button6.Location = new System.Drawing.Point(213, 273);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(136, 35);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Save";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Lime;
+            this.btnSave.Location = new System.Drawing.Point(213, 273);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(136, 35);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(391, 20);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 15);
+            this.label16.Size = new System.Drawing.Size(106, 19);
             this.label16.TabIndex = 5;
             this.label16.Text = "Date of Birth";
             // 
@@ -405,7 +406,7 @@ namespace SEN371_Project
             // 
             // frmApplication
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1028, 670);
@@ -469,7 +470,7 @@ namespace SEN371_Project
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button7;
     }
