@@ -35,6 +35,12 @@ namespace SEN371_Project
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pnlDept = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlWorkButtons = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTransferCall = new System.Windows.Forms.Button();
@@ -53,12 +59,6 @@ namespace SEN371_Project
             this.btnJob = new System.Windows.Forms.Button();
             this.btnViewServices = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pnlDept = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.pnlClientButtons = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -87,14 +87,14 @@ namespace SEN371_Project
             this.button7 = new System.Windows.Forms.Button();
             this.pnlWork.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnlDept.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlWorkButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDeptButton.SuspendLayout();
-            this.pnlDept.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlClientButtons.SuspendLayout();
             this.pnlClient.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -155,6 +155,63 @@ namespace SEN371_Project
             this.pictureBox4.Size = new System.Drawing.Size(143, 58);
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
+            // 
+            // pnlDept
+            // 
+            this.pnlDept.Controls.Add(this.label12);
+            this.pnlDept.Controls.Add(this.label10);
+            this.pnlDept.Controls.Add(this.panel6);
+            this.pnlDept.Location = new System.Drawing.Point(18, 0);
+            this.pnlDept.Name = "pnlDept";
+            this.pnlDept.Size = new System.Drawing.Size(744, 507);
+            this.pnlDept.TabIndex = 31;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(227, 69);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(228, 15);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Here you can update your account details";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(167, 25);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(367, 27);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Welcome to your Client portal page!";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Controls.Add(this.button2);
+            this.panel6.Location = new System.Drawing.Point(52, 100);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(674, 381);
+            this.panel6.TabIndex = 6;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(670, 377);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(393, 399);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 27);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // pnlWorkButtons
             // 
@@ -332,63 +389,6 @@ namespace SEN371_Project
             this.button1.Text = "Log Issue";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // pnlDept
-            // 
-            this.pnlDept.Controls.Add(this.label12);
-            this.pnlDept.Controls.Add(this.label10);
-            this.pnlDept.Controls.Add(this.panel6);
-            this.pnlDept.Location = new System.Drawing.Point(18, 0);
-            this.pnlDept.Name = "pnlDept";
-            this.pnlDept.Size = new System.Drawing.Size(744, 507);
-            this.pnlDept.TabIndex = 31;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(227, 69);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(228, 15);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Here you can update your account details";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(167, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(367, 27);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Welcome to your Client portal page!";
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.dataGridView1);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Location = new System.Drawing.Point(52, 100);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(674, 381);
-            this.panel6.TabIndex = 6;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(670, 377);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(393, 399);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 27);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // pnlClientButtons
             // 
             this.pnlClientButtons.Controls.Add(this.label3);
@@ -405,9 +405,9 @@ namespace SEN371_Project
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(72, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 15);
+            this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 10;
-            this.label3.Text = "label3";
+            this.label3.Text = "Clients";
             // 
             // button5
             // 
@@ -448,11 +448,12 @@ namespace SEN371_Project
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(293, 13);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(228, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 15);
+            this.label4.Size = new System.Drawing.Size(217, 19);
             this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.label4.Text = "Please enter client Information";
             // 
             // panel9
             // 
@@ -652,6 +653,10 @@ namespace SEN371_Project
             this.pnlWork.ResumeLayout(false);
             this.pnlWork.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnlDept.ResumeLayout(false);
+            this.pnlDept.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlWorkButtons.ResumeLayout(false);
             this.pnlWorkButtons.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -659,10 +664,6 @@ namespace SEN371_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDeptButton.ResumeLayout(false);
             this.pnlDeptButton.PerformLayout();
-            this.pnlDept.ResumeLayout(false);
-            this.pnlDept.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlClientButtons.ResumeLayout(false);
             this.pnlClientButtons.PerformLayout();
             this.pnlClient.ResumeLayout(false);
