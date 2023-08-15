@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace SEN371_Project
 {
-    public partial class managementDeptForm : Form
+    public partial class frmManagementDept : Form
     {
-        public managementDeptForm()
+        public frmManagementDept()
         {
             InitializeComponent();
+        }
+
+        private void frmManagementDept_Load(object sender, EventArgs e)
+        {
+            Rectangle resolutionRect = System.Windows.Forms.Screen.FromControl(this).Bounds;
+            if (this.Width >= resolutionRect.Width || this.Height >= resolutionRect.Height)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
     }
 }
