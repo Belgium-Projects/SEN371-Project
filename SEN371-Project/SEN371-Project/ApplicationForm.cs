@@ -130,13 +130,41 @@ namespace SEN371_Project
                 MessageBox.Show("Username can only contain valid characters", "Validation Error");
                 return;
             }
+            if(!isValidLastName(lastName))
+            {
 
+            }
+            if (!isValidPhoneNumber(phoneNumber))
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
             if (!IsValidEmail(email))
             {
                 MessageBox.Show("Invalid email address.", "Validation Error");
                 return;
             }
+            if (!isValidDateOfBirth())
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
 
+            if (!isValidAddress())
+            {
+                MessageBox.Show("Invalid email address.", "Validation Error");
+                return;
+            }
+
+            if (!isValidZipCode())
+            {
+                return;
+            }
+
+            if (!isValidBusinessName())
+            {
+                return;
+            }
         }
     }
 }
