@@ -13,33 +13,41 @@
         <ul class="top-nav-left">
             <li><img src="Website Images/Business Images/PSS Logo.png" id="PSSLogo" /></li>
             <li id="Nav1" class="current"><a href="../index.html">Home</a></li>
-            <li id="Nav2" class="Link"><a href="Website Pages/register.html">Register</a></li>
-            <li id="Nav3" class="Link"><a href="Website Pages/login.html">Login</a></li>
+            <li id="Nav2"><a href="Website Pages/register.html">Register</a></li>
+            <li id="Nav3"><a href="Website Pages/login.html">Login</a></li>
         </ul>
     </nav>
+
     <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img class="SlideImg" src="Website Images/Content Images/Slide Mic.png" style="width:100%">
+        <div id="leftArrow">
+            <img class="prev" onclick="plusSlides(-1)" src="Website Images/Content Images/Sliders Left.png">
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img class="SlideImg" src="Website Images/Content Images/Slide Speakers.png" style="width:100%">
+            <!--<div class="numbertext">1 / 3</div>-->
+            <img class="SlideImg" src="Website Images/Content Images/Slide Mic.png">
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img class="SlideImg" src="Website Images/Content Images/Slide Soundboard.png" style="width:100%">
+            <!--<div class="numbertext">2 / 3</div>-->
+            <img class="SlideImg" src="Website Images/Content Images/Slide Speakers.png">
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+        <div class="mySlides fade">
+            <!--<div class="numbertext">3 / 3</div>-->
+            <img class="SlideImg" src="Website Images/Content Images/Slide Soundboard.png">
+        </div>
 
+        <!--<a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>-->
         <div class="dots" style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div id="rightArrow">
+            <img class="next" onclick="plusSlides(1)" src="Website Images/Content Images/Sliders Right.png">
         </div>
     </div>
 

@@ -3,20 +3,35 @@
 <head>
   <title>Log In</title>
   <link rel="stylesheet" href="../CSS Files/login out.css">
-  <link rel="stylesheet" href="../Web Font Kit/stylesheet.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../Web Font Kit/Hermeneus One Font/stylesheet.css" type="text/css" charset="utf-8" />
 </head>
 <body>
-  <div class="container">
-    <form id="login-form">
-      <label for="username">Username:</label>
-      <input type="text" id="username" required>
-      <br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" required>
-      <br>
-      <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account?&ensp;<a href="register.html">Register</a></p>
-  </div>
+    <nav class="top-nav">
+        <ul class="top-nav-left">
+            <li><img src="../Website Images/Business Images/PSS Logo.png" id="PSSLogo" /></li>
+            <li id="Nav1"><a href="../index.html">Home</a></li>
+            <li id="Nav2"><a href="register.html">Register</a></li>
+            <li id="Nav3" class="current"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account?&ensp;<a href="register.html" class="redirect">Register</a></p>
+    </div>
+
+    <footer class="Footer">
+        <ul class="Footer-Content">
+            <li>Copyright © Premier Service Solutions 2023</li>
+        </ul>
+    </footer>
 </body>
 </html>
