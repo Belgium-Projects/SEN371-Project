@@ -344,7 +344,7 @@ namespace SEN371_Project
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(795, 559);
+            this.ClientSize = new System.Drawing.Size(797, 559);
             this.Controls.Add(this.pnlClient);
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnClient);

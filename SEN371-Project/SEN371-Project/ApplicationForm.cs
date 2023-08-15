@@ -27,7 +27,7 @@ namespace SEN371_Project
         }
         private void btnWork_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmCallCentre a = new frmCallCentre();
             a.Show();
 
@@ -41,7 +41,7 @@ namespace SEN371_Project
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmClient a = new frmClient();
             a.Show();
 
