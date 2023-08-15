@@ -23,5 +23,10 @@ namespace SEN371_Project
             employee obj = new employee();
             lblEmpName.Text = obj.EmpName;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
