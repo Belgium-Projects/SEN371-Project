@@ -115,7 +115,7 @@ namespace SEN371_Project
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmPackages a = new frmPackages();
             a.Show();
         }
@@ -123,7 +123,7 @@ namespace SEN371_Project
         private void button8_Click(object sender, EventArgs e)
         {
 
-            this.Close();
+            this.Hide();
             frmClient a = new frmClient();
             a.Show();
         }
@@ -131,7 +131,7 @@ namespace SEN371_Project
         private void button7_Click(object sender, EventArgs e)
         {
 
-            this.Close();
+            this.Hide();
             frmServices a = new frmServices();
             a.Show();
         }

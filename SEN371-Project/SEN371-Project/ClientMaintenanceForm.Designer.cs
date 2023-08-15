@@ -72,6 +72,7 @@ namespace SEN371_Project
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(37, 332);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 43);
@@ -101,6 +102,7 @@ namespace SEN371_Project
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(37, 256);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(159, 43);
@@ -110,6 +112,7 @@ namespace SEN371_Project
             // 
             // btnViewServices
             // 
+            this.btnViewServices.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewServices.Location = new System.Drawing.Point(37, 96);
             this.btnViewServices.Name = "btnViewServices";
             this.btnViewServices.Size = new System.Drawing.Size(159, 43);
@@ -119,6 +122,7 @@ namespace SEN371_Project
             // 
             // button5
             // 
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(37, 179);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(159, 43);
@@ -128,15 +132,17 @@ namespace SEN371_Project
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(375, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 52);
             this.button1.TabIndex = 65;
-            this.button1.Text = "Work";
+            this.button1.Text = "Jobs";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(265, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 52);
@@ -147,6 +153,7 @@ namespace SEN371_Project
             // 
             // btnLogOut
             // 
+            this.btnLogOut.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Location = new System.Drawing.Point(836, 2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(114, 52);
@@ -157,11 +164,12 @@ namespace SEN371_Project
             // 
             // button6
             // 
+            this.button6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(485, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(104, 52);
             this.button6.TabIndex = 62;
-            this.button6.Text = "Department";
+            this.button6.Text = "Admin";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
