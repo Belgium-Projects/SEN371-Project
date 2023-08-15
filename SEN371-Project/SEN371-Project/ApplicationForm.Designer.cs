@@ -37,6 +37,7 @@ namespace SEN371_Project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlClient = new System.Windows.Forms.Panel();
+            this.lblEmpName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.dateDateOfBirth = new System.Windows.Forms.DateTimePicker();
@@ -57,7 +58,6 @@ namespace SEN371_Project
             this.btnSave = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.lblEmpName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +71,7 @@ namespace SEN371_Project
             this.btnDepartment.Name = "btnDepartment";
             this.btnDepartment.Size = new System.Drawing.Size(104, 48);
             this.btnDepartment.TabIndex = 5;
-            this.btnDepartment.Text = "Department";
+            this.btnDepartment.Text = "Packages";
             this.btnDepartment.UseVisualStyleBackColor = true;
             this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
@@ -91,7 +91,7 @@ namespace SEN371_Project
             this.btnClient.Name = "btnClient";
             this.btnClient.Size = new System.Drawing.Size(104, 48);
             this.btnClient.TabIndex = 9;
-            this.btnClient.Text = "Client";
+            this.btnClient.Text = "Clients";
             this.btnClient.UseVisualStyleBackColor = true;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
@@ -101,7 +101,7 @@ namespace SEN371_Project
             this.btnWork.Name = "btnWork";
             this.btnWork.Size = new System.Drawing.Size(104, 48);
             this.btnWork.TabIndex = 10;
-            this.btnWork.Text = "Work";
+            this.btnWork.Text = "Services";
             this.btnWork.UseVisualStyleBackColor = true;
             this.btnWork.Click += new System.EventHandler(this.btnWork_Click);
             // 
@@ -141,10 +141,19 @@ namespace SEN371_Project
             this.pnlClient.Controls.Add(this.label4);
             this.pnlClient.Controls.Add(this.panel9);
             this.pnlClient.Controls.Add(this.pictureBox3);
-            this.pnlClient.Location = new System.Drawing.Point(123, 66);
+            this.pnlClient.Location = new System.Drawing.Point(71, 79);
             this.pnlClient.Name = "pnlClient";
-            this.pnlClient.Size = new System.Drawing.Size(668, 459);
+            this.pnlClient.Size = new System.Drawing.Size(668, 468);
             this.pnlClient.TabIndex = 33;
+            // 
+            // lblEmpName
+            // 
+            this.lblEmpName.AutoSize = true;
+            this.lblEmpName.Location = new System.Drawing.Point(286, 3);
+            this.lblEmpName.Name = "lblEmpName";
+            this.lblEmpName.Size = new System.Drawing.Size(40, 15);
+            this.lblEmpName.TabIndex = 35;
+            this.lblEmpName.Text = "label1";
             // 
             // label4
             // 
@@ -306,7 +315,7 @@ namespace SEN371_Project
             this.btnSave.BackColor = System.Drawing.Color.Lime;
             this.btnSave.Location = new System.Drawing.Point(213, 273);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(136, 35);
+            this.btnSave.Size = new System.Drawing.Size(136, 42);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -330,21 +339,12 @@ namespace SEN371_Project
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // lblEmpName
-            // 
-            this.lblEmpName.AutoSize = true;
-            this.lblEmpName.Location = new System.Drawing.Point(286, 3);
-            this.lblEmpName.Name = "lblEmpName";
-            this.lblEmpName.Size = new System.Drawing.Size(40, 15);
-            this.lblEmpName.TabIndex = 35;
-            this.lblEmpName.Text = "label1";
-            // 
             // frmApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(795, 670);
+            this.ClientSize = new System.Drawing.Size(795, 559);
             this.Controls.Add(this.pnlClient);
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnClient);

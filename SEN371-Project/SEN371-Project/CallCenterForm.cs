@@ -36,17 +36,18 @@ namespace SEN371_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            frmClose a = new frmClose();
+            a.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -72,6 +73,29 @@ namespace SEN371_Project
         private void pnlDeptButton_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmPackages a = new frmPackages();
+            a.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            frmClient a = new frmClient();
+            a.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            frmServices a = new frmServices();
+            a.Show();
         }
     }
 }

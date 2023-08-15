@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SEN371_Project
 {
-    public partial class frmClient : Form
+    public partial class frmServices : Form
     {
-        public frmClient()
+        public frmServices()
         {
             InitializeComponent();
         }
@@ -35,6 +35,20 @@ namespace SEN371_Project
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmClose a = new frmClose();
+            a.Show();
+        }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmClient a = new frmClient();
+            a.Show();
         }
     }
 }

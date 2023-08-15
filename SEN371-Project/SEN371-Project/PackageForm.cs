@@ -23,5 +23,19 @@ namespace SEN371_Project
             employee obj = new employee();
             lblEmpName.Text = obj.EmpName;
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmClose a = new frmClose();
+            a.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmClient a = new frmClient();
+            a.Show();
+        }
     }
 }

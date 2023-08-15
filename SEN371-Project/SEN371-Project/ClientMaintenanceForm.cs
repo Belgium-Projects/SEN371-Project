@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SEN371_Project
 {
-    public partial class ClientMaintenanceForm : Form
+    public partial class frmClient : Form
     {
-        public ClientMaintenanceForm()
+        public frmClient()
         {
             InitializeComponent();
         }
@@ -21,12 +21,21 @@ namespace SEN371_Project
         private void ClientMaintenanceForm_Load(object sender, EventArgs e)
         {
             employee obj = new employee();
-            lblEmpName.Text = obj.EmpName;
+            lblEmpName.Text ="Welcome " +obj.EmpName;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Close();
+            frmCallCentre a = new frmCallCentre();
+            a.Show();
+        }
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmClose a = new frmClose();
+            a.Show();
         }
     }
 }
