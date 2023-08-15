@@ -329,3 +329,8 @@ insert into Jobs(CustomerID,EmployeeID,DateStarted,Notes,Priority,ServiceID,stat
 Values(5,7,'2023/08/11','Case Fluid','High',4,'Active');
 insert into Jobs(CustomerID,EmployeeID,DateStarted,Notes,Priority,ServiceID,status)
 Values(6,7,'2023/08/12','Standard oil change','Medium',5,'Active');
+use PremierServiceSolutions;
+go
+Insert into Employee(JobTitle,Name,Surname,Department,Salary,DateHired,DOB,Email,MangerID,Availability,Username,Password,PhoneNumber)
+Values('COO','jeff ','Jeff','Admin' ,50000,'2010/01/20','08/31/1976','8/31/1976',0,'no','Admin','lsrjXOipsCRBeL8o5JZsLOG4OFcjqWprg4hYzdbKCh4=','+27824900898');
+
