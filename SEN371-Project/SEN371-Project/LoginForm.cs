@@ -46,19 +46,9 @@ namespace SEN371_Project
             }
             return Convert.ToBase64String(saltBytes);
         }
- 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            txtPassword.PasswordChar = '*';
             clientMange obj = new clientMange();
             List<string> check = new List<string>();
             check.Add("CEO,Susan,Susanson,+278150523");
