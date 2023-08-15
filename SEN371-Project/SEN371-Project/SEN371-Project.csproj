@@ -62,6 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForm.Designer.cs">
+      <DependentUpon>adminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="connection\API.cs" />
     <Compile Include="dataHandler\client.cs" />
     <Compile Include="dataHandler\databaseCon.cs" />
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="ClientMaintenanceForm.Designer.cs">
       <DependentUpon>ClientMaintenanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managementDeptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managementDeptForm.Designer.cs">
+      <DependentUpon>managementDeptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ServicesForm.cs">
       <SubType>Form</SubType>
