@@ -137,6 +137,9 @@
     <EmbeddedResource Include="ClosingForm.resx">
       <DependentUpon>ClosingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="managementDeptForm.resx">
+      <DependentUpon>managementDeptForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PackageForm.resx">
       <DependentUpon>PackageForm.cs</DependentUpon>
     </EmbeddedResource>
