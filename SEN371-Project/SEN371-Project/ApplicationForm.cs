@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEN371_Project.dataHandler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,8 @@ namespace SEN371_Project
         private void frmManagement_Load(object sender, EventArgs e)
         {
             //add management function here
-         
+             employee obj = new employee();
+            lblEmpName.Text = obj.EmpName;
 
         }
         private void btnWork_Click(object sender, EventArgs e)

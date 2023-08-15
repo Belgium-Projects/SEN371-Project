@@ -9,17 +9,18 @@ using System.Windows.Forms;
 
 namespace SEN371_Project.dataHandler
 {
+ 
     internal  class employee :dataLog
     {
            
-        string empName;
-        string empId;
-        string empSurname;
-        string empRole;
-        string empPhoneNumber;
-        string empUsername;
-        string empPassword;
-        private string HashedPassword;
+      public static string empName;
+        public string empId;
+        public string empSurname;
+        public string empRole;
+        public string empPhoneNumber;
+        public string empUsername;
+        public string empPassword;
+         private string HashedPassword;
 
         //public employee(string empName, string empId, string empSurname, string empRole, string empPhoneNumber,string empUsername, string empPassword)
         //{
@@ -42,7 +43,7 @@ namespace SEN371_Project.dataHandler
             }
             
         }
-
+       
         public bool ValidateCredentials(string username, string password)
         {
             bool flag = false;
@@ -51,7 +52,7 @@ namespace SEN371_Project.dataHandler
                 Connection();
                 string hashedPass = HashPassword(password);
                
-                string getAccountInfo = $"Select Username ,Password from Employee where Username = '{username}' and Password = '{hashedPass}';";
+                string getAccountInfo = $"Select * from Employee where Username = '{username}' and Password = '{hashedPass}';";
                
            
                 Command = new System.Data.SqlClient.SqlCommand(getAccountInfo, Connection1);
@@ -59,12 +60,13 @@ namespace SEN371_Project.dataHandler
                 while(Reader.Read())
                 {
                    
-                    if (Reader[0].ToString() == username && Reader[1].ToString() == hashedPass)
+                    if (Reader[12].ToString() == username && Reader[13].ToString() == hashedPass)
                     {
-                        MessageBox.Show(Reader[0].ToString() + "=" + username + ',' + Reader[1].ToString() + "=" + hashedPass);
+                        //MessageBox.Show(Reader[0].ToString() + "=" + username + ',' + Reader[1].ToString() + "=" + hashedPass);
                         //MessageBox.Show("YEah");
+                        empName = Reader[3].ToString();
 
-                        flag = true;
+                         flag = true;
                     }
                     else
                     {
