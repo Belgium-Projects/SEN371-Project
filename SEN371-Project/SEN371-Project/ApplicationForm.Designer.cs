@@ -127,7 +127,7 @@ namespace SEN371_Project
             this.pnlWork.Controls.Add(this.pictureBox4);
             this.pnlWork.Location = new System.Drawing.Point(259, 138);
             this.pnlWork.Name = "pnlWork";
-            this.pnlWork.Size = new System.Drawing.Size(676, 53);
+            this.pnlWork.Size = new System.Drawing.Size(676, 73);
             this.pnlWork.TabIndex = 7;
             // 
             // panel3
@@ -164,7 +164,7 @@ namespace SEN371_Project
             this.pnlWorkButtons.Controls.Add(this.btnViewIssue);
             this.pnlWorkButtons.Location = new System.Drawing.Point(12, 81);
             this.pnlWorkButtons.Name = "pnlWorkButtons";
-            this.pnlWorkButtons.Size = new System.Drawing.Size(209, 49);
+            this.pnlWorkButtons.Size = new System.Drawing.Size(230, 267);
             this.pnlWorkButtons.TabIndex = 8;
             // 
             // label1
@@ -270,9 +270,9 @@ namespace SEN371_Project
             this.pnlDeptButton.Controls.Add(this.btnJob);
             this.pnlDeptButton.Controls.Add(this.btnViewServices);
             this.pnlDeptButton.Controls.Add(this.button1);
-            this.pnlDeptButton.Location = new System.Drawing.Point(12, 139);
+            this.pnlDeptButton.Location = new System.Drawing.Point(289, 340);
             this.pnlDeptButton.Name = "pnlDeptButton";
-            this.pnlDeptButton.Size = new System.Drawing.Size(209, 56);
+            this.pnlDeptButton.Size = new System.Drawing.Size(209, 222);
             this.pnlDeptButton.TabIndex = 32;
             // 
             // btnCall
@@ -338,7 +338,7 @@ namespace SEN371_Project
             this.pnlDept.Controls.Add(this.panel6);
             this.pnlDept.Location = new System.Drawing.Point(259, 81);
             this.pnlDept.Name = "pnlDept";
-            this.pnlDept.Size = new System.Drawing.Size(753, 51);
+            this.pnlDept.Size = new System.Drawing.Size(753, 66);
             this.pnlDept.TabIndex = 31;
             // 
             // label12
@@ -394,7 +394,7 @@ namespace SEN371_Project
             this.pnlClientButtons.Controls.Add(this.button5);
             this.pnlClientButtons.Controls.Add(this.button4);
             this.pnlClientButtons.Controls.Add(this.button3);
-            this.pnlClientButtons.Location = new System.Drawing.Point(14, 201);
+            this.pnlClientButtons.Location = new System.Drawing.Point(14, 378);
             this.pnlClientButtons.Name = "pnlClientButtons";
             this.pnlClientButtons.Size = new System.Drawing.Size(207, 279);
             this.pnlClientButtons.TabIndex = 34;
