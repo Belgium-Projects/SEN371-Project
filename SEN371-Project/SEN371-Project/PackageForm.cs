@@ -37,5 +37,15 @@ namespace SEN371_Project
             frmClient a = new frmClient();
             a.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewServices_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

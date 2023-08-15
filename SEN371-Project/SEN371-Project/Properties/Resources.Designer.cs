@@ -133,6 +133,16 @@ namespace SEN371_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download__6_ {
+            get {
+                object obj = ResourceManager.GetObject("download (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Premier_Service_Solutions_540_110_px_Final {
             get {
                 object obj = ResourceManager.GetObject("Premier Service Solutions 540_110 px_Final", resourceCulture);

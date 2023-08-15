@@ -17,6 +17,7 @@ namespace SEN371_Project
         public frmCallCentre()
         {
             InitializeComponent();
+           
         }
         callCentre obj = new callCentre();
         employee obj2 = new employee();
@@ -34,6 +35,7 @@ namespace SEN371_Project
             cbRedirect.Hide();
             lblRedirect.Hide();
             btnredirect.Hide();
+            pngCall.Hide();
         }
         public void comboboxinit()
         {
@@ -44,6 +46,7 @@ namespace SEN371_Project
             CBPriority.Items.Add("High");
             CBPriority.Items.Add("Medium");
             CBPriority.Items.Add("Low");
+           
             try
             {
                 if (txtCustomerID.Text != null)
@@ -52,6 +55,7 @@ namespace SEN371_Project
                     {
                         CBService1.Items.Add(item);
                         lbServices.Items.Add(item);
+                        cbRedirect.Items.Add(item);
                     }
                 }
 
@@ -63,14 +67,6 @@ namespace SEN371_Project
             }
 
         }
-        private void frmJobs_Load(object sender, EventArgs e)
-        {
-            pannelClose();
-           
-            lblEmpName.Text = obj2.EmpName;
-            //MessageBox.Show(obj.returnall()[0]);
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -78,7 +74,7 @@ namespace SEN371_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -168,8 +164,8 @@ namespace SEN371_Project
 
                 }
             }
-               
-            
+
+
 
         }
 
@@ -201,11 +197,15 @@ namespace SEN371_Project
             cbRedirect.Show();
             lblRedirect.Show();
             btnredirect.Show();
+            pngCall.Show();
+
         }
+
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             pannelClose();
+            pngCall.Show();
             lblTitle.Text = "Customer view";
             lbCustomer.Show();
         }
@@ -220,6 +220,46 @@ namespace SEN371_Project
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnredirect_Click(object sender, EventArgs e)
+        {
+            string selectedOption = cbRedirect.SelectedItem.ToString();
+
+            // Change the form based on the selected option
+            switch (selectedOption)
+            {
+                case "Services Department":
+                    // Open Form1
+                    frmServices form1 = new frmServices();
+                    form1.Show();
+                    break;
+
+                case "Packages Department":
+                    // Open Form2
+                    frmPackages form2 = new frmPackages();
+                    form2.Show();
+                    break;
+
+                case "Management Department":
+                    // Open Form3
+                    frmCallCentre form3 = new frmCallCentre();
+                    form3.Show();
+                    break;
+            }
+        }
+
+        private void frmCallCentre_Load(object sender, EventArgs e)
+        {
+            pannelClose();
+            cbRedirect.Items.Add("Services Department");
+            cbRedirect.Items.Add("Packages Department");
+            cbRedirect.Items.Add("Management Department");
+            // Set default selected index
+            cbRedirect.SelectedIndex = -1;
+            lblEmpName.Text = obj2.EmpName;
+            //MessageBox.Show(obj.returnall()[0]);
 
         }
     }

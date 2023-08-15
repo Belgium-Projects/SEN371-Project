@@ -47,6 +47,9 @@ namespace SEN371_Project
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlWork.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -54,10 +57,16 @@ namespace SEN371_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblEmpName);
             this.panel1.Controls.Add(this.button4);
@@ -90,9 +99,9 @@ namespace SEN371_Project
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(37, 256);
+            this.button4.Location = new System.Drawing.Point(37, 265);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 43);
+            this.button4.Size = new System.Drawing.Size(159, 44);
             this.button4.TabIndex = 9;
             this.button4.Text = "Delete Packages";
             this.button4.UseVisualStyleBackColor = true;
@@ -105,6 +114,7 @@ namespace SEN371_Project
             this.btnViewServices.TabIndex = 8;
             this.btnViewServices.Text = "View Packages";
             this.btnViewServices.UseVisualStyleBackColor = true;
+            this.btnViewServices.Click += new System.EventHandler(this.btnViewServices_Click);
             // 
             // button5
             // 
@@ -233,6 +243,40 @@ namespace SEN371_Project
             this.pictureBox2.TabIndex = 58;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.download__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox5.Image = global::SEN371_Project.Properties.Resources.download__3_;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 179);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(60, 43);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 63;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = global::SEN371_Project.Properties.Resources.download__1_1;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 265);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(60, 44);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 64;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmPackages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -261,6 +305,9 @@ namespace SEN371_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,5 +332,8 @@ namespace SEN371_Project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

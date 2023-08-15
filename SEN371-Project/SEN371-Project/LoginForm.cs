@@ -66,7 +66,7 @@ namespace SEN371_Project
 
             if (isValid)
             {
-                //MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 frmApplication a = new frmApplication();
                 a.Show();
