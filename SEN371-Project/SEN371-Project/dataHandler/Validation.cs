@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -143,6 +144,12 @@ namespace SEN371_Project.dataHandler
             string zaZipRegex = @"^\d{4,5}$";
             return Regex.IsMatch(zipCode, zaZipRegex);
         }
+        public bool isNumber(string number)
+        {
+            string numbercheck = @"^[0-9]+$";
+            return Regex.IsMatch(number, numbercheck);
+        }
+
         private bool isValidAddress()
         {
             return true;

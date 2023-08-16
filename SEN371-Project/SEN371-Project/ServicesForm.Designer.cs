@@ -43,6 +43,8 @@ namespace SEN371_Project
             this.cbescalte = new System.Windows.Forms.ComboBox();
             this.cbEmployeeID = new System.Windows.Forms.ComboBox();
             this.lbTrackJob = new System.Windows.Forms.ListBox();
+            this.pnlContent3 = new System.Windows.Forms.Panel();
+            this.dgvAlljobs = new System.Windows.Forms.DataGridView();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -61,10 +63,19 @@ namespace SEN371_Project
             this.pnlBR4 = new System.Windows.Forms.Panel();
             this.pnlBR1 = new System.Windows.Forms.Panel();
             this.pnlBR2 = new System.Windows.Forms.Panel();
-            this.pnlContent3 = new System.Windows.Forms.Panel();
-            this.dgvAlljobs = new System.Windows.Forms.DataGridView();
+            this.lblNote = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblService = new System.Windows.Forms.Label();
+            this.cbService = new System.Windows.Forms.ComboBox();
+            this.lblPriority = new System.Windows.Forms.Label();
+            this.cbpriority = new System.Windows.Forms.ComboBox();
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.lnlCustomerID = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlContent2.SuspendLayout();
             this.pnlBR3.SuspendLayout();
+            this.pnlContent3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).BeginInit();
             this.pnlContent1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,18 +83,16 @@ namespace SEN371_Project
             this.pnlBR4.SuspendLayout();
             this.pnlBR1.SuspendLayout();
             this.pnlBR2.SuspendLayout();
-            this.pnlContent3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContent2
             // 
             this.pnlContent2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(104)))), ((int)(((byte)(104)))));
+            this.pnlContent2.Controls.Add(this.pnlBR3);
             this.pnlContent2.Controls.Add(this.label1);
             this.pnlContent2.Controls.Add(this.txtJobid);
             this.pnlContent2.Controls.Add(this.label12);
             this.pnlContent2.Controls.Add(this.label10);
-            this.pnlContent2.Controls.Add(this.pnlBR3);
             this.pnlContent2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent2.Location = new System.Drawing.Point(10, 10);
             this.pnlContent2.Name = "pnlContent2";
@@ -135,15 +144,14 @@ namespace SEN371_Project
             // pnlBR3
             // 
             this.pnlBR3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.pnlBR3.Controls.Add(this.btnClose);
-            this.pnlBR3.Controls.Add(this.btnescalte1);
-            this.pnlBR3.Controls.Add(this.lblEmployeeID);
             this.pnlBR3.Controls.Add(this.lblEscalte);
-            this.pnlBR3.Controls.Add(this.btnSubmitEmp);
+            this.pnlBR3.Controls.Add(this.btnescalte1);
             this.pnlBR3.Controls.Add(this.cbescalte);
+            this.pnlBR3.Controls.Add(this.btnSubmitEmp);
             this.pnlBR3.Controls.Add(this.cbEmployeeID);
-            this.pnlBR3.Controls.Add(this.lbTrackJob);
+            this.pnlBR3.Controls.Add(this.lblEmployeeID);
             this.pnlBR3.Controls.Add(this.pnlContent3);
+            this.pnlBR3.Controls.Add(this.lbTrackJob);
             this.pnlBR3.Location = new System.Drawing.Point(28, 205);
             this.pnlBR3.Name = "pnlBR3";
             this.pnlBR3.Padding = new System.Windows.Forms.Padding(10);
@@ -154,9 +162,9 @@ namespace SEN371_Project
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnClose.Location = new System.Drawing.Point(605, 322);
+            this.btnClose.Location = new System.Drawing.Point(1235, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(140, 50);
+            this.btnClose.Size = new System.Drawing.Size(125, 42);
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "Close Job";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -229,13 +237,45 @@ namespace SEN371_Project
             // 
             // lbTrackJob
             // 
+            this.lbTrackJob.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTrackJob.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTrackJob.FormattingEnabled = true;
             this.lbTrackJob.ItemHeight = 42;
-            this.lbTrackJob.Location = new System.Drawing.Point(419, 75);
+            this.lbTrackJob.Location = new System.Drawing.Point(10, 10);
             this.lbTrackJob.Name = "lbTrackJob";
-            this.lbTrackJob.Size = new System.Drawing.Size(568, 340);
+            this.lbTrackJob.Size = new System.Drawing.Size(1360, 528);
             this.lbTrackJob.TabIndex = 4;
+            // 
+            // pnlContent3
+            // 
+            this.pnlContent3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
+            this.pnlContent3.Controls.Add(this.button2);
+            this.pnlContent3.Controls.Add(this.lnlCustomerID);
+            this.pnlContent3.Controls.Add(this.txtCustomerID);
+            this.pnlContent3.Controls.Add(this.cbpriority);
+            this.pnlContent3.Controls.Add(this.lblPriority);
+            this.pnlContent3.Controls.Add(this.cbService);
+            this.pnlContent3.Controls.Add(this.lblService);
+            this.pnlContent3.Controls.Add(this.textBox1);
+            this.pnlContent3.Controls.Add(this.lblNote);
+            this.pnlContent3.Controls.Add(this.btnClose);
+            this.pnlContent3.Controls.Add(this.dgvAlljobs);
+            this.pnlContent3.Location = new System.Drawing.Point(7, 20);
+            this.pnlContent3.Name = "pnlContent3";
+            this.pnlContent3.Size = new System.Drawing.Size(1360, 528);
+            this.pnlContent3.TabIndex = 14;
+            // 
+            // dgvAlljobs
+            // 
+            this.dgvAlljobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlljobs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAlljobs.Location = new System.Drawing.Point(0, 0);
+            this.dgvAlljobs.Name = "dgvAlljobs";
+            this.dgvAlljobs.RowHeadersWidth = 51;
+            this.dgvAlljobs.RowTemplate.Height = 24;
+            this.dgvAlljobs.Size = new System.Drawing.Size(1360, 528);
+            this.dgvAlljobs.TabIndex = 0;
+            this.dgvAlljobs.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAlljobs_RowHeaderMouseClick);
             // 
             // btnWork
             // 
@@ -444,25 +484,90 @@ namespace SEN371_Project
             this.pnlBR2.Size = new System.Drawing.Size(1459, 800);
             this.pnlBR2.TabIndex = 14;
             // 
-            // pnlContent3
+            // lblNote
             // 
-            this.pnlContent3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
-            this.pnlContent3.Controls.Add(this.dgvAlljobs);
-            this.pnlContent3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent3.Location = new System.Drawing.Point(10, 10);
-            this.pnlContent3.Name = "pnlContent3";
-            this.pnlContent3.Size = new System.Drawing.Size(1360, 528);
-            this.pnlContent3.TabIndex = 14;
+            this.lblNote.AutoSize = true;
+            this.lblNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNote.Location = new System.Drawing.Point(203, 90);
+            this.lblNote.Name = "lblNote";
+            this.lblNote.Size = new System.Drawing.Size(82, 32);
+            this.lblNote.TabIndex = 14;
+            this.lblNote.Text = "Note:";
             // 
-            // dgvAlljobs
+            // textBox1
             // 
-            this.dgvAlljobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlljobs.Location = new System.Drawing.Point(62, 41);
-            this.dgvAlljobs.Name = "dgvAlljobs";
-            this.dgvAlljobs.RowHeadersWidth = 51;
-            this.dgvAlljobs.RowTemplate.Height = 24;
-            this.dgvAlljobs.Size = new System.Drawing.Size(292, 363);
-            this.dgvAlljobs.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(197, 125);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(577, 101);
+            this.textBox1.TabIndex = 15;
+            // 
+            // lblService
+            // 
+            this.lblService.AutoSize = true;
+            this.lblService.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblService.Location = new System.Drawing.Point(203, 229);
+            this.lblService.Name = "lblService";
+            this.lblService.Size = new System.Drawing.Size(109, 32);
+            this.lblService.TabIndex = 16;
+            this.lblService.Text = "Service";
+            // 
+            // cbService
+            // 
+            this.cbService.FormattingEnabled = true;
+            this.cbService.Location = new System.Drawing.Point(197, 279);
+            this.cbService.Name = "cbService";
+            this.cbService.Size = new System.Drawing.Size(577, 24);
+            this.cbService.TabIndex = 17;
+            this.cbService.Text = "Please Enter customerID to see service availability";
+            // 
+            // lblPriority
+            // 
+            this.lblPriority.AutoSize = true;
+            this.lblPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriority.Location = new System.Drawing.Point(203, 327);
+            this.lblPriority.Name = "lblPriority";
+            this.lblPriority.Size = new System.Drawing.Size(103, 32);
+            this.lblPriority.TabIndex = 18;
+            this.lblPriority.Text = "Priority";
+            // 
+            // cbpriority
+            // 
+            this.cbpriority.FormattingEnabled = true;
+            this.cbpriority.Location = new System.Drawing.Point(209, 371);
+            this.cbpriority.Name = "cbpriority";
+            this.cbpriority.Size = new System.Drawing.Size(577, 24);
+            this.cbpriority.TabIndex = 20;
+            // 
+            // txtCustomerID
+            // 
+            this.txtCustomerID.Location = new System.Drawing.Point(197, 65);
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.Size = new System.Drawing.Size(577, 22);
+            this.txtCustomerID.TabIndex = 21;
+            this.txtCustomerID.TextChanged += new System.EventHandler(this.txtCustomerID_TextChanged);
+            // 
+            // lnlCustomerID
+            // 
+            this.lnlCustomerID.AutoSize = true;
+            this.lnlCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnlCustomerID.Location = new System.Drawing.Point(203, 18);
+            this.lnlCustomerID.Name = "lnlCustomerID";
+            this.lnlCustomerID.Size = new System.Drawing.Size(178, 32);
+            this.lnlCustomerID.TabIndex = 22;
+            this.lnlCustomerID.Text = "Customer ID:";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.button2.Location = new System.Drawing.Point(209, 425);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 60);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Submit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmServices
             // 
@@ -486,6 +591,9 @@ namespace SEN371_Project
             this.pnlContent2.PerformLayout();
             this.pnlBR3.ResumeLayout(false);
             this.pnlBR3.PerformLayout();
+            this.pnlContent3.ResumeLayout(false);
+            this.pnlContent3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).EndInit();
             this.pnlContent1.ResumeLayout(false);
             this.pnlContent1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -494,8 +602,6 @@ namespace SEN371_Project
             this.pnlBR4.ResumeLayout(false);
             this.pnlBR1.ResumeLayout(false);
             this.pnlBR2.ResumeLayout(false);
-            this.pnlContent3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,5 +642,14 @@ namespace SEN371_Project
         private System.Windows.Forms.ComboBox cbEmployeeID;
         private System.Windows.Forms.Panel pnlContent3;
         private System.Windows.Forms.DataGridView dgvAlljobs;
+        private System.Windows.Forms.Label lblPriority;
+        private System.Windows.Forms.ComboBox cbService;
+        private System.Windows.Forms.Label lblService;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblNote;
+        private System.Windows.Forms.ComboBox cbpriority;
+        private System.Windows.Forms.Label lnlCustomerID;
+        private System.Windows.Forms.TextBox txtCustomerID;
+        private System.Windows.Forms.Button button2;
     }
 }

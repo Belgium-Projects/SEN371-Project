@@ -1,4 +1,5 @@
 ﻿using SEN371_Project.dataHandler;
+using SEN371_Project.FunctionalAreas;
 using SEN371_Project.userExperience;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,34 @@ namespace SEN371_Project
             txtJobid.Text = string.Empty;
 
         }
+        public void comboboxinit()
+        {
+            callCentre obj = new callCentre();
+            cbService.Items.Clear();
+            cbpriority.Items.Clear();
+             cbService.Text = "Please select Services";
+            cbpriority.Text = "Please select the Priority";
+            cbpriority.Items.Add("High");
+            cbpriority.Items.Add("Medium");
+            cbpriority.Items.Add("Low");
+          
+            try
+            {
+                if (txtCustomerID.Text != null)
+                {
+                    foreach (var item in obj.returnServices(txtCustomerID.Text))
+                    {
+                        cbService.Items.Add(item);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
         public void ClearPannel()
         {
             lbTrackJob.Hide();
@@ -30,6 +59,16 @@ namespace SEN371_Project
             cbescalte.Hide();
             lblEscalte.Hide();
             btnescalte1.Hide();
+            txtCustomerID.Hide();
+            lblNote.Hide();
+            //btnsubmit.Hide();
+            lblPriority.Hide();
+            lblService.Hide();
+            cbService.Hide();
+            cbpriority.Hide();
+            textBox1.Hide();
+            button2.Hide();
+            lnlCustomerID.Hide();
         }
         employee obj = new employee();
         serviceDept obj2 = new serviceDept();
@@ -232,13 +271,22 @@ namespace SEN371_Project
             //MessageBox.Show(empid + txtJobid.Text);
             obj2.reAssign(empid, txtJobid.Text);
         }
-
+        callCentre call = new callCentre();
         private void btnescalte_Click(object sender, EventArgs e)
         {
-            ClearPannel();
-            lblEscalte.Show();
-            cbescalte.Show();
-            btnescalte1.Show();
+            txtCustomerID.Show();
+            lnlCustomerID.Show();
+            lblNote.Show();
+            textBox1.Show();
+            lblService.Show();
+            cbService.Show();
+            cbpriority.Show();
+            textBox1.Show();
+            button2.Show();
+            lnlCustomerID.Show();
+            lblPriority.Show();
+            //comboboxinit();
+
         }
 
         private void btnescalte1_Click(object sender, EventArgs e)
@@ -250,6 +298,74 @@ namespace SEN371_Project
         private void btnClose_Click(object sender, EventArgs e)
         {
             obj2.closeService(txtJobid.Text);
+            dgvAlljobs.ColumnCount = 9;
+            dgvAlljobs.ColumnHeadersVisible = true;
+
+            // Set the column header style.
+            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+
+            columnHeaderStyle.BackColor = Color.Beige;
+            columnHeaderStyle.Font = new Font("Verdana", 10, FontStyle.Bold);
+            dgvAlljobs.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+
+            dgvAlljobs.Columns[0].Name = "JOb ID";
+            dgvAlljobs.Columns[1].Name = "Customer ID";
+            dgvAlljobs.Columns[2].Name = "Employee ID";
+            dgvAlljobs.Columns[3].Name = "Notes";
+            dgvAlljobs.Columns[4].Name = "Status";
+            dgvAlljobs.Columns[5].Name = "Date Started";
+            dgvAlljobs.Columns[6].Name = "DateEnded";
+            dgvAlljobs.Columns[7].Name = "Service ID";
+            dgvAlljobs.Columns[8].Name = "Priority";
+
+            foreach (var item in obj2.returnJobs())
+            {
+                List<string> itembreakdown = item.Split(',').ToList();
+                dgvAlljobs.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[5], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
+            }
+        }
+
+        private void dgvAlljobs_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtJobid.Text = dgvAlljobs.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void btnsubmit_Click(object sender, EventArgs e)
+        {
+            call.logJob(int.Parse(txtCustomerID.Text), 0, textBox1.Text, DateTime.Now.ToString("yyyy/MM/dd"), int.Parse(cbService.SelectedItem.ToString()), cbpriority.SelectedItem.ToString());
+        }
+        Validation ob3j = new Validation();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ob3j.isNumber(cbService.SelectedItem.ToString().Split(',')[0]))
+                {
+                    int serviceid = int.Parse(cbService.SelectedItem.ToString().Split(',')[0]);
+                    //MessageBox.Show(txtCustomerID.Text);
+                    if (string.IsNullOrEmpty(txtCustomerID.Text) || string.IsNullOrWhiteSpace(txtCustomerID.Text))
+                    {
+                        MessageBox.Show("Please enter all the values");
+                    }
+                    else if (cbpriority.Text == "High" || cbpriority.Text == "Medium" || cbpriority.Text == "Low")
+                    {
+                        call.logJob(int.Parse(txtCustomerID.Text), 0, textBox1.Text, "2023/08/17", serviceid, cbpriority.SelectedItem.ToString());
+                    }
+                }
+                
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Incorrect Service chosen");
+            }
+            
+        }
+
+        private void txtCustomerID_TextChanged(object sender, EventArgs e)
+        {
+            comboboxinit();
         }
     }
 }

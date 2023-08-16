@@ -41,7 +41,7 @@ namespace SEN371_Project
             {
                 Disconnect();
             }
-            return returnJobs;
+        
         }
         //Assign request 
         public void assignRequest()
@@ -97,9 +97,11 @@ namespace SEN371_Project
             }
             finally
             {
+
                 Disconnect();
+               
             }
-            return returnJobs;
+           
         }
         public override void deleteFromDB()
         {
