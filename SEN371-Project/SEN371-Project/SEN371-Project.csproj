@@ -94,7 +94,6 @@
     <Compile Include="CallSimulator.Designer.cs">
       <DependentUpon>CallSimulator.cs</DependentUpon>
     </Compile>
-	<Compile Include="dataHandler\Validation.cs" />
     <Compile Include="dataHandler\Validation.cs" />
     <Compile Include="managementDeptForm.cs">
       <SubType>Form</SubType>
@@ -103,11 +102,6 @@
       <DependentUpon>managementDeptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-	<Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -149,6 +143,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="functionalAreas\serviceDept.cs" />
+    <Compile Include="userExperience\formatUX.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="ClientMaintenanceForm.resx">
       <DependentUpon>ClientMaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,15 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-	  <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-	<Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
