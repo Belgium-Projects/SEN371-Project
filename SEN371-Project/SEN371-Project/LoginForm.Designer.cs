@@ -71,7 +71,7 @@ namespace SEN371_Project
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(96, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 22);
+            this.label1.Size = new System.Drawing.Size(96, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "Please Login!";
             // 
@@ -80,16 +80,15 @@ namespace SEN371_Project
             this.lblPass.AutoSize = true;
             this.lblPass.Location = new System.Drawing.Point(118, 153);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(81, 19);
+            this.lblPass.Size = new System.Drawing.Size(59, 15);
             this.lblPass.TabIndex = 4;
             this.lblPass.Text = "Password";
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(56, 171);
-            this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(184, 38);
+            this.txtPassword.Size = new System.Drawing.Size(184, 22);
             this.txtPassword.TabIndex = 3;
             // 
             // lblUser
@@ -97,16 +96,15 @@ namespace SEN371_Project
             this.lblUser.AutoSize = true;
             this.lblUser.Location = new System.Drawing.Point(115, 65);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(83, 19);
+            this.lblUser.Size = new System.Drawing.Size(62, 15);
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Username";
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(56, 83);
-            this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(184, 40);
+            this.txtUsername.Size = new System.Drawing.Size(184, 22);
             this.txtUsername.TabIndex = 1;
             // 
             // btnLogin
@@ -132,7 +130,7 @@ namespace SEN371_Project
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(893, 477);

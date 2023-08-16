@@ -15,23 +15,22 @@ namespace SEN371_Project
 {
     public partial class frmLogin : Form
     {
-        private employee emp;
         public frmLogin()
-        { 
-          
+        {
+
             InitializeComponent();
-        //    emp = new employee(
-        //    "EmployeeName",
-        //    "EmployeeID",
-        //    "EmployeeSurname",
-        //    "EmployeeRole",
-        //    "EmployeePhoneNumber",
-        //    "sampleUser",
-        //    HashPassword("samplePassword", GenerateSalt()) // Hash the password with the salt
+            //    emp = new employee(
+            //    "EmployeeName",
+            //    "EmployeeID",
+            //    "EmployeeSurname",
+            //    "EmployeeRole",
+            //    "EmployeePhoneNumber",
+            //    "sampleUser",
+            //    HashPassword("samplePassword", GenerateSalt()) // Hash the password with the salt
 
-            
 
-        //);
+
+            //);
         }
 
         private string HashPassword(string v1, string v2)
@@ -39,24 +38,16 @@ namespace SEN371_Project
             throw new NotImplementedException();
         }
 
-        // Helper method to generate a random salt
-        //private static string GenerateSalt()
-        //{
-        //    byte[] saltBytes = new byte[32];
-        //    using (var rng = new RNGCryptoServiceProvider())
-        //    {
-        //        rng.GetBytes(saltBytes);
-        //    }
-        //    return Convert.ToBase64String(saltBytes);
-        //}
+
         private void frmLogin_Load(object sender, EventArgs e)
         {
             //employee obj1 = new employee();
             //MessageBox.Show(obj1.HashPassword("123","123"));
             txtPassword.PasswordChar = '*';
-           
-        }
 
+
+        }
+        int incorrectAttempts = 0;
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
             employee emp = new employee();
@@ -73,10 +64,20 @@ namespace SEN371_Project
             }
             else
             {
-                MessageBox.Show("Invalid username or password. Login failed.", "Error", MessageBoxButtons.OK);
-                txtUsername.Clear();
-                txtPassword.Clear();
+                incorrectAttempts++; // Increment the incorrect attempts counter
+                if (incorrectAttempts >= 3) // Check if maximum attempts reached
+                {
+                    MessageBox.Show("Too many incorrect login attempts. The application will now close.", "Error", MessageBoxButtons.OK);
+                    Application.Exit(); // Exit the application
+                }
+                else
+                {
+                    MessageBox.Show($"Invalid username or password. You have {3 - incorrectAttempts} attempts left.", "Error", MessageBoxButtons.OK);
+                    txtUsername.Clear();
+                    txtPassword.Clear();
+
+                }
             }
         }
     }
-  }
+}
