@@ -37,10 +37,8 @@ namespace SEN371_Project
             int maxIndex = 0;
             int indexCount1 = 1;
             int indexCount2 = 1;
-            int indexCount3 = 1;
             bool stop1 = false;
             bool stop2 = false;
-            bool stop3 = false;
 
             //Setting Content Panel transparency/fixing flickering (Content Panel border Naming) *"pnlContent{Num}*
             while (!stop1)
@@ -115,29 +113,6 @@ namespace SEN371_Project
                 {
                     indexCount2 = 1;
                     stop2 = true;
-                }
-            }
-
-            //Setting Labels background transparent (Label naming) *"lblContent{num}"*
-            while (!stop3)
-            {
-                String ctlName = $"lblContent{indexCount3}";
-                Label label = this.Controls.Find(ctlName, true).FirstOrDefault() as Label;
-                if (label != null)
-                {
-                    typeof(Label).InvokeMember("DoubleBuffered",
-                    BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
-                    null, label, new object[] { true });
-
-                    SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-
-                    label.BackColor = Color.FromArgb(0, 65, 65, 65);
-                    indexCount3++;
-                }
-                else
-                {
-                    indexCount3 = 1;
-                    stop3 = true;
                 }
             }
         }

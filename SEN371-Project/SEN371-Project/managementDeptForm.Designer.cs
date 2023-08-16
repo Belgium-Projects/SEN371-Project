@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.picbUserLogo = new System.Windows.Forms.PictureBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.btndepartment = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlBR4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlContent1 = new System.Windows.Forms.Panel();
             this.lblLine1 = new System.Windows.Forms.Label();
             this.btnViewReports = new System.Windows.Forms.Button();
@@ -48,17 +50,15 @@
             this.pnlContent3 = new System.Windows.Forms.Panel();
             this.pnlBR1 = new System.Windows.Forms.Panel();
             this.pnlBR2 = new System.Windows.Forms.Panel();
-            this.picbUserLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbUserLogo)).BeginInit();
             this.pnlBR4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlContent1.SuspendLayout();
             this.pnlContent2.SuspendLayout();
             this.pnlBR3.SuspendLayout();
             this.pnlBR1.SuspendLayout();
             this.pnlBR2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbUserLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -79,6 +79,16 @@
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(3);
             this.pnlHeader.Size = new System.Drawing.Size(1924, 119);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // picbUserLogo
+            // 
+            this.picbUserLogo.Image = global::SEN371_Project.Properties.Resources.Profile_Pic_1;
+            this.picbUserLogo.Location = new System.Drawing.Point(1608, 13);
+            this.picbUserLogo.Name = "picbUserLogo";
+            this.picbUserLogo.Size = new System.Drawing.Size(100, 100);
+            this.picbUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbUserLogo.TabIndex = 6;
+            this.picbUserLogo.TabStop = false;
             // 
             // btnLogOut
             // 
@@ -144,6 +154,20 @@
             this.pnlBR4.Padding = new System.Windows.Forms.Padding(7);
             this.pnlBR4.Size = new System.Drawing.Size(526, 102);
             this.pnlBR4.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.Premier_Service_Solutions_540_110_px_Final;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(512, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlContent1
             // 
@@ -216,6 +240,7 @@
             // lblContent2
             // 
             this.lblContent2.AutoSize = true;
+            this.lblContent2.BackColor = System.Drawing.Color.Transparent;
             this.lblContent2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContent2.Location = new System.Drawing.Point(117, 106);
             this.lblContent2.Name = "lblContent2";
@@ -226,6 +251,7 @@
             // lblContent1
             // 
             this.lblContent1.AutoSize = true;
+            this.lblContent1.BackColor = System.Drawing.Color.Transparent;
             this.lblContent1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContent1.Location = new System.Drawing.Point(83, 52);
             this.lblContent1.Name = "lblContent1";
@@ -282,30 +308,6 @@
             this.pnlBR2.Size = new System.Drawing.Size(1459, 800);
             this.pnlBR2.TabIndex = 6;
             // 
-            // picbUserLogo
-            // 
-            this.picbUserLogo.Image = global::SEN371_Project.Properties.Resources.Profile_Pic_1;
-            this.picbUserLogo.Location = new System.Drawing.Point(1608, 13);
-            this.picbUserLogo.Name = "picbUserLogo";
-            this.picbUserLogo.Size = new System.Drawing.Size(100, 100);
-            this.picbUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbUserLogo.TabIndex = 6;
-            this.picbUserLogo.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.Premier_Service_Solutions_540_110_px_Final;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(512, 88);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmManagementDept
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,15 +325,15 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManagementDept_Load);
             this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picbUserLogo)).EndInit();
             this.pnlBR4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlContent1.ResumeLayout(false);
             this.pnlContent1.PerformLayout();
             this.pnlContent2.ResumeLayout(false);
             this.pnlBR3.ResumeLayout(false);
             this.pnlBR1.ResumeLayout(false);
             this.pnlBR2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picbUserLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
