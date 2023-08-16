@@ -36,7 +36,9 @@ namespace SEN371_Project
 
         private void btnDepartment_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            frmServices a = new frmServices();
+            a.Show();
 
         }
 

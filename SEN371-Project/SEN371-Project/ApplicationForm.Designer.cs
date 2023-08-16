@@ -71,6 +71,7 @@ namespace SEN371_Project
             this.btnDepartment.Name = "btnDepartment";
             this.btnDepartment.Size = new System.Drawing.Size(104, 48);
             this.btnDepartment.TabIndex = 5;
+            this.btnDepartment.Text = "Services";
             this.btnDepartment.UseVisualStyleBackColor = true;
             this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
