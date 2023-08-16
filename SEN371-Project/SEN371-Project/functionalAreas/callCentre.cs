@@ -97,19 +97,19 @@ namespace SEN371_Project.FunctionalAreas
             }
         }
         //View customer agreement
-        public Services cusAgreement(int id)
+        public List<string> cusAgreement(string id)
         {
             Connection();
-            string custom = $"select * from cusAgreement where CustomerID = {id}";
-           
+            string custom = $"select * from cusAgreement where customerid =2";
+           List<string> CusAgreementlist = new List<string>();
             try
             {
                 Command = new System.Data.SqlClient.SqlCommand(custom,Connection1);
                 Reader = Command.ExecuteReader();
                 while (Reader.Read())
                 {
-                    Services Service = new Services(int.Parse(Reader[1].ToString()), Reader[2].ToString(), Reader[3].ToString(),int.Parse( Reader[4].ToString()),int.Parse( Reader[5].ToString()), Reader[6].ToString(), Reader[7].ToString(), Reader[8].ToString());
-                    return Service;
+                    CusAgreementlist.Add($"{int.Parse(Reader[1].ToString())}, {Reader[2].ToString()}, {Reader[3].ToString()},{int.Parse( Reader[4].ToString())},{int.Parse( Reader[5].ToString())},{Reader[6].ToString()},{Reader[7].ToString()}, {Reader[8].ToString()}");
+                    return CusAgreementlist;
                 }
             }
             catch (Exception ex)

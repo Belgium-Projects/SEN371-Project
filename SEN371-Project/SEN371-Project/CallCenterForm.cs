@@ -139,37 +139,62 @@ namespace SEN371_Project
             comboboxinit();
             if (txtCustomerID.Text != "")
             {
-                List<client> customer = (obj.selectFromDB(int.Parse(txtCustomerID.Text)));
-                lbCustomer.Items.Clear();
-                if (customer[0].CusName == "Business")
+             
+                try
                 {
-
-                    lbCustomer.Items.Add($"Customer Type: {customer[0].CusName}");
-                    lbCustomer.Items.Add($"Business Name: {customer[0].CusSurname}");
-                    //listBox1.Items.Add($"Packages ID {customer[0].packagesID}");
-                    lbCustomer.Items.Add($"Street: {customer[0].CusService}");
-                    //foreach (var item in customer[0].CusRepresentativeName)
-                    //{
-                    //    listBox1.Items.Add(item);
-                    //}
-                }
-                else
-                {
-                    lbCustomer.Items.Add($"Customer Name: {customer[0].CusName}");
-                    lbCustomer.Items.Add($"Customer Surname: {customer[0].CusSurname}");
-                    lbCustomer.Items.Add($"Customer Name: {customer[0].CusService}");
-                    lbCustomer.Items.Add($"Customer Surname: {customer[0].CusPhonenumber}");
-
-                }
-                lbCustomer.Items.Add("Services in customers packages:");
-                if (txtCustomerID.Text != null)
-                {
-                    foreach (var item in obj.returnServices(txtCustomerID.Text))
+                    List<client> customer = (obj.selectFromDB(int.Parse(txtCustomerID.Text)));
+                    lbCustomer.Items.Clear();
+                    if (customer[0].CusName == "Business")
                     {
-                        lbCustomer.Items.Add(item);
-                    }
-                }
 
+                        lbCustomer.Items.Add($"Customer Type: {customer[0].CusName}");
+                        lbCustomer.Items.Add($"Business Name: {customer[0].CusSurname}");
+                        //listBox1.Items.Add($"Packages ID {customer[0].packagesID}");
+                        lbCustomer.Items.Add($"Street: {customer[0].CusService}");
+                        //foreach (var item in customer[0].CusRepresentativeName)
+                        //{
+                        //    listBox1.Items.Add(item);
+                        //}
+                    }
+                    else
+                    {
+                        lbCustomer.Items.Add($"Customer Name: {customer[0].CusName}");
+                        lbCustomer.Items.Add($"Customer Surname: {customer[0].CusSurname}");
+                        lbCustomer.Items.Add($"Customer Name: {customer[0].CusService}");
+                        lbCustomer.Items.Add($"Customer Surname: {customer[0].CusPhonenumber}");
+
+                    }
+                    lbCustomer.Items.Add("Services in customers packages:");
+                    if (txtCustomerID.Text != null)
+                    {
+                        foreach (var item in obj.returnServices(txtCustomerID.Text))
+                        {
+                            lbCustomer.Items.Add(item);
+                        }
+                    }
+                    lbCustomer.Items.Add("customer agreement:");
+                    //if(txtCustomerID.Text != null)
+                    //{
+                    //    foreach (var item in obj.cusAgreement(txtCustomerID.Text))
+                    //    {
+                    //        List<string> itemBreakdown = item.Split(',').ToList();
+                    //        lbCustomer.Items.Add("PackagesID:"+itemBreakdown[1]);
+                    //        lbCustomer.Items.Add("Packages Name:" + itemBreakdown[2]);
+                    //        lbCustomer.Items.Add("Start Date:" + itemBreakdown[7]);
+                    //        lbCustomer.Items.Add("End Date:" + itemBreakdown[6]);
+                    //        lbCustomer.Items.Add("Status:" + itemBreakdown[8]);
+
+                    //    }
+
+                   // }
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("No Customer with that ID is there");
+                }
+                
             }
         }
         //View Services
@@ -198,13 +223,21 @@ namespace SEN371_Project
                      dgvHistory.Columns[4].Name = "Start time";
                      dgvHistory.Columns[5].Name = "End time";
                      dgvHistory.Columns[6].Name = "Duration ";
-
-                foreach (var item in obj.callHistory(int.Parse(txtCustomerID.Text)))
+                try
                 {
-                    
-                    List<string> itembreakDown = item.Split(',').ToList();
-                    dgvHistory.Rows.Add(itembreakDown[0], itembreakDown[1], itembreakDown[2], itembreakDown[3], itembreakDown[4], itembreakDown[5], itembreakDown[6]+"s");
+                    foreach (var item in obj.callHistory(int.Parse(txtCustomerID.Text)))
+                    {
+
+                        List<string> itembreakDown = item.Split(',').ToList();
+                        dgvHistory.Rows.Add(itembreakDown[0], itembreakDown[1], itembreakDown[2], itembreakDown[3], itembreakDown[4], itembreakDown[5], itembreakDown[6] + "s");
+                    }
                 }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Ensure that customer id is filled in");
+                }
+               
             }
         }
 
@@ -256,13 +289,17 @@ namespace SEN371_Project
 
         private void btnredirect_Click(object sender, EventArgs e)
         {
-            try
+            if(string.IsNullOrEmpty(txtCustomerID.Text) || string.IsNullOrWhiteSpace(txtCustomerID.Text))
             {
-                string selectedOption = cbRedirect.Text;
-                frmSimulator frmsimulator = new frmSimulator();
-                // Change the form based on the selected option
-                if (txtCustomerID.Text != null || txtCustomerID.Text != "")
+                MessageBox.Show("Please enter client ID before redirecting");
+            }
+            else
+            {
+                try
                 {
+                    string selectedOption = cbRedirect.Text;
+                    frmSimulator frmsimulator = new frmSimulator();
+                    // Change the form based on the selected option
                     switch (selectedOption)
                     {
                         case "Services Department":
@@ -272,7 +309,8 @@ namespace SEN371_Project
                             frmsimulator.TopMost = true;
                             form1.Show();
                             this.Hide();
-                            MessageBox.Show("Transferred Succefully Services Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBox.Show("Transferred Succefully Services Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             break;
 
                         case "Packages Department":
@@ -283,7 +321,7 @@ namespace SEN371_Project
                             frmsimulator.Show();
                             frmsimulator.TopMost = true;
                             this.Hide();
-                            MessageBox.Show("Transferred Succefully Packages Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBox.Show("Transferred Succefully Packages Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
 
                         case "Management Department":
@@ -293,19 +331,19 @@ namespace SEN371_Project
                             frmsimulator.TopMost = true;
                             form3.Show();
                             this.Hide();
-                            MessageBox.Show("Transferred Succefully Management Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBox.Show("Transferred Succefully Management Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
+
+
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Please enter a customer to redirect in the customer ID");
+                    MessageBox.Show(ex.Message);
                 }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
             
         }
 

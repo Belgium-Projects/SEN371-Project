@@ -34,6 +34,7 @@ namespace SEN371_Project
             this.btnClient = new System.Windows.Forms.Button();
             this.btnDepartment = new System.Windows.Forms.Button();
             this.pnlWork = new System.Windows.Forms.Panel();
+            this.btnCallSimulation = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -43,12 +44,13 @@ namespace SEN371_Project
             this.lblRedirect = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.CBPriority = new System.Windows.Forms.ComboBox();
-            this.txtNote = new System.Windows.Forms.TextBox();
             this.lblServie = new System.Windows.Forms.Label();
             this.lblNote = new System.Windows.Forms.Label();
             this.lblPriority = new System.Windows.Forms.Label();
             this.cbRedirect = new System.Windows.Forms.ComboBox();
             this.lbCustomer = new System.Windows.Forms.ListBox();
+            this.dgvHistory = new System.Windows.Forms.DataGridView();
+            this.txtNote = new System.Windows.Forms.TextBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCustomer = new System.Windows.Forms.Button();
@@ -60,20 +62,18 @@ namespace SEN371_Project
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.btnCallSimulation = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvHistory = new System.Windows.Forms.DataGridView();
             this.pnlWork.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // btnWork
@@ -115,6 +115,21 @@ namespace SEN371_Project
             this.pnlWork.Size = new System.Drawing.Size(777, 508);
             this.pnlWork.TabIndex = 48;
             this.pnlWork.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlWork_Paint);
+            // 
+            // btnCallSimulation
+            // 
+            this.btnCallSimulation.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCallSimulation.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCallSimulation.FlatAppearance.BorderSize = 0;
+            this.btnCallSimulation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCallSimulation.ForeColor = System.Drawing.Color.Black;
+            this.btnCallSimulation.Location = new System.Drawing.Point(655, 7);
+            this.btnCallSimulation.Name = "btnCallSimulation";
+            this.btnCallSimulation.Size = new System.Drawing.Size(119, 43);
+            this.btnCallSimulation.TabIndex = 55;
+            this.btnCallSimulation.Text = "Call Simulation";
+            this.btnCallSimulation.UseVisualStyleBackColor = false;
+            this.btnCallSimulation.Click += new System.EventHandler(this.btnCallSimulation_Click);
             // 
             // label2
             // 
@@ -211,14 +226,6 @@ namespace SEN371_Project
             this.CBPriority.Size = new System.Drawing.Size(477, 24);
             this.CBPriority.TabIndex = 5;
             // 
-            // txtNote
-            // 
-            this.txtNote.Location = new System.Drawing.Point(124, 83);
-            this.txtNote.Multiline = true;
-            this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(477, 79);
-            this.txtNote.TabIndex = 3;
-            // 
             // lblServie
             // 
             this.lblServie.AutoSize = true;
@@ -263,6 +270,25 @@ namespace SEN371_Project
             this.lbCustomer.Name = "lbCustomer";
             this.lbCustomer.Size = new System.Drawing.Size(719, 376);
             this.lbCustomer.TabIndex = 7;
+            // 
+            // dgvHistory
+            // 
+            this.dgvHistory.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistory.Location = new System.Drawing.Point(11, 10);
+            this.dgvHistory.Name = "dgvHistory";
+            this.dgvHistory.RowHeadersWidth = 51;
+            this.dgvHistory.RowTemplate.Height = 24;
+            this.dgvHistory.Size = new System.Drawing.Size(716, 387);
+            this.dgvHistory.TabIndex = 13;
+            // 
+            // txtNote
+            // 
+            this.txtNote.Location = new System.Drawing.Point(124, 83);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(477, 79);
+            this.txtNote.TabIndex = 3;
             // 
             // btnLogOut
             // 
@@ -377,21 +403,6 @@ namespace SEN371_Project
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // btnCallSimulation
-            // 
-            this.btnCallSimulation.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCallSimulation.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCallSimulation.FlatAppearance.BorderSize = 0;
-            this.btnCallSimulation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCallSimulation.ForeColor = System.Drawing.Color.Black;
-            this.btnCallSimulation.Location = new System.Drawing.Point(655, 7);
-            this.btnCallSimulation.Name = "btnCallSimulation";
-            this.btnCallSimulation.Size = new System.Drawing.Size(119, 43);
-            this.btnCallSimulation.TabIndex = 55;
-            this.btnCallSimulation.Text = "Call Simulation";
-            this.btnCallSimulation.UseVisualStyleBackColor = false;
-            this.btnCallSimulation.Click += new System.EventHandler(this.btnCallSimulation_Click);
-            // 
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -434,17 +445,6 @@ namespace SEN371_Project
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
-            // dgvHistory
-            // 
-            this.dgvHistory.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistory.Location = new System.Drawing.Point(11, 10);
-            this.dgvHistory.Name = "dgvHistory";
-            this.dgvHistory.RowHeadersWidth = 51;
-            this.dgvHistory.RowTemplate.Height = 24;
-            this.dgvHistory.Size = new System.Drawing.Size(716, 387);
-            this.dgvHistory.TabIndex = 13;
-            // 
             // frmCallCentre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -472,13 +472,13 @@ namespace SEN371_Project
             this.pnlWork.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -32,8 +32,6 @@ namespace SEN371_Project
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPackages));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btnServicesinPackages = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -59,7 +57,6 @@ namespace SEN371_Project
             this.serviceinPackagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.packagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -76,8 +73,6 @@ namespace SEN371_Project
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.btnServicesinPackages);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.pictureBox6);
@@ -92,27 +87,6 @@ namespace SEN371_Project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 472);
             this.panel1.TabIndex = 66;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox8.Image = global::SEN371_Project.Properties.Resources.download__2_;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 237);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(60, 43);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 68;
-            this.pictureBox8.TabStop = false;
-            // 
-            // btnServicesinPackages
-            // 
-            this.btnServicesinPackages.Location = new System.Drawing.Point(55, 237);
-            this.btnServicesinPackages.Name = "btnServicesinPackages";
-            this.btnServicesinPackages.Size = new System.Drawing.Size(159, 43);
-            this.btnServicesinPackages.TabIndex = 67;
-            this.btnServicesinPackages.Text = "Packages Composition";
-            this.btnServicesinPackages.UseVisualStyleBackColor = true;
-            this.btnServicesinPackages.Click += new System.EventHandler(this.btnServicesinPackages_Click);
             // 
             // pictureBox7
             // 
@@ -368,7 +342,6 @@ namespace SEN371_Project
             this.Load += new System.EventHandler(this.frmPackages_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -411,8 +384,6 @@ namespace SEN371_Project
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button btnServicesinPackages;
         //private PremierServiceSolutionsDataSet premierServiceSolutionsDataSet;
         private System.Windows.Forms.BindingSource serviceinPackagesBindingSource;
         //private PremierServiceSolutionsDataSetTableAdapters.ServiceinPackagesTableAdapter serviceinPackagesTableAdapter;
