@@ -274,6 +274,7 @@ namespace SEN371_Project
         callCentre call = new callCentre();
         private void btnescalte_Click(object sender, EventArgs e)
         {
+            ClearPannel();
             txtCustomerID.Show();
             lnlCustomerID.Show();
             lblNote.Show();

@@ -144,6 +144,7 @@ namespace SEN371_Project
             // pnlBR3
             // 
             this.pnlBR3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR3.Controls.Add(this.lbTrackJob);
             this.pnlBR3.Controls.Add(this.lblEscalte);
             this.pnlBR3.Controls.Add(this.btnescalte1);
             this.pnlBR3.Controls.Add(this.cbescalte);
@@ -151,7 +152,6 @@ namespace SEN371_Project
             this.pnlBR3.Controls.Add(this.cbEmployeeID);
             this.pnlBR3.Controls.Add(this.lblEmployeeID);
             this.pnlBR3.Controls.Add(this.pnlContent3);
-            this.pnlBR3.Controls.Add(this.lbTrackJob);
             this.pnlBR3.Location = new System.Drawing.Point(28, 205);
             this.pnlBR3.Name = "pnlBR3";
             this.pnlBR3.Padding = new System.Windows.Forms.Padding(10);
