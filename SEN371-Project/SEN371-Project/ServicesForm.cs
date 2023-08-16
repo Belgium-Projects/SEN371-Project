@@ -131,6 +131,7 @@ namespace SEN371_Project
             if (txtJobid.Text == "" || txtJobid.Text == null)
             {
                 ClearPannel();
+
                 
                 dgvAlljobs.Show();
                 
@@ -157,7 +158,7 @@ namespace SEN371_Project
                 foreach (var item in obj2.returnJobs())
                 {
                     List<string> itembreakdown = item.Split(',').ToList();
-                    dgvAlljobs.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
+                    dgvAlljobs.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[5], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
                 }
                 if(dgvAlljobs.RowCount > 0) {
                     lbTrackJob.Hide();

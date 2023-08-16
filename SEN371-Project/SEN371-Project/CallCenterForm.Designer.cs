@@ -339,7 +339,7 @@ namespace SEN371_Project
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(37, 176);
+            this.button5.Location = new System.Drawing.Point(37, 170);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(159, 43);
             this.button5.TabIndex = 7;

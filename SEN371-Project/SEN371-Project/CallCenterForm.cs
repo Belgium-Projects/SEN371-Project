@@ -256,38 +256,57 @@ namespace SEN371_Project
 
         private void btnredirect_Click(object sender, EventArgs e)
         {
-            string selectedOption = cbRedirect.SelectedItem.ToString();
-
-            // Change the form based on the selected option
-            switch (selectedOption)
+            try
             {
-                case "Services Department":
+                string selectedOption = cbRedirect.Text;
+                frmSimulator frmsimulator = new frmSimulator();
+                // Change the form based on the selected option
+                if (txtCustomerID.Text != null || txtCustomerID.Text != "")
+                {
+                    switch (selectedOption)
+                    {
+                        case "Services Department":
 
-                    frmServices form1 = new frmServices();
-                    form1.Show();
-                    this.Hide();
-                    MessageBox.Show("Transferred Succefully Services Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
+                            frmServices form1 = new frmServices();
+                            frmsimulator.Show();
+                            frmsimulator.TopMost = true;
+                            form1.Show();
+                            this.Hide();
+                            MessageBox.Show("Transferred Succefully Services Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
 
-                case "Packages Department":
-                    // Open Form2
+                        case "Packages Department":
+                            // Open Form2
 
-                    frmPackages form2 = new frmPackages();
-                    form2.Show();
-                    this.Hide();
-                    MessageBox.Show("Transferred Succefully Packages Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmPackages form2 = new frmPackages();
+                            form2.Show();
+                            frmsimulator.Show();
+                            frmsimulator.TopMost = true;
+                            this.Hide();
+                            MessageBox.Show("Transferred Succefully Packages Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
 
-                    break;
-
-                case "Management Department":
-                    // Open Form3
-
-                    frmCallCentre form3 = new frmCallCentre();
-                    form3.Show();
-                    this.Hide();
-                    MessageBox.Show("Transferred Succefully Management Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
+                        case "Management Department":
+                            // Open Form3
+                            frmsimulator.Show();
+                            frmCallCentre form3 = new frmCallCentre();
+                            frmsimulator.TopMost = true;
+                            form3.Show();
+                            this.Hide();
+                            MessageBox.Show("Transferred Succefully Management Department!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a customer to redirect in the customer ID");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void frmCallCentre_Load(object sender, EventArgs e)

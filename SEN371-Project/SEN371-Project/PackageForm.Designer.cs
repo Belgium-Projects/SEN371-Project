@@ -29,8 +29,16 @@ namespace SEN371_Project
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPackages));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btnServicesinPackages = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmpName = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -43,28 +51,39 @@ namespace SEN371_Project
             this.pnlWork = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvServies = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.premierServiceSolutionsDataSet = new SEN371_Project.PremierServiceSolutionsDataSet();
+            this.serviceinPackagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceinPackagesTableAdapter = new SEN371_Project.PremierServiceSolutionsDataSetTableAdapters.ServiceinPackagesTableAdapter();
+            this.packagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.packagesTableAdapter = new SEN371_Project.PremierServiceSolutionsDataSetTableAdapters.PackagesTableAdapter();
             this.panel1.SuspendLayout();
-            this.pnlWork.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlWork.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.premierServiceSolutionsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceinPackagesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.packagesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox8);
+            this.panel1.Controls.Add(this.btnServicesinPackages);
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -75,8 +94,84 @@ namespace SEN371_Project
             this.panel1.Controls.Add(this.button5);
             this.panel1.Location = new System.Drawing.Point(19, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 330);
+            this.panel1.Size = new System.Drawing.Size(225, 472);
             this.panel1.TabIndex = 66;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox8.Image = global::SEN371_Project.Properties.Resources.download__2_;
+            this.pictureBox8.Location = new System.Drawing.Point(3, 237);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(60, 43);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 68;
+            this.pictureBox8.TabStop = false;
+            // 
+            // btnServicesinPackages
+            // 
+            this.btnServicesinPackages.Location = new System.Drawing.Point(55, 237);
+            this.btnServicesinPackages.Name = "btnServicesinPackages";
+            this.btnServicesinPackages.Size = new System.Drawing.Size(159, 43);
+            this.btnServicesinPackages.TabIndex = 67;
+            this.btnServicesinPackages.Text = "Packages Composition";
+            this.btnServicesinPackages.UseVisualStyleBackColor = true;
+            this.btnServicesinPackages.Click += new System.EventHandler(this.btnServicesinPackages_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox7.Image = global::SEN371_Project.Properties.Resources.download__2_;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 170);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(60, 43);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 66;
+            this.pictureBox7.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(37, 170);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(177, 43);
+            this.button3.TabIndex = 65;
+            this.button3.Text = "Services offered";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = global::SEN371_Project.Properties.Resources.download__1_1;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 382);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(60, 44);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 64;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox5.Image = global::SEN371_Project.Properties.Resources.download__3_;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 306);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(60, 43);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 63;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.download__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -100,9 +195,9 @@ namespace SEN371_Project
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(37, 265);
+            this.button4.Location = new System.Drawing.Point(37, 382);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 44);
+            this.button4.Size = new System.Drawing.Size(177, 44);
             this.button4.TabIndex = 9;
             this.button4.Text = "Delete Packages";
             this.button4.UseVisualStyleBackColor = true;
@@ -111,7 +206,7 @@ namespace SEN371_Project
             // 
             this.btnViewServices.Location = new System.Drawing.Point(37, 96);
             this.btnViewServices.Name = "btnViewServices";
-            this.btnViewServices.Size = new System.Drawing.Size(159, 43);
+            this.btnViewServices.Size = new System.Drawing.Size(177, 43);
             this.btnViewServices.TabIndex = 8;
             this.btnViewServices.Text = "View Packages";
             this.btnViewServices.UseVisualStyleBackColor = true;
@@ -119,9 +214,9 @@ namespace SEN371_Project
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(37, 179);
+            this.button5.Location = new System.Drawing.Point(37, 306);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(159, 43);
+            this.button5.Size = new System.Drawing.Size(177, 43);
             this.button5.TabIndex = 7;
             this.button5.Text = "Update Package";
             this.button5.UseVisualStyleBackColor = true;
@@ -187,22 +282,24 @@ namespace SEN371_Project
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dgvServies);
             this.panel3.Location = new System.Drawing.Point(18, 92);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(634, 416);
             this.panel3.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgvServies
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 416);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvServies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServies.Location = new System.Drawing.Point(2, -2);
+            this.dgvServies.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvServies.Name = "dgvServies";
+            this.dgvServies.RowHeadersWidth = 51;
+            this.dgvServies.RowTemplate.Height = 24;
+            this.dgvServies.Size = new System.Drawing.Size(633, 416);
+            this.dgvServies.TabIndex = 0;
+            this.dgvServies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServies_CellContentClick);
+            this.dgvServies.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvServies_RowHeaderMouseClick);
             // 
             // label2
             // 
@@ -213,40 +310,6 @@ namespace SEN371_Project
             this.label2.Size = new System.Drawing.Size(295, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "THIS IS THE PACKAGES DEPARTMENT";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Image = global::SEN371_Project.Properties.Resources.download__1_1;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 265);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(60, 44);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 64;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Image = global::SEN371_Project.Properties.Resources.download__3_;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 179);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 43);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 63;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.download__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 96);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 62;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox3
             // 
@@ -279,6 +342,29 @@ namespace SEN371_Project
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // premierServiceSolutionsDataSet
+            // 
+            this.premierServiceSolutionsDataSet.DataSetName = "PremierServiceSolutionsDataSet";
+            this.premierServiceSolutionsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // serviceinPackagesBindingSource
+            // 
+            this.serviceinPackagesBindingSource.DataMember = "ServiceinPackages";
+            this.serviceinPackagesBindingSource.DataSource = this.premierServiceSolutionsDataSet;
+            // 
+            // serviceinPackagesTableAdapter
+            // 
+            this.serviceinPackagesTableAdapter.ClearBeforeFill = true;
+            // 
+            // packagesBindingSource
+            // 
+            this.packagesBindingSource.DataMember = "Packages";
+            this.packagesBindingSource.DataSource = this.premierServiceSolutionsDataSet;
+            // 
+            // packagesTableAdapter
+            // 
+            this.packagesTableAdapter.ClearBeforeFill = true;
+            // 
             // frmPackages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -300,16 +386,21 @@ namespace SEN371_Project
             this.Load += new System.EventHandler(this.frmPackages_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlWork.ResumeLayout(false);
-            this.pnlWork.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlWork.ResumeLayout(false);
+            this.pnlWork.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.premierServiceSolutionsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceinPackagesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.packagesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,12 +421,21 @@ namespace SEN371_Project
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel pnlWork;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvServies;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button btnServicesinPackages;
+        private PremierServiceSolutionsDataSet premierServiceSolutionsDataSet;
+        private System.Windows.Forms.BindingSource serviceinPackagesBindingSource;
+        private PremierServiceSolutionsDataSetTableAdapters.ServiceinPackagesTableAdapter serviceinPackagesTableAdapter;
+        private System.Windows.Forms.BindingSource packagesBindingSource;
+        private PremierServiceSolutionsDataSetTableAdapters.PackagesTableAdapter packagesTableAdapter;
     }
 }

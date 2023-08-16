@@ -8115,7 +8115,7 @@
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAhwAAABuCAYAAABsi8qfAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADt0RVh0Q29tbWVudAB4cjpkOkRBRnEzMU9NYUVrOjMsajo4OTY0ODE0MDQyMDE1
+        vAAADrwBlbxySQAAADt0RVh0Q29tbWVudAB4cjpkOkRBRnEzMU9NYUVrOjMsajo4OTY0ODE0MDQyMDE1
         MTEwMTQ3LHQ6MjMwODA3MTVuNylLAAD/a0lEQVR4Xrz9559W15WuC+vj2VYgh4KCykXOiCCQAJFzzkki
         ipxB5CAESALlaEm25SRHOWe3vbvb7r3/q/le172qEEIl9LhPn/fD/D1pPWvNMOYY94jzoZ5jV5beU7aX
         PpM2l95Td5Q+k7eUXpM2ld6Tnyn9pj1T+s84WPryW8/RS8tjrU+VR1tmlO7ts0u31lm0meXR1uml5/Al
@@ -10031,7 +10031,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABQAAAANUCAYAAADsK4AsAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADt0RVh0Q29tbWVudAB4cjpkOkRBRnJWd1dZb1pjOjMsajoxNTEzNjA4OTc0NjIw
+        vAAADrwBlbxySQAAADt0RVh0Q29tbWVudAB4cjpkOkRBRnJWd1dZb1pjOjMsajoxNTEzNjA4OTc0NjIw
         Nzg5MDU1LHQ6MjMwODEyMTV0hHryAAD/a0lEQVR4Xlzdd6tdRRfH8fNG8kCisffee++99xa7icZEU9Wo
         ERUbgiD4Ws/DZ+B7Wdw/FjOzZpXfKjN7n+1VN1deeeX2wgsv3F5xxRXbSy+9dGt9yy23bK+//vpFN998
         8/aee+7ZPvTQQ9s77rhje/XVV2+vu+66xb/22mu3N9xww1oj85tuummHyOAli5fsNddcs73qqquWvRtv
@@ -32022,4 +32022,22 @@
         /GG9P1/Bthzz2oxnSAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="premierServiceSolutionsDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="serviceinPackagesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>291, 17</value>
+  </metadata>
+  <metadata name="serviceinPackagesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>568, 17</value>
+  </metadata>
+  <metadata name="packagesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>838, 17</value>
+  </metadata>
+  <metadata name="packagesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1056, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>
