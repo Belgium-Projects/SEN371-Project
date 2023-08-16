@@ -94,6 +94,7 @@
     <Compile Include="CallSimulator.Designer.cs">
       <DependentUpon>CallSimulator.cs</DependentUpon>
     </Compile>
+    <Compile Include="dataHandler\Validation.cs" />
     <Compile Include="managementDeptForm.cs">
       <SubType>Form</SubType>
     </Compile>

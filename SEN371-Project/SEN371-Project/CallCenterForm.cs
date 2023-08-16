@@ -164,11 +164,8 @@ namespace SEN371_Project
 
                 }
             }
-
-
-
         }
-
+        //View Services
         private void btnViewServices_Click(object sender, EventArgs e)
         {
             pannelClose();
@@ -198,7 +195,6 @@ namespace SEN371_Project
             lblRedirect.Show();
             btnredirect.Show();
             pngCall.Show();
-
         }
 
 
@@ -281,8 +277,7 @@ namespace SEN371_Project
             {
               frmSimulator a=new   frmSimulator();
                a.Show();
-               this.Hide();
-              // obj.endCall(int.Parse(txtCustomerID.Text), int.Parse(obj2.EmpId));
+               //this.Hide();
             }
         }
 
