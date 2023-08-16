@@ -35,13 +35,11 @@ namespace SEN371_Project
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmpName = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.btnViewServices = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -59,7 +57,6 @@ namespace SEN371_Project
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlWork.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,13 +73,11 @@ namespace SEN371_Project
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblEmpName);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.btnViewServices);
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Location = new System.Drawing.Point(19, 75);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 472);
@@ -113,23 +108,12 @@ namespace SEN371_Project
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox6.Image = global::SEN371_Project.Properties.Resources.download__1_1;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 332);
+            this.pictureBox6.Location = new System.Drawing.Point(3, 252);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(60, 44);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 64;
             this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Image = global::SEN371_Project.Properties.Resources.download__3_;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 248);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 43);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 63;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -165,12 +149,13 @@ namespace SEN371_Project
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(37, 332);
+            this.button4.Location = new System.Drawing.Point(37, 252);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(177, 44);
             this.button4.TabIndex = 9;
             this.button4.Text = "Delete Packages";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnViewServices
             // 
@@ -181,15 +166,6 @@ namespace SEN371_Project
             this.btnViewServices.Text = "View Packages";
             this.btnViewServices.UseVisualStyleBackColor = true;
             this.btnViewServices.Click += new System.EventHandler(this.btnViewServices_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(37, 248);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(177, 43);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Update Package";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -269,8 +245,12 @@ namespace SEN371_Project
             this.dgvServies.Size = new System.Drawing.Size(633, 416);
             this.dgvServies.TabIndex = 0;
             this.dgvServies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServies_CellContentClick);
+            this.dgvServies.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServies_CellEnter);
+            this.dgvServies.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServies_CellValueChanged);
             this.dgvServies.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvServies_RowHeaderMouseClick);
             this.dgvServies.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServies_RowLeave);
+            this.dgvServies.EnabledChanged += new System.EventHandler(this.dgvServies_EnabledChanged);
+            this.dgvServies.Enter += new System.EventHandler(this.dgvServies_Enter);
             // 
             // label2
             // 
@@ -344,7 +324,6 @@ namespace SEN371_Project
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlWork.ResumeLayout(false);
             this.pnlWork.PerformLayout();
@@ -366,7 +345,6 @@ namespace SEN371_Project
         private System.Windows.Forms.Label lblEmpName;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnViewServices;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLogOut;
@@ -380,7 +358,6 @@ namespace SEN371_Project
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button3;

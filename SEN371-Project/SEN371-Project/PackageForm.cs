@@ -80,7 +80,7 @@ namespace SEN371_Project
             foreach (var item in contract.definepackages())
             {
                 List<string> itembreakdown = item.Split(',').ToList();
-                dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7]);
+                dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
             }
         }
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace SEN371_Project
             foreach (var item in contract.defineServices())
             {
                 List<string> itembreakdown = item.Split(',').ToList();
-                dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7]);
+                dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
             }
         }
 
@@ -134,7 +134,7 @@ namespace SEN371_Project
                 foreach (var item in contract.definepackages())
                 {
                     List<string> itembreakdown = item.Split(',').ToList();
-                    dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7]);
+                    dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
                 }
                 dgvServies.Rows[row-1].Selected = true;
                 dgvServies.Rows.Insert(row,null, "Service ID", "Maintances Type", "Difficulty", "Prices", "Frequency", "Task", "Description", "Tools Materials");
@@ -169,6 +169,64 @@ namespace SEN371_Project
         private void dgvServies_RowLeave(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void dgvServies_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //MessageBox.Show(dgvServies.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void dgvServies_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            //contract.update(dgvServies.CurrentRow.Cells[1].Value.ToString(), dgvServies.CurrentRow.Cells[2].Value.ToString(), dgvServies.CurrentRow.Cells[3].Value.ToString(), dgvServies.CurrentRow.Cells[0].Value.ToString());
+
+        }
+
+        private void dgvServies_EditModeChanged(object sender, EventArgs e)
+        {
+            //contract.update(dgvServies.CurrentRow.Cells[1].Value.ToString(), dgvServies.CurrentRow.Cells[2].Value.ToString(), dgvServies.CurrentRow.Cells[3].Value.ToString(), dgvServies.CurrentRow.Cells[0].Value.ToString());
+
+        }
+
+        private void dgvServies_EnabledChanged(object sender, EventArgs e)
+        {
+            //contract.update(dgvServies.CurrentRow.Cells[1].Value.ToString(), dgvServies.CurrentRow.Cells[2].Value.ToString(), dgvServies.CurrentRow.Cells[3].Value.ToString(), dgvServies.CurrentRow.Cells[0].Value.ToString());
+
+        }
+
+        private void dgvServies_Enter(object sender, EventArgs e)
+        {
+            //contract.update(dgvServies.CurrentRow.Cells[1].Value.ToString(), dgvServies.CurrentRow.Cells[2].Value.ToString(), dgvServies.CurrentRow.Cells[3].Value.ToString(), dgvServies.CurrentRow.Cells[0].Value.ToString());
+
+        }
+
+        private void dgvServies_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to update?",
+                      "Mood Test", MessageBoxButtons.YesNo);
+            switch (dr)
+            {
+                case DialogResult.Yes:
+                    contract.update(dgvServies.CurrentRow.Cells[1].Value.ToString(), dgvServies.CurrentRow.Cells[2].Value.ToString(), dgvServies.CurrentRow.Cells[3].Value.ToString(), dgvServies.CurrentRow.Cells[0].Value.ToString());
+                    dgvServies.Rows.Clear();
+
+                    foreach (var item in contract.definepackages())
+                    {
+                        List<string> itembreakdown = item.Split(',').ToList();
+                        dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
+                    }
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+               contract.DeletePackages(dgvServies.CurrentRow.Cells[0].Value.ToString());
+            
+           
         }
     }
 }

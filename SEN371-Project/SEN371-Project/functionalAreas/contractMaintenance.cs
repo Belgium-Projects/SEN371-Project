@@ -31,6 +31,25 @@ namespace SEN371_Project.FunctionalAreas
             Disconnect();
 
         }
+        public void update(string packageName,string Availability,string Discount,string PackagesID)
+        {
+            Connection();
+            try
+            {
+                string update = $"update Packages set PackageName = '{packageName}',Availability = '{Availability}',Discount='{Discount}' where PackagesID ={PackagesID}";
+                Command = new System.Data.SqlClient.SqlCommand (update, Connection1);
+                Command.ExecuteNonQuery();
+                MessageBox.Show($"{PackagesID} is updated");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
         //Define service levels
         public List<string> defineServices()
         {
@@ -101,6 +120,29 @@ namespace SEN371_Project.FunctionalAreas
           
            
         }
+        public void DeletePackages(string PackagesID)
+        {
+           
+                Connection();
+                try
+                {
+                    string delete = $"Delete from Packages where PackagesID = {PackagesID}";
+                    Command = new System.Data.SqlClient.SqlCommand(delete, Connection1);
+                    Command.ExecuteNonQuery();
+                    MessageBox.Show("It has been deleted");
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    Disconnect();
+                }
+            
+            
+        }
         //View performance of contract types
         public void contractPerformnace() {
             throw new NotImplementedException();
@@ -125,5 +167,6 @@ namespace SEN371_Project.FunctionalAreas
         {
             throw new NotImplementedException();
         }
+       
     }
 }

@@ -86,7 +86,7 @@ namespace SEN371_Project
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(65, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 22);
+            this.label1.Size = new System.Drawing.Size(101, 26);
             this.label1.TabIndex = 11;
             this.label1.Text = "Options:";
             // 
@@ -96,7 +96,7 @@ namespace SEN371_Project
             this.lblEmpName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpName.Location = new System.Drawing.Point(50, 24);
             this.lblEmpName.Name = "lblEmpName";
-            this.lblEmpName.Size = new System.Drawing.Size(106, 22);
+            this.lblEmpName.Size = new System.Drawing.Size(131, 26);
             this.lblEmpName.TabIndex = 10;
             this.lblEmpName.Text = "Peter Jones";
             // 
@@ -209,7 +209,7 @@ namespace SEN371_Project
             this.label10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(148, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(367, 27);
+            this.label10.Size = new System.Drawing.Size(451, 35);
             this.label10.TabIndex = 10;
             this.label10.Text = "Welcome to your Client portal page!";
             // 
@@ -232,13 +232,14 @@ namespace SEN371_Project
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(633, 416);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(233, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 14);
+            this.label2.Size = new System.Drawing.Size(245, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "THIS IS THE CLIENT MAINTENANCE ";
             // 
@@ -253,7 +254,7 @@ namespace SEN371_Project
             // 
             // frmClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(954, 597);
