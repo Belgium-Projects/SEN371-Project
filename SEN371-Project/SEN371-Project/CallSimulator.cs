@@ -93,7 +93,7 @@ namespace SEN371_Project
                 minElapsed++;
 
             }
-            lbltimer.Text =hour.ToString()+":"+minElapsed.ToString()+":"+ timeElapsed.ToString();
+            lbltimer.Text =hour.ToString()+"h:"+minElapsed.ToString()+"min:"+ timeElapsed.ToString()+"s";
         }
 
         private void lbltimer_Click(object sender, EventArgs e)
