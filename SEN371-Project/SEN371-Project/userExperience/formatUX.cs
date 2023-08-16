@@ -14,7 +14,7 @@ namespace SEN371_Project.userExperience
 {
     internal class formatUX : Form
     {
-        public void formattingRules(frmManagementDept form)
+        public void formattingRules(Form form)
         {
             //Making Form dynamic in sizing elements
             Rectangle resolutionRect = System.Windows.Forms.Screen.FromControl(form).Bounds;

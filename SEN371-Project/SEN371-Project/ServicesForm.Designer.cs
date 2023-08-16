@@ -29,463 +29,512 @@ namespace SEN371_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlDept = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.pnlContent2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtJobid = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlBR3 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnescalte1 = new System.Windows.Forms.Button();
-            this.lblEscalte = new System.Windows.Forms.Label();
-            this.cbescalte = new System.Windows.Forms.ComboBox();
-            this.btnSubmitEmp = new System.Windows.Forms.Button();
-            this.cbEmployeeID = new System.Windows.Forms.ComboBox();
             this.lblEmployeeID = new System.Windows.Forms.Label();
-            this.dgvAlljobs = new System.Windows.Forms.DataGridView();
+            this.lblEscalte = new System.Windows.Forms.Label();
+            this.btnSubmitEmp = new System.Windows.Forms.Button();
+            this.cbescalte = new System.Windows.Forms.ComboBox();
+            this.cbEmployeeID = new System.Windows.Forms.ComboBox();
             this.lbTrackJob = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnDepartment = new System.Windows.Forms.Button();
-            this.pnlClientButtons = new System.Windows.Forms.Panel();
+            this.pnlContent1 = new System.Windows.Forms.Panel();
+            this.lblContent2 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblContent1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnescalte = new System.Windows.Forms.Button();
+            this.btnLogJob = new System.Windows.Forms.Button();
             this.btnTrackJob = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlDept.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).BeginInit();
-            this.pnlClientButtons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pnlBR4 = new System.Windows.Forms.Panel();
+            this.pnlBR1 = new System.Windows.Forms.Panel();
+            this.pnlBR2 = new System.Windows.Forms.Panel();
+            this.pnlContent3 = new System.Windows.Forms.Panel();
+            this.dgvAlljobs = new System.Windows.Forms.DataGridView();
+            this.pnlContent2.SuspendLayout();
+            this.pnlBR3.SuspendLayout();
+            this.pnlContent1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlHeader.SuspendLayout();
+            this.pnlBR4.SuspendLayout();
+            this.pnlBR1.SuspendLayout();
+            this.pnlBR2.SuspendLayout();
+            this.pnlContent3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlDept
+            // pnlContent2
             // 
-            this.pnlDept.Controls.Add(this.btnClose);
-            this.pnlDept.Controls.Add(this.label1);
-            this.pnlDept.Controls.Add(this.txtJobid);
-            this.pnlDept.Controls.Add(this.label12);
-            this.pnlDept.Controls.Add(this.label10);
-            this.pnlDept.Controls.Add(this.panel6);
-            this.pnlDept.Location = new System.Drawing.Point(263, 69);
-            this.pnlDept.Name = "pnlDept";
-            this.pnlDept.Size = new System.Drawing.Size(744, 546);
-            this.pnlDept.TabIndex = 40;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(515, 56);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 41);
-            this.btnClose.TabIndex = 13;
-            this.btnClose.Text = "Close Job";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.pnlContent2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(104)))), ((int)(((byte)(104)))));
+            this.pnlContent2.Controls.Add(this.label1);
+            this.pnlContent2.Controls.Add(this.txtJobid);
+            this.pnlContent2.Controls.Add(this.label12);
+            this.pnlContent2.Controls.Add(this.label10);
+            this.pnlContent2.Controls.Add(this.pnlBR3);
+            this.pnlContent2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent2.Location = new System.Drawing.Point(10, 10);
+            this.pnlContent2.Name = "pnlContent2";
+            this.pnlContent2.Size = new System.Drawing.Size(1439, 780);
+            this.pnlContent2.TabIndex = 40;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 65);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.Location = new System.Drawing.Point(581, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.Size = new System.Drawing.Size(82, 29);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Job ID:";
+            this.label1.Text = "Job ID";
             // 
             // txtJobid
             // 
-            this.txtJobid.Location = new System.Drawing.Point(99, 65);
+            this.txtJobid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txtJobid.Location = new System.Drawing.Point(666, 146);
             this.txtJobid.Name = "txtJobid";
-            this.txtJobid.Size = new System.Drawing.Size(100, 23);
+            this.txtJobid.Size = new System.Drawing.Size(126, 34);
             this.txtJobid.TabIndex = 11;
             this.txtJobid.TextChanged += new System.EventHandler(this.PopulateItem);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(217, 65);
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label12.Location = new System.Drawing.Point(533, 74);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(238, 16);
+            this.label12.Size = new System.Drawing.Size(334, 29);
             this.label12.TabIndex = 10;
-            this.label12.Text = "THIS IS THE SERVICE DEPARTMENT";
+            this.label12.Text = "This is the service department";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(130, 14);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.label10.Location = new System.Drawing.Point(399, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(451, 35);
+            this.label10.Size = new System.Drawing.Size(656, 46);
             this.label10.TabIndex = 9;
             this.label10.Text = "Welcome to your Client portal page!";
             // 
-            // panel6
+            // pnlBR3
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.btnescalte1);
-            this.panel6.Controls.Add(this.lblEscalte);
-            this.panel6.Controls.Add(this.cbescalte);
-            this.panel6.Controls.Add(this.btnSubmitEmp);
-            this.panel6.Controls.Add(this.cbEmployeeID);
-            this.panel6.Controls.Add(this.lblEmployeeID);
-            this.panel6.Controls.Add(this.dgvAlljobs);
-            this.panel6.Controls.Add(this.lbTrackJob);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Location = new System.Drawing.Point(35, 112);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(691, 406);
-            this.panel6.TabIndex = 6;
+            this.pnlBR3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR3.Controls.Add(this.btnClose);
+            this.pnlBR3.Controls.Add(this.btnescalte1);
+            this.pnlBR3.Controls.Add(this.lblEmployeeID);
+            this.pnlBR3.Controls.Add(this.lblEscalte);
+            this.pnlBR3.Controls.Add(this.btnSubmitEmp);
+            this.pnlBR3.Controls.Add(this.cbescalte);
+            this.pnlBR3.Controls.Add(this.cbEmployeeID);
+            this.pnlBR3.Controls.Add(this.lbTrackJob);
+            this.pnlBR3.Controls.Add(this.pnlContent3);
+            this.pnlBR3.Location = new System.Drawing.Point(28, 205);
+            this.pnlBR3.Name = "pnlBR3";
+            this.pnlBR3.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBR3.Size = new System.Drawing.Size(1380, 548);
+            this.pnlBR3.TabIndex = 14;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnClose.Location = new System.Drawing.Point(605, 322);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(140, 50);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "Close Job";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnescalte1
             // 
-            this.btnescalte1.Location = new System.Drawing.Point(373, 204);
+            this.btnescalte1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnescalte1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnescalte1.Location = new System.Drawing.Point(861, 267);
             this.btnescalte1.Name = "btnescalte1";
-            this.btnescalte1.Size = new System.Drawing.Size(131, 47);
+            this.btnescalte1.Size = new System.Drawing.Size(140, 50);
             this.btnescalte1.TabIndex = 11;
             this.btnescalte1.Text = "Escalate";
-            this.btnescalte1.UseVisualStyleBackColor = true;
+            this.btnescalte1.UseVisualStyleBackColor = false;
             this.btnescalte1.Click += new System.EventHandler(this.btnescalte1_Click);
-            // 
-            // lblEscalte
-            // 
-            this.lblEscalte.AutoSize = true;
-            this.lblEscalte.Location = new System.Drawing.Point(381, 112);
-            this.lblEscalte.Name = "lblEscalte";
-            this.lblEscalte.Size = new System.Drawing.Size(47, 16);
-            this.lblEscalte.TabIndex = 10;
-            this.lblEscalte.Text = "Escalte";
-            // 
-            // cbescalte
-            // 
-            this.cbescalte.FormattingEnabled = true;
-            this.cbescalte.Location = new System.Drawing.Point(373, 144);
-            this.cbescalte.Name = "cbescalte";
-            this.cbescalte.Size = new System.Drawing.Size(263, 24);
-            this.cbescalte.TabIndex = 9;
-            this.cbescalte.Text = "...";
-            // 
-            // btnSubmitEmp
-            // 
-            this.btnSubmitEmp.Location = new System.Drawing.Point(62, 189);
-            this.btnSubmitEmp.Name = "btnSubmitEmp";
-            this.btnSubmitEmp.Size = new System.Drawing.Size(131, 47);
-            this.btnSubmitEmp.TabIndex = 8;
-            this.btnSubmitEmp.Text = "Submit";
-            this.btnSubmitEmp.UseVisualStyleBackColor = true;
-            this.btnSubmitEmp.Click += new System.EventHandler(this.btnSubmitEmp_Click);
-            // 
-            // cbEmployeeID
-            // 
-            this.cbEmployeeID.FormattingEnabled = true;
-            this.cbEmployeeID.Location = new System.Drawing.Point(62, 144);
-            this.cbEmployeeID.Name = "cbEmployeeID";
-            this.cbEmployeeID.Size = new System.Drawing.Size(263, 24);
-            this.cbEmployeeID.TabIndex = 7;
             // 
             // lblEmployeeID
             // 
             this.lblEmployeeID.AutoSize = true;
-            this.lblEmployeeID.Location = new System.Drawing.Point(70, 112);
+            this.lblEmployeeID.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblEmployeeID.Location = new System.Drawing.Point(332, 164);
             this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(81, 16);
+            this.lblEmployeeID.Size = new System.Drawing.Size(151, 29);
             this.lblEmployeeID.TabIndex = 6;
             this.lblEmployeeID.Text = "Employee ID";
             // 
-            // dgvAlljobs
+            // lblEscalte
             // 
-            this.dgvAlljobs.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvAlljobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlljobs.Location = new System.Drawing.Point(-2, -2);
-            this.dgvAlljobs.Name = "dgvAlljobs";
-            this.dgvAlljobs.RowHeadersWidth = 51;
-            this.dgvAlljobs.RowTemplate.Height = 24;
-            this.dgvAlljobs.Size = new System.Drawing.Size(686, 395);
-            this.dgvAlljobs.TabIndex = 5;
-            this.dgvAlljobs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlljobs_CellContentClick);
-            this.dgvAlljobs.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.pipulateID);
-            this.dgvAlljobs.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.populateid);
+            this.lblEscalte.AutoSize = true;
+            this.lblEscalte.BackColor = System.Drawing.Color.Transparent;
+            this.lblEscalte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblEscalte.Location = new System.Drawing.Point(895, 164);
+            this.lblEscalte.Name = "lblEscalte";
+            this.lblEscalte.Size = new System.Drawing.Size(92, 29);
+            this.lblEscalte.TabIndex = 10;
+            this.lblEscalte.Text = "Escalte";
+            // 
+            // btnSubmitEmp
+            // 
+            this.btnSubmitEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnSubmitEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnSubmitEmp.Location = new System.Drawing.Point(337, 267);
+            this.btnSubmitEmp.Name = "btnSubmitEmp";
+            this.btnSubmitEmp.Size = new System.Drawing.Size(140, 50);
+            this.btnSubmitEmp.TabIndex = 8;
+            this.btnSubmitEmp.Text = "Submit";
+            this.btnSubmitEmp.UseVisualStyleBackColor = false;
+            this.btnSubmitEmp.Click += new System.EventHandler(this.btnSubmitEmp_Click);
+            // 
+            // cbescalte
+            // 
+            this.cbescalte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.cbescalte.FormattingEnabled = true;
+            this.cbescalte.Location = new System.Drawing.Point(806, 209);
+            this.cbescalte.Name = "cbescalte";
+            this.cbescalte.Size = new System.Drawing.Size(263, 37);
+            this.cbescalte.TabIndex = 9;
+            this.cbescalte.Text = "...";
+            // 
+            // cbEmployeeID
+            // 
+            this.cbEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.cbEmployeeID.FormattingEnabled = true;
+            this.cbEmployeeID.Location = new System.Drawing.Point(278, 209);
+            this.cbEmployeeID.Name = "cbEmployeeID";
+            this.cbEmployeeID.Size = new System.Drawing.Size(263, 37);
+            this.cbEmployeeID.TabIndex = 7;
             // 
             // lbTrackJob
             // 
             this.lbTrackJob.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTrackJob.FormattingEnabled = true;
             this.lbTrackJob.ItemHeight = 42;
-            this.lbTrackJob.Location = new System.Drawing.Point(-2, 4);
+            this.lbTrackJob.Location = new System.Drawing.Point(419, 75);
             this.lbTrackJob.Name = "lbTrackJob";
-            this.lbTrackJob.Size = new System.Drawing.Size(691, 382);
+            this.lbTrackJob.Size = new System.Drawing.Size(568, 340);
             this.lbTrackJob.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(393, 430);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btnWork
             // 
-            this.btnWork.Location = new System.Drawing.Point(373, 0);
+            this.btnWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnWork.Location = new System.Drawing.Point(735, 33);
             this.btnWork.Name = "btnWork";
-            this.btnWork.Size = new System.Drawing.Size(104, 52);
+            this.btnWork.Size = new System.Drawing.Size(199, 55);
             this.btnWork.TabIndex = 45;
             this.btnWork.Text = "Packages";
-            this.btnWork.UseVisualStyleBackColor = true;
+            this.btnWork.UseVisualStyleBackColor = false;
             // 
             // btnClient
             // 
-            this.btnClient.Location = new System.Drawing.Point(263, 0);
+            this.btnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnClient.Location = new System.Drawing.Point(556, 33);
             this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(104, 52);
+            this.btnClient.Size = new System.Drawing.Size(152, 55);
             this.btnClient.TabIndex = 44;
             this.btnClient.Text = "Client";
-            this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.UseVisualStyleBackColor = false;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(898, 1);
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnLogOut.Location = new System.Drawing.Point(1719, 33);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(114, 51);
+            this.btnLogOut.Size = new System.Drawing.Size(152, 55);
             this.btnLogOut.TabIndex = 43;
             this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnDepartment
             // 
-            this.btnDepartment.Location = new System.Drawing.Point(483, 1);
+            this.btnDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnDepartment.Location = new System.Drawing.Point(963, 33);
             this.btnDepartment.Name = "btnDepartment";
-            this.btnDepartment.Size = new System.Drawing.Size(104, 52);
+            this.btnDepartment.Size = new System.Drawing.Size(233, 55);
             this.btnDepartment.TabIndex = 42;
             this.btnDepartment.Text = "Department";
-            this.btnDepartment.UseVisualStyleBackColor = true;
+            this.btnDepartment.UseVisualStyleBackColor = false;
             // 
-            // pnlClientButtons
+            // pnlContent1
             // 
-            this.pnlClientButtons.Controls.Add(this.pictureBox8);
-            this.pnlClientButtons.Controls.Add(this.pictureBox4);
-            this.pnlClientButtons.Controls.Add(this.button1);
-            this.pnlClientButtons.Controls.Add(this.pictureBox6);
-            this.pnlClientButtons.Controls.Add(this.pictureBox7);
-            this.pnlClientButtons.Controls.Add(this.label3);
-            this.pnlClientButtons.Controls.Add(this.button5);
-            this.pnlClientButtons.Controls.Add(this.btnescalte);
-            this.pnlClientButtons.Controls.Add(this.btnTrackJob);
-            this.pnlClientButtons.Location = new System.Drawing.Point(12, 69);
-            this.pnlClientButtons.Name = "pnlClientButtons";
-            this.pnlClientButtons.Size = new System.Drawing.Size(226, 387);
-            this.pnlClientButtons.TabIndex = 50;
+            this.pnlContent1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.pnlContent1.Controls.Add(this.lblContent2);
+            this.pnlContent1.Controls.Add(this.label2);
+            this.pnlContent1.Controls.Add(this.lblContent1);
+            this.pnlContent1.Controls.Add(this.button1);
+            this.pnlContent1.Controls.Add(this.label3);
+            this.pnlContent1.Controls.Add(this.btnLogJob);
+            this.pnlContent1.Controls.Add(this.btnTrackJob);
+            this.pnlContent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent1.Location = new System.Drawing.Point(10, 10);
+            this.pnlContent1.Name = "pnlContent1";
+            this.pnlContent1.Padding = new System.Windows.Forms.Padding(7);
+            this.pnlContent1.Size = new System.Drawing.Size(328, 710);
+            this.pnlContent1.TabIndex = 50;
+            // 
+            // lblContent2
+            // 
+            this.lblContent2.AutoSize = true;
+            this.lblContent2.BackColor = System.Drawing.Color.Transparent;
+            this.lblContent2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblContent2.Location = new System.Drawing.Point(117, 106);
+            this.lblContent2.Name = "lblContent2";
+            this.lblContent2.Size = new System.Drawing.Size(97, 29);
+            this.lblContent2.TabIndex = 52;
+            this.lblContent2.Text = "Options";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label2.Location = new System.Drawing.Point(78, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 4);
+            this.label2.TabIndex = 51;
+            // 
+            // lblContent1
+            // 
+            this.lblContent1.AutoSize = true;
+            this.lblContent1.BackColor = System.Drawing.Color.Transparent;
+            this.lblContent1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lblContent1.Location = new System.Drawing.Point(83, 52);
+            this.lblContent1.Name = "lblContent1";
+            this.lblContent1.Size = new System.Drawing.Size(173, 36);
+            this.lblContent1.TabIndex = 50;
+            this.lblContent1.Text = "Peter Jones";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(30, 27);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(30, 205);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 48);
+            this.button1.Size = new System.Drawing.Size(270, 70);
             this.button1.TabIndex = 49;
-            this.button1.Text = "     Manage Job";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Manage Job";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 14);
+            this.label3.Location = new System.Drawing.Point(79, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 16);
             this.label3.TabIndex = 10;
             // 
-            // button5
+            // btnLogJob
             // 
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(33, 258);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(161, 47);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "    Delete Account";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btnescalte
-            // 
-            this.btnescalte.Location = new System.Drawing.Point(33, 180);
-            this.btnescalte.Name = "btnescalte";
-            this.btnescalte.Size = new System.Drawing.Size(161, 48);
-            this.btnescalte.TabIndex = 8;
-            this.btnescalte.Text = "Escalate";
-            this.btnescalte.UseVisualStyleBackColor = true;
-            this.btnescalte.Click += new System.EventHandler(this.btnescalte_Click);
+            this.btnLogJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnLogJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogJob.Location = new System.Drawing.Point(30, 474);
+            this.btnLogJob.Name = "btnLogJob";
+            this.btnLogJob.Size = new System.Drawing.Size(270, 70);
+            this.btnLogJob.TabIndex = 8;
+            this.btnLogJob.Text = "Log Job";
+            this.btnLogJob.UseVisualStyleBackColor = false;
+            this.btnLogJob.Click += new System.EventHandler(this.btnescalte_Click);
             // 
             // btnTrackJob
             // 
-            this.btnTrackJob.Location = new System.Drawing.Point(30, 92);
+            this.btnTrackJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnTrackJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrackJob.Location = new System.Drawing.Point(30, 340);
             this.btnTrackJob.Name = "btnTrackJob";
-            this.btnTrackJob.Size = new System.Drawing.Size(164, 55);
+            this.btnTrackJob.Size = new System.Drawing.Size(270, 70);
             this.btnTrackJob.TabIndex = 7;
             this.btnTrackJob.Text = "Track Job";
-            this.btnTrackJob.UseVisualStyleBackColor = true;
+            this.btnTrackJob.UseVisualStyleBackColor = false;
             this.btnTrackJob.Click += new System.EventHandler(this.btnTrackJob_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox8.Image = global::SEN371_Project.Properties.Resources.download__2_;
-            this.pictureBox8.Location = new System.Drawing.Point(27, 27);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(52, 43);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 46;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Image = global::SEN371_Project.Properties.Resources.download__3_;
-            this.pictureBox4.Location = new System.Drawing.Point(27, 180);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(52, 48);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 50;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Image = global::SEN371_Project.Properties.Resources.download__1_1;
-            this.pictureBox6.Location = new System.Drawing.Point(27, 258);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(52, 47);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox7.Image = global::SEN371_Project.Properties.Resources.download__1_;
-            this.pictureBox7.Location = new System.Drawing.Point(27, 92);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(52, 55);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 47;
-            this.pictureBox7.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Image = global::SEN371_Project.Properties.Resources.Tony_Hawk_137489040;
-            this.pictureBox3.Location = new System.Drawing.Point(813, 0);
+            this.pictureBox3.Image = global::SEN371_Project.Properties.Resources.Profile_Pic_3;
+            this.pictureBox3.Location = new System.Drawing.Point(1608, 9);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 52);
+            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 41;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SEN371_Project.Properties.Resources.Wall_UnSat__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 59);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1031, 569);
-            this.pictureBox2.TabIndex = 37;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.Premier_Service_Solutions_540_110_px_Final;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(512, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.AutoSize = true;
+            this.pnlHeader.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(90)))), ((int)(((byte)(112)))));
+            this.pnlHeader.Controls.Add(this.btnWork);
+            this.pnlHeader.Controls.Add(this.btnDepartment);
+            this.pnlHeader.Controls.Add(this.btnClient);
+            this.pnlHeader.Controls.Add(this.pictureBox3);
+            this.pnlHeader.Controls.Add(this.btnLogOut);
+            this.pnlHeader.Controls.Add(this.pnlBR4);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlHeader.Size = new System.Drawing.Size(1924, 117);
+            this.pnlHeader.TabIndex = 51;
+            // 
+            // pnlBR4
+            // 
+            this.pnlBR4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR4.Controls.Add(this.pictureBox1);
+            this.pnlBR4.Location = new System.Drawing.Point(9, 9);
+            this.pnlBR4.Name = "pnlBR4";
+            this.pnlBR4.Padding = new System.Windows.Forms.Padding(7);
+            this.pnlBR4.Size = new System.Drawing.Size(526, 102);
+            this.pnlBR4.TabIndex = 46;
+            // 
+            // pnlBR1
+            // 
+            this.pnlBR1.Controls.Add(this.pnlContent1);
+            this.pnlBR1.Location = new System.Drawing.Point(25, 150);
+            this.pnlBR1.Name = "pnlBR1";
+            this.pnlBR1.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBR1.Size = new System.Drawing.Size(348, 730);
+            this.pnlBR1.TabIndex = 52;
+            // 
+            // pnlBR2
+            // 
+            this.pnlBR2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR2.Controls.Add(this.pnlContent2);
+            this.pnlBR2.Location = new System.Drawing.Point(426, 150);
+            this.pnlBR2.Name = "pnlBR2";
+            this.pnlBR2.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBR2.Size = new System.Drawing.Size(1459, 800);
+            this.pnlBR2.TabIndex = 14;
+            // 
+            // pnlContent3
+            // 
+            this.pnlContent3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
+            this.pnlContent3.Controls.Add(this.dgvAlljobs);
+            this.pnlContent3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent3.Location = new System.Drawing.Point(10, 10);
+            this.pnlContent3.Name = "pnlContent3";
+            this.pnlContent3.Size = new System.Drawing.Size(1360, 528);
+            this.pnlContent3.TabIndex = 14;
+            // 
+            // dgvAlljobs
+            // 
+            this.dgvAlljobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlljobs.Location = new System.Drawing.Point(62, 41);
+            this.dgvAlljobs.Name = "dgvAlljobs";
+            this.dgvAlljobs.RowHeadersWidth = 51;
+            this.dgvAlljobs.RowTemplate.Height = 24;
+            this.dgvAlljobs.Size = new System.Drawing.Size(292, 363);
+            this.dgvAlljobs.TabIndex = 0;
             // 
             // frmServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1007, 620);
-            this.Controls.Add(this.pnlClientButtons);
-            this.Controls.Add(this.btnWork);
-            this.Controls.Add(this.btnClient);
-            this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnDepartment);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pnlDept);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::SEN371_Project.Properties.Resources.Wall_UnSat__1_;
+            this.ClientSize = new System.Drawing.Size(1924, 1000);
+            this.Controls.Add(this.pnlHeader);
+            this.Controls.Add(this.pnlBR1);
+            this.Controls.Add(this.pnlBR2);
+            this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.Name = "frmServices";
             this.Text = "Services Depmartment";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmClient_Load);
-            this.pnlDept.ResumeLayout(false);
-            this.pnlDept.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).EndInit();
-            this.pnlClientButtons.ResumeLayout(false);
-            this.pnlClientButtons.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.pnlContent2.ResumeLayout(false);
+            this.pnlContent2.PerformLayout();
+            this.pnlBR3.ResumeLayout(false);
+            this.pnlBR3.PerformLayout();
+            this.pnlContent1.ResumeLayout(false);
+            this.pnlContent1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlBR4.ResumeLayout(false);
+            this.pnlBR1.ResumeLayout(false);
+            this.pnlBR2.ResumeLayout(false);
+            this.pnlContent3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlljobs)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel pnlDept;
+        private System.Windows.Forms.Panel pnlContent2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnWork;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnDepartment;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel pnlClientButtons;
+        private System.Windows.Forms.Panel pnlContent1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnescalte;
+        private System.Windows.Forms.Button btnLogJob;
         private System.Windows.Forms.Button btnTrackJob;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtJobid;
-        private System.Windows.Forms.ListBox lbTrackJob;
-        private System.Windows.Forms.DataGridView dgvAlljobs;
-        private System.Windows.Forms.Label lblEmployeeID;
-        private System.Windows.Forms.ComboBox cbEmployeeID;
-        private System.Windows.Forms.Button btnSubmitEmp;
-        private System.Windows.Forms.Label lblEscalte;
-        private System.Windows.Forms.ComboBox cbescalte;
-        private System.Windows.Forms.Button btnescalte1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblContent1;
+        private System.Windows.Forms.Label lblContent2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Panel pnlBR1;
+        private System.Windows.Forms.Panel pnlBR4;
+        private System.Windows.Forms.Panel pnlBR2;
+        private System.Windows.Forms.Panel pnlBR3;
+        private System.Windows.Forms.ListBox lbTrackJob;
+        private System.Windows.Forms.Button btnescalte1;
+        private System.Windows.Forms.Label lblEmployeeID;
+        private System.Windows.Forms.Label lblEscalte;
+        private System.Windows.Forms.Button btnSubmitEmp;
+        private System.Windows.Forms.ComboBox cbescalte;
+        private System.Windows.Forms.ComboBox cbEmployeeID;
+        private System.Windows.Forms.Panel pnlContent3;
+        private System.Windows.Forms.DataGridView dgvAlljobs;
     }
 }

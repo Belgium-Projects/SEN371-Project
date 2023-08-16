@@ -77,13 +77,13 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(3);
-            this.pnlHeader.Size = new System.Drawing.Size(1924, 119);
+            this.pnlHeader.Size = new System.Drawing.Size(1924, 117);
             this.pnlHeader.TabIndex = 0;
             // 
             // picbUserLogo
             // 
             this.picbUserLogo.Image = global::SEN371_Project.Properties.Resources.Profile_Pic_1;
-            this.picbUserLogo.Location = new System.Drawing.Point(1608, 13);
+            this.picbUserLogo.Location = new System.Drawing.Point(1608, 9);
             this.picbUserLogo.Name = "picbUserLogo";
             this.picbUserLogo.Size = new System.Drawing.Size(100, 100);
             this.picbUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,7 +94,7 @@
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(1719, 37);
+            this.btnLogOut.Location = new System.Drawing.Point(1719, 33);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(166, 55);
             this.btnLogOut.TabIndex = 5;
@@ -105,7 +105,7 @@
             // 
             this.btnWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWork.Location = new System.Drawing.Point(1145, 37);
+            this.btnWork.Location = new System.Drawing.Point(1145, 33);
             this.btnWork.Name = "btnWork";
             this.btnWork.Size = new System.Drawing.Size(138, 55);
             this.btnWork.TabIndex = 4;
@@ -116,7 +116,7 @@
             // 
             this.btnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient.Location = new System.Drawing.Point(968, 37);
+            this.btnClient.Location = new System.Drawing.Point(968, 33);
             this.btnClient.Name = "btnClient";
             this.btnClient.Size = new System.Drawing.Size(143, 55);
             this.btnClient.TabIndex = 3;
@@ -127,7 +127,7 @@
             // 
             this.btndepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btndepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndepartment.Location = new System.Drawing.Point(735, 37);
+            this.btndepartment.Location = new System.Drawing.Point(735, 33);
             this.btndepartment.Name = "btndepartment";
             this.btndepartment.Size = new System.Drawing.Size(210, 55);
             this.btndepartment.TabIndex = 2;
@@ -138,7 +138,7 @@
             // 
             this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(556, 37);
+            this.btnHome.Location = new System.Drawing.Point(556, 33);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(152, 55);
             this.btnHome.TabIndex = 1;
@@ -208,7 +208,7 @@
             // 
             this.btnViewEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnViewEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewEmployee.Location = new System.Drawing.Point(29, 474);
+            this.btnViewEmployee.Location = new System.Drawing.Point(30, 474);
             this.btnViewEmployee.Name = "btnViewEmployee";
             this.btnViewEmployee.Size = new System.Drawing.Size(270, 70);
             this.btnViewEmployee.TabIndex = 3;
@@ -219,7 +219,7 @@
             // 
             this.btnViewServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnViewServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewServices.Location = new System.Drawing.Point(29, 340);
+            this.btnViewServices.Location = new System.Drawing.Point(30, 340);
             this.btnViewServices.Name = "btnViewServices";
             this.btnViewServices.Size = new System.Drawing.Size(270, 70);
             this.btnViewServices.TabIndex = 3;
@@ -230,7 +230,7 @@
             // 
             this.btnPerformance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnPerformance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerformance.Location = new System.Drawing.Point(29, 205);
+            this.btnPerformance.Location = new System.Drawing.Point(30, 205);
             this.btnPerformance.Name = "btnPerformance";
             this.btnPerformance.Size = new System.Drawing.Size(270, 70);
             this.btnPerformance.TabIndex = 2;
@@ -276,7 +276,7 @@
             this.pnlBR3.Location = new System.Drawing.Point(28, 205);
             this.pnlBR3.Name = "pnlBR3";
             this.pnlBR3.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlBR3.Size = new System.Drawing.Size(1362, 548);
+            this.pnlBR3.Size = new System.Drawing.Size(1380, 548);
             this.pnlBR3.TabIndex = 0;
             // 
             // pnlContent3
@@ -285,7 +285,7 @@
             this.pnlContent3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent3.Location = new System.Drawing.Point(10, 10);
             this.pnlContent3.Name = "pnlContent3";
-            this.pnlContent3.Size = new System.Drawing.Size(1342, 528);
+            this.pnlContent3.Size = new System.Drawing.Size(1360, 528);
             this.pnlContent3.TabIndex = 0;
             // 
             // pnlBR1

@@ -1,4 +1,5 @@
 ﻿using SEN371_Project.dataHandler;
+using SEN371_Project.userExperience;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace SEN371_Project
         {
             InitializeComponent();
             txtJobid.Text = string.Empty;
-          
+
         }
         public void ClearPannel()
         {
@@ -34,11 +35,14 @@ namespace SEN371_Project
         serviceDept obj2 = new serviceDept();
         private void frmClient_Load(object sender, EventArgs e)
         {
+            formatUX format = new formatUX();
+            format.formattingRules(this);
+
             ClearPannel();
             foreach (var item in obj2.employeeAvailabe())
             {
                 List<string> itemBrokedown = item.Split(',').ToList();
-                cbEmployeeID.Items.Add(itemBrokedown[0] +"  " + itemBrokedown[1] +" " + itemBrokedown[2]);
+                cbEmployeeID.Items.Add(itemBrokedown[0] + "  " + itemBrokedown[1] + " " + itemBrokedown[2]);
             }
             cbescalte.Items.Add("High");
             cbescalte.Items.Add("Medium");
@@ -93,20 +97,20 @@ namespace SEN371_Project
                     }
                 }
             }
-            
-           
+
+
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmClose a = new frmClose();
             a.Show();
         }
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmClient a = new frmClient();
             a.Show();
         }
@@ -132,9 +136,9 @@ namespace SEN371_Project
             {
                 ClearPannel();
 
-                
+
                 dgvAlljobs.Show();
-                
+
                 dgvAlljobs.ColumnCount = 9;
                 dgvAlljobs.ColumnHeadersVisible = true;
 
@@ -160,7 +164,8 @@ namespace SEN371_Project
                     List<string> itembreakdown = item.Split(',').ToList();
                     dgvAlljobs.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[5], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
                 }
-                if(dgvAlljobs.RowCount > 0) {
+                if (dgvAlljobs.RowCount > 0)
+                {
                     lbTrackJob.Hide();
                     lblEmployeeID.Hide();
                     btnSubmitEmp.Hide();
@@ -173,7 +178,7 @@ namespace SEN371_Project
         }
         private void PopulateItem(object sender, EventArgs e)
         {
-            if(txtJobid.Text != "")
+            if (txtJobid.Text != "")
             {
                 lbTrackJob.Items.Clear();
                 try
@@ -211,7 +216,7 @@ namespace SEN371_Project
 
         private void populateid(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             txtJobid.Text = dgvAlljobs.CurrentRow.Cells[0].Value.ToString();
         }
 
@@ -239,12 +244,12 @@ namespace SEN371_Project
         private void btnescalte1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(cbescalte.Text);
-            obj2.escaltejob(txtJobid.Text,cbescalte.Text);
+            obj2.escaltejob(txtJobid.Text, cbescalte.Text);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            obj2.closeService(txtJobid.Text) ;
+            obj2.closeService(txtJobid.Text);
         }
     }
 }
