@@ -145,6 +145,7 @@ namespace SEN371_Project
                 {
                     List<client> customer = (obj.selectFromDB(int.Parse(txtCustomerID.Text)));
                     lbCustomer.Items.Clear();
+                    MessageBox.Show(customer[0].CusName);
                     if (customer[0].CusName == "Business")
                     {
 
@@ -152,7 +153,8 @@ namespace SEN371_Project
                         lbCustomer.Items.Add($"Business Name: {customer[0].CusSurname}");
                         //listBox1.Items.Add($"Packages ID {customer[0].packagesID}");
                         lbCustomer.Items.Add($"Street: {customer[0].CusService}");
-
+                        lbCustomer.Items.Add($"Business Rep:");
+                        
                         foreach (var item in obj.BUsinessRep(txtCustomerID.Text))
                         {
                             lbCustomer.Items.Add(item);

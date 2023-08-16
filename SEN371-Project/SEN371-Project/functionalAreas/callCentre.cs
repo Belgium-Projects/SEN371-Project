@@ -247,7 +247,7 @@ namespace SEN371_Project.FunctionalAreas
             List<string> businessRep = new List<string>();
             while (Reader.Read())
             {
-                businessRep.Add($"{Reader[0]},{Reader[1]},{Reader[2]},{Reader[3]},{Reader[4]}");
+                businessRep.Add($"{Reader[0]}  ,  {Reader[1]},  {Reader[2]},  {Reader[3]}, {Reader[4]}");
 
             }
             Disconnect();
@@ -261,25 +261,14 @@ namespace SEN371_Project.FunctionalAreas
             {
                 if (isBusinessCustomer(clientID))
                 {
-                    //Is a business CLient 
-                    Connection();
-                    string getRep = $"Select * from BusinessRole br inner join BusinessCustomer bc on br.BusinessRoleID = bc.BusinessRoleID where CustomerID ={clientID}";
-                    Command =new SqlCommand(getRep, Connection1);
-                    Reader = Command.ExecuteReader();
                     List<string> businessRep = new List<string>();
-                    while (Reader.Read())
-                    {
-                        businessRep.Add($"{Reader[0]},{Reader[1]},{Reader[2]},{Reader[3]},{Reader[4]}");
-                        
-                    }
-                    Disconnect();
                     Connection();
                     string getclientInfo = $"Select * from customer where CustomerID ={clientID}";
                     Command = new SqlCommand(getclientInfo, Connection1);
                     Reader = Command.ExecuteReader();
                     while (Reader.Read())
                     {
-                        CustomerInfo.Add(new client(Reader[2].ToString(), businessRep, Reader[4].ToString(), Reader[0].ToString()));
+                        CustomerInfo.Add(new client(Reader[1].ToString(),Reader[2].ToString(), businessRep, Reader[4].ToString(), Reader[0].ToString()));
                     }
                     Disconnect();
                     return CustomerInfo;
