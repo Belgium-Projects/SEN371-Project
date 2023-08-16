@@ -311,6 +311,7 @@ namespace SEN371_Project
         {
                 frmSimulator a = new frmSimulator();
                 a.Show();
+                a.TopMost = true;
                 //this.Hide();
         }
 

@@ -113,9 +113,10 @@ namespace SEN371_Project
             {
                 //MessageBox.Show(frmCallCentre.CustomerID + employee.empId);
                 obj.endCall(int.Parse(frmCallCentre.CustomerID), int.Parse(employee.empId));
+                duration.Stop();
+                this.Hide();
             }
-            duration.Stop();
-            this.Hide();
+            
           
         }
     }

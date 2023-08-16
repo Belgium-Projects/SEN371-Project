@@ -339,7 +339,7 @@ namespace SEN371_Project
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(37, 179);
+            this.button5.Location = new System.Drawing.Point(37, 176);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(159, 43);
             this.button5.TabIndex = 7;
@@ -382,8 +382,9 @@ namespace SEN371_Project
             this.btnCallSimulation.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCallSimulation.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCallSimulation.FlatAppearance.BorderSize = 0;
+            this.btnCallSimulation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCallSimulation.ForeColor = System.Drawing.Color.Black;
-            this.btnCallSimulation.Location = new System.Drawing.Point(642, 4);
+            this.btnCallSimulation.Location = new System.Drawing.Point(655, 7);
             this.btnCallSimulation.Name = "btnCallSimulation";
             this.btnCallSimulation.Size = new System.Drawing.Size(119, 43);
             this.btnCallSimulation.TabIndex = 55;
