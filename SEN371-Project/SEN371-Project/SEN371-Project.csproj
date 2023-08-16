@@ -241,5 +241,14 @@
   <ItemGroup>
     <None Include="Resources\accept_icon-icons.com_71800.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\awnsercall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Endcall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favpng_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,6 +14,7 @@ namespace SEN371_Project
 {
     public partial class frmCallCentre : Form
     {
+        public static string CustomerID;
         public frmCallCentre()
         {
             InitializeComponent();
@@ -138,6 +139,7 @@ namespace SEN371_Project
 
         private void initalizeVars(object sender, EventArgs e)
         {
+            CustomerID = txtCustomerID.Text;
             comboboxinit();
             if (txtCustomerID.Text != "")
             {
@@ -208,7 +210,7 @@ namespace SEN371_Project
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            obj2.EmpId = "1";
+            //obj2.EmpId = "1";
             int serviceID = int.Parse(CBService1.SelectedItem.ToString().Split(',')[0]);
             MessageBox.Show(serviceID.ToString());
             obj.logJob(int.Parse(txtCustomerID.Text), 0, txtNote.Text, "2023/08/15", serviceID, CBPriority.SelectedItem.ToString());
@@ -261,8 +263,7 @@ namespace SEN371_Project
             cbRedirect.Items.Add("Services Department");
             cbRedirect.Items.Add("Packages Department");
             cbRedirect.Items.Add("Management Department");
-            chkSimulateCall.Checked = false;
-
+           
             // Set default selected index
             cbRedirect.SelectedIndex = -1;
             lblEmpName.Text = obj2.EmpName;
@@ -273,14 +274,16 @@ namespace SEN371_Project
         private void chkSimulateCall_CheckedChanged(object sender, EventArgs e)
         {           
 
-            if (chkSimulateCall.Checked)
-            {
-              frmSimulator a=new   frmSimulator();
-               a.Show();
-               //this.Hide();
-            }
+           
         }
 
-      
+        private void btnCallSimulation_Click(object sender, EventArgs e)
+        {
+            
+                frmSimulator a = new frmSimulator();
+                a.Show();
+                //this.Hide();
+            
+        }
     } 
 }

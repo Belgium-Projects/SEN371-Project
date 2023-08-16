@@ -159,19 +159,22 @@ namespace SEN371_Project.FunctionalAreas
         //anwsers call
         public string anwsercall()
         {
-            this.starttime = DateTime.Now.ToString();
+            this.starttime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff");
             
             return starttime;
         }
         // end call
         public void endCall(int customerID, int employeeid)
+            
         {
-            string insert = $"insert into CallHistory(CustomerID,StartTime,Endtime,EmployeeID) values({customerID},'{starttime}','{DateTime.Now}',{employeeid})";
+            //MessageBox.Show(starttime + "   "+ DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff"));
+            string insert = $"insert into CallHistory(CustomerID,StartTime,Endtime,EmployeeID) values({customerID},'{starttime}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff")}',{employeeid})";
             Connection();
             try
             {
                 Command = new System.Data.SqlClient.SqlCommand(insert,Connection1);
                 Command.ExecuteNonQuery();
+
 
             }                //MessageBox.Show("Inserted");
             catch (Exception ex)

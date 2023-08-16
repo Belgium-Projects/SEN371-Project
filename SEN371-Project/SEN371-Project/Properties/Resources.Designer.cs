@@ -19,7 +19,7 @@ namespace SEN371_Project.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -113,6 +113,16 @@ namespace SEN371_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap awnsercall {
+            get {
+                object obj = ResourceManager.GetObject("awnsercall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap call_incoming_phone_icon_193514 {
             get {
                 object obj = ResourceManager.GetObject("call_incoming_phone_icon_193514", resourceCulture);
@@ -176,6 +186,26 @@ namespace SEN371_Project.Properties {
         internal static System.Drawing.Bitmap download__6_ {
             get {
                 object obj = ResourceManager.GetObject("download (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Endcall {
+            get {
+                object obj = ResourceManager.GetObject("Endcall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap favpng_icon {
+            get {
+                object obj = ResourceManager.GetObject("favpng_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
