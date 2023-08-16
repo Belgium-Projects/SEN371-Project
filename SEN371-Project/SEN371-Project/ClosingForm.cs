@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEN371_Project.userExperience;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace SEN371_Project
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmClose_Load(object sender, EventArgs e)
+        {
+            formatUX format = new formatUX();
+            format.formattingRules(this);
         }
     }
 }
