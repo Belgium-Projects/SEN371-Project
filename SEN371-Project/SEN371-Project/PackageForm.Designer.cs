@@ -56,11 +56,11 @@ namespace SEN371_Project
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.premierServiceSolutionsDataSet = new SEN371_Project.PremierServiceSolutionsDataSet();
+            //this.premierServiceSolutionsDataSet = new SEN371_Project.PremierServiceSolutionsDataSet();
             this.serviceinPackagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.serviceinPackagesTableAdapter = new SEN371_Project.PremierServiceSolutionsDataSetTableAdapters.ServiceinPackagesTableAdapter();
+            //this.serviceinPackagesTableAdapter = new SEN371_Project.PremierServiceSolutionsDataSetTableAdapters.ServiceinPackagesTableAdapter();
             this.packagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.packagesTableAdapter = new SEN371_Project.PremierServiceSolutionsDataSetTableAdapters.PackagesTableAdapter();
+            //this.packagesTableAdapter = new SEN371_Project.PremierServiceSolutionsDataSetTableAdapters.PackagesTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -73,7 +73,7 @@ namespace SEN371_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.premierServiceSolutionsDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.premierServiceSolutionsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceinPackagesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.packagesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -344,26 +344,26 @@ namespace SEN371_Project
             // 
             // premierServiceSolutionsDataSet
             // 
-            this.premierServiceSolutionsDataSet.DataSetName = "PremierServiceSolutionsDataSet";
-            this.premierServiceSolutionsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.premierServiceSolutionsDataSet.DataSetName = "PremierServiceSolutionsDataSet";
+            //this.premierServiceSolutionsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // serviceinPackagesBindingSource
             // 
             this.serviceinPackagesBindingSource.DataMember = "ServiceinPackages";
-            this.serviceinPackagesBindingSource.DataSource = this.premierServiceSolutionsDataSet;
+            //this.serviceinPackagesBindingSource.DataSource = this.premierServiceSolutionsDataSet;
             // 
             // serviceinPackagesTableAdapter
             // 
-            this.serviceinPackagesTableAdapter.ClearBeforeFill = true;
+            //this.serviceinPackagesTableAdapter.ClearBeforeFill = true;
             // 
             // packagesBindingSource
             // 
             this.packagesBindingSource.DataMember = "Packages";
-            this.packagesBindingSource.DataSource = this.premierServiceSolutionsDataSet;
+            //this.packagesBindingSource.DataSource = this.premierServiceSolutionsDataSet;
             // 
             // packagesTableAdapter
             // 
-            this.packagesTableAdapter.ClearBeforeFill = true;
+            //this.packagesTableAdapter.ClearBeforeFill = true;
             // 
             // frmPackages
             // 
@@ -398,7 +398,7 @@ namespace SEN371_Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.premierServiceSolutionsDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.premierServiceSolutionsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceinPackagesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.packagesBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -432,10 +432,10 @@ namespace SEN371_Project
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btnServicesinPackages;
-        private PremierServiceSolutionsDataSet premierServiceSolutionsDataSet;
+        //private PremierServiceSolutionsDataSet premierServiceSolutionsDataSet;
         private System.Windows.Forms.BindingSource serviceinPackagesBindingSource;
-        private PremierServiceSolutionsDataSetTableAdapters.ServiceinPackagesTableAdapter serviceinPackagesTableAdapter;
+        //private PremierServiceSolutionsDataSetTableAdapters.ServiceinPackagesTableAdapter serviceinPackagesTableAdapter;
         private System.Windows.Forms.BindingSource packagesBindingSource;
-        private PremierServiceSolutionsDataSetTableAdapters.PackagesTableAdapter packagesTableAdapter;
+        //private PremierServiceSolutionsDataSetTableAdapters.PackagesTableAdapter packagesTableAdapter;
     }
 }

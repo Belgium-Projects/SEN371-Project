@@ -22,9 +22,9 @@ namespace SEN371_Project
         private void frmPackages_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'premierServiceSolutionsDataSet.Packages' table. You can move, or remove it, as needed.
-            this.packagesTableAdapter.Fill(this.premierServiceSolutionsDataSet.Packages);
+            //this.packagesTableAdapter.Fill(this.premierServiceSolutionsDataSet.Packages);
             // TODO: This line of code loads data into the 'premierServiceSolutionsDataSet.ServiceinPackages' table. You can move, or remove it, as needed.
-            this.serviceinPackagesTableAdapter.Fill(this.premierServiceSolutionsDataSet.ServiceinPackages);
+            //this.serviceinPackagesTableAdapter.Fill(this.premierServiceSolutionsDataSet.ServiceinPackages);
             employee obj = new employee();
             lblEmpName.Text = obj.EmpName;
             pannelClear();
