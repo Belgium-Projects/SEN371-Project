@@ -1,5 +1,6 @@
 ﻿using SEN371_Project.dataHandler;
 using SEN371_Project.FunctionalAreas;
+using SEN371_Project.userExperience;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,7 +44,13 @@ namespace SEN371_Project
         {
             //employee obj1 = new employee();
             //MessageBox.Show(obj1.HashPassword("123","123"));
-            txtPassword.PasswordChar = '*';
+            formatUX format = new formatUX();
+            format.formattingRules(this);
+            //this.txtUsername.AutoSize = false;
+            //this.txtPassword.AutoSize = false;
+            //this.txtUsername.Size = new System.Drawing.Size(350, 40);
+            //this.txtPassword.Size = new System.Drawing.Size(350, 40);
+            //txtPassword.PasswordChar = '*';
 
 
         }
