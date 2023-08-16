@@ -124,7 +124,7 @@ namespace SEN371_Project
         {
 
             this.Hide();
-            frmClient a = new frmClient();
+            frmManagementDept a = new frmManagementDept();
             a.Show();
         }
 

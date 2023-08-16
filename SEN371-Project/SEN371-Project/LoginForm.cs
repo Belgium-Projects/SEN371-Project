@@ -68,7 +68,7 @@ namespace SEN371_Project
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                frmApplication a = new frmApplication();
+                frmCallCentre a = new frmCallCentre();
                 a.Show();
             }
             else
