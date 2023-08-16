@@ -13,12 +13,35 @@ body {
     background-size: cover;
     background-position: center;
   }
-  
-  .container {
-    text-align: center; 
+
+  .chatbot-container {
+    text-align: center;
     font-family: 'hepta_slabextralight', Arial, sans-serif;
+    background-color: #9A9A9A70;
+    border: 5px solid #D9D9D9;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
   }
 
+  #chat-bot-box {
+    background-color: #9A9A9A;
+    border: 5px solid #D9D9D9;
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  #UserLogo{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #9A9A9A;
+    border-radius: 50px;
+    /* margin-left: 80%; */
+    margin-right: 25px;
+    position: relative;
+    float: right;
+    margin-top: -3px;
+  }
   form{
     max-width: 300px;
     margin: 0 auto;
@@ -27,7 +50,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2); /* White with 20% opacity */
     background-color: rgba(255, 255, 255, 0.1); /* White with 10% opacity */
   }
-  
+
   label {
     display: block;
     margin-bottom: 5px;
@@ -42,30 +65,30 @@ body {
     top: 0;
     left: 0;
     padding-top: 20px;
-  }  
-  
+  }
+
   .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .sidebar li {
     margin: 0;
     padding: 0;
   }
-  
+
   .sidebar a {
     display: block;
     text-decoration: none;
     color: #fff;
     padding: 10px 20px;
   }
-  
+
   .sidebar a:hover {
     background-color: #4CAF50;
   }
-  
+
   /* button {
     background-color: #4CAF50;
     color: #fff;
@@ -74,7 +97,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   button:hover {
     background-color: #45a049;
   } */
@@ -200,4 +223,3 @@ html {
     min-height: 100%;
     box-sizing: border-box;
 }
-  

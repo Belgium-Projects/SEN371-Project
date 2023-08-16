@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Here, you can implement your logic to generate bot responses based on user input
         // For this example, let's use predefined responses
         const responses = {
-            "Hey":"Hey!Iam Toby Premier Services Solutions Chatbot, How can I assist you?",
-            "hello": "Hello!Iam Toby Premier Services Solutions Chatbot, How can I assist you?",
+            "hey":"Hey!  Iam Toby Premier Services Solutions Chatbot, How can I assist you?",
+            "hello": "Hello!  Iam Toby Premier Services Solutions Chatbot, How can I assist you?",
             "how are you": "I'm just a bot, but I'm here to help!",
             "bye": "Goodbye! Have a great day!"
         };
