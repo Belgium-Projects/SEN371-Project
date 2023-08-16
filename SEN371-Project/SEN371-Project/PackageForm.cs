@@ -18,6 +18,20 @@ namespace SEN371_Project
         {
             InitializeComponent();
         }
+        public void innit()
+        {
+            cbSALID.Items.Clear();
+
+            foreach (var item in contract.SLAID())
+            {
+                
+                cbSALID.Items.Add(item);
+            }
+            foreach (var item in contract.defineServices())
+            {
+                clbServices.Items.Add(item);
+            }
+        }
         contractMaintenance contract = new contractMaintenance();
         private void frmPackages_Load(object sender, EventArgs e)
         {
@@ -33,6 +47,36 @@ namespace SEN371_Project
         public void pannelClear()
         {
             dgvServies.Hide();
+            lblAvailablity.Hide();
+            lblDiscount.Hide();
+            lblPackagesName.Hide();
+            lblSLAID.Hide();
+            txtPackageName.Hide();
+            txtAvailability.Hide();
+            txtDiscount.Hide();
+            cbSALID.Hide();
+            btnSubmit.Hide();
+            clbServices.Hide();
+            //lblPackages.Hide();
+            lblMaintance.Hide();
+            lblDifficultyMeasure.Hide();
+            lblPrices.Hide();
+            lblFrequency.Hide();
+            lblPackages.Hide();
+            lblDesciption.Hide();
+            lblTools.Hide();
+            cbMaintances.Hide();
+            cbdifficult.Hide();
+            txtPrice.Hide();
+            cbfrequency.Hide();
+            lblDesciption.Hide();
+            lblDescription.Hide();
+            lblTools.Hide();
+            txttools.Hide();
+            btnSubmitService.Hide();
+            lblPackages.Hide();
+            txttask.Hide();
+            lblTask.Hide();
         }
         private void btnLogOut_Click(object sender, EventArgs e)
         {
@@ -55,6 +99,7 @@ namespace SEN371_Project
 
         private void btnViewServices_Click(object sender, EventArgs e)
         {
+            pannelClear();
             dgvServies.Show();
             dgvServies.Rows.Clear();
             dgvServies.ColumnCount = 9;
@@ -90,6 +135,7 @@ namespace SEN371_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
+            pannelClear();
             dgvServies.Show();
             dgvServies.Rows.Clear();
 
@@ -126,6 +172,7 @@ namespace SEN371_Project
         int row = 0;
         private void dgvServies_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            
             try
             {
                 row = dgvServies.CurrentRow.Index + 1;
@@ -227,6 +274,68 @@ namespace SEN371_Project
                contract.DeletePackages(dgvServies.CurrentRow.Cells[0].Value.ToString());
             
            
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            contract.InsertPackages(txtPackageName.Text,txtAvailability.Text,txtDiscount.Text,cbSALID.Text);
+            contract.insertservicesinpackages(contract.Lastitem(), clbServices);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            pannelClear();
+            innit();
+            lblAvailablity.Show();
+            lblDiscount.Show();
+            lblPackagesName.Show();
+            lblSLAID.Show();
+            txtPackageName.Show();
+            txtAvailability.Show();
+            txtDiscount.Show();
+            cbSALID.Show();
+            btnSubmit.Show();
+            clbServices.Show();
+            lblPackages.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pannelClear();
+            lblMaintance.Show();
+            lblDifficultyMeasure.Show();
+            lblPrices.Show();
+            lblFrequency.Show();
+            
+            lblDesciption.Show();
+            lblTools.Show();
+            cbMaintances.Show();
+            cbdifficult.Show();
+            txtPrice.Show();
+            cbfrequency.Show();
+            lblDesciption.Show();
+            lblDescription.Show();
+            lblTools.Show();
+            txttools.Show();
+            btnSubmitService.Show();
+            txttask.Show();
+            lblTask.Show();
+        }
+
+        private void lblDesciption_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmitService_Click(object sender, EventArgs e)
+        {
+            contract.insertservices(cbMaintances.Text, cbdifficult.Text, txtPrice.Text, cbfrequency.Text, txttask.Text, lblDescription.Text, txttools.Text);
+       
         }
     }
 }

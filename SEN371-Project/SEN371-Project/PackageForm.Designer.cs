@@ -54,6 +54,34 @@ namespace SEN371_Project
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.serviceinPackagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.packagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtPackageName = new System.Windows.Forms.TextBox();
+            this.txtAvailability = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.cbSALID = new System.Windows.Forms.ComboBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblPackagesName = new System.Windows.Forms.Label();
+            this.lblAvailablity = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.lblSLAID = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAddServices = new System.Windows.Forms.Button();
+            this.clbServices = new System.Windows.Forms.CheckedListBox();
+            this.lblPackages = new System.Windows.Forms.Label();
+            this.lblMaintance = new System.Windows.Forms.Label();
+            this.lblDifficultyMeasure = new System.Windows.Forms.Label();
+            this.lblPrices = new System.Windows.Forms.Label();
+            this.lblFrequency = new System.Windows.Forms.Label();
+            this.lblTask = new System.Windows.Forms.Label();
+            this.lblDesciption = new System.Windows.Forms.Label();
+            this.lblTools = new System.Windows.Forms.Label();
+            this.cbdifficult = new System.Windows.Forms.ComboBox();
+            this.cbMaintances = new System.Windows.Forms.ComboBox();
+            this.cbfrequency = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.TextBox();
+            this.txttools = new System.Windows.Forms.TextBox();
+            this.btnSubmitService = new System.Windows.Forms.Button();
+            this.txttask = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -70,6 +98,8 @@ namespace SEN371_Project
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnAddServices);
+            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.pictureBox6);
@@ -175,6 +205,7 @@ namespace SEN371_Project
             this.button1.TabIndex = 65;
             this.button1.Text = "Work";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -228,6 +259,32 @@ namespace SEN371_Project
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.btnSubmitService);
+            this.panel3.Controls.Add(this.txttask);
+            this.panel3.Controls.Add(this.txttools);
+            this.panel3.Controls.Add(this.lblDescription);
+            this.panel3.Controls.Add(this.txtPrice);
+            this.panel3.Controls.Add(this.cbfrequency);
+            this.panel3.Controls.Add(this.cbMaintances);
+            this.panel3.Controls.Add(this.cbdifficult);
+            this.panel3.Controls.Add(this.lblTools);
+            this.panel3.Controls.Add(this.lblDesciption);
+            this.panel3.Controls.Add(this.lblTask);
+            this.panel3.Controls.Add(this.lblFrequency);
+            this.panel3.Controls.Add(this.lblPrices);
+            this.panel3.Controls.Add(this.lblDifficultyMeasure);
+            this.panel3.Controls.Add(this.lblMaintance);
+            this.panel3.Controls.Add(this.lblPackages);
+            this.panel3.Controls.Add(this.clbServices);
+            this.panel3.Controls.Add(this.lblSLAID);
+            this.panel3.Controls.Add(this.lblDiscount);
+            this.panel3.Controls.Add(this.lblAvailablity);
+            this.panel3.Controls.Add(this.lblPackagesName);
+            this.panel3.Controls.Add(this.btnSubmit);
+            this.panel3.Controls.Add(this.cbSALID);
+            this.panel3.Controls.Add(this.txtDiscount);
+            this.panel3.Controls.Add(this.txtAvailability);
+            this.panel3.Controls.Add(this.txtPackageName);
             this.panel3.Controls.Add(this.dgvServies);
             this.panel3.Location = new System.Drawing.Point(18, 92);
             this.panel3.Name = "panel3";
@@ -237,7 +294,7 @@ namespace SEN371_Project
             // dgvServies
             // 
             this.dgvServies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServies.Location = new System.Drawing.Point(2, -2);
+            this.dgvServies.Location = new System.Drawing.Point(-1, 2);
             this.dgvServies.Margin = new System.Windows.Forms.Padding(2);
             this.dgvServies.Name = "dgvServies";
             this.dgvServies.RowHeadersWidth = 51;
@@ -301,6 +358,260 @@ namespace SEN371_Project
             // 
             this.packagesBindingSource.DataMember = "Packages";
             // 
+            // txtPackageName
+            // 
+            this.txtPackageName.Location = new System.Drawing.Point(136, 34);
+            this.txtPackageName.Name = "txtPackageName";
+            this.txtPackageName.Size = new System.Drawing.Size(319, 23);
+            this.txtPackageName.TabIndex = 1;
+            // 
+            // txtAvailability
+            // 
+            this.txtAvailability.Location = new System.Drawing.Point(136, 96);
+            this.txtAvailability.Name = "txtAvailability";
+            this.txtAvailability.Size = new System.Drawing.Size(319, 23);
+            this.txtAvailability.TabIndex = 2;
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Location = new System.Drawing.Point(136, 141);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(319, 23);
+            this.txtDiscount.TabIndex = 3;
+            // 
+            // cbSALID
+            // 
+            this.cbSALID.FormattingEnabled = true;
+            this.cbSALID.Location = new System.Drawing.Point(136, 195);
+            this.cbSALID.Name = "cbSALID";
+            this.cbSALID.Size = new System.Drawing.Size(319, 24);
+            this.cbSALID.TabIndex = 4;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(222, 322);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(134, 66);
+            this.btnSubmit.TabIndex = 5;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // lblPackagesName
+            // 
+            this.lblPackagesName.AutoSize = true;
+            this.lblPackagesName.Location = new System.Drawing.Point(133, 15);
+            this.lblPackagesName.Name = "lblPackagesName";
+            this.lblPackagesName.Size = new System.Drawing.Size(97, 16);
+            this.lblPackagesName.TabIndex = 6;
+            this.lblPackagesName.Text = "Packages Name";
+            // 
+            // lblAvailablity
+            // 
+            this.lblAvailablity.AutoSize = true;
+            this.lblAvailablity.Location = new System.Drawing.Point(133, 76);
+            this.lblAvailablity.Name = "lblAvailablity";
+            this.lblAvailablity.Size = new System.Drawing.Size(64, 16);
+            this.lblAvailablity.TabIndex = 7;
+            this.lblAvailablity.Text = "Availablity";
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Location = new System.Drawing.Point(133, 122);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(58, 16);
+            this.lblDiscount.TabIndex = 8;
+            this.lblDiscount.Text = "Discount";
+            // 
+            // lblSLAID
+            // 
+            this.lblSLAID.AutoSize = true;
+            this.lblSLAID.Location = new System.Drawing.Point(133, 172);
+            this.lblSLAID.Name = "lblSLAID";
+            this.lblSLAID.Size = new System.Drawing.Size(47, 16);
+            this.lblSLAID.TabIndex = 9;
+            this.lblSLAID.Text = "SLAID";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(3, 324);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(211, 43);
+            this.btnAdd.TabIndex = 67;
+            this.btnAdd.Text = "Packages Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnAddServices
+            // 
+            this.btnAddServices.Location = new System.Drawing.Point(3, 389);
+            this.btnAddServices.Name = "btnAddServices";
+            this.btnAddServices.Size = new System.Drawing.Size(211, 43);
+            this.btnAddServices.TabIndex = 68;
+            this.btnAddServices.Text = "Packages Add";
+            this.btnAddServices.UseVisualStyleBackColor = true;
+            this.btnAddServices.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // clbServices
+            // 
+            this.clbServices.FormattingEnabled = true;
+            this.clbServices.Location = new System.Drawing.Point(136, 249);
+            this.clbServices.Name = "clbServices";
+            this.clbServices.Size = new System.Drawing.Size(329, 58);
+            this.clbServices.TabIndex = 10;
+            // 
+            // lblPackages
+            // 
+            this.lblPackages.AutoSize = true;
+            this.lblPackages.Location = new System.Drawing.Point(133, 230);
+            this.lblPackages.Name = "lblPackages";
+            this.lblPackages.Size = new System.Drawing.Size(120, 16);
+            this.lblPackages.TabIndex = 11;
+            this.lblPackages.Text = "Service in Packages";
+            // 
+            // lblMaintance
+            // 
+            this.lblMaintance.AutoSize = true;
+            this.lblMaintance.Location = new System.Drawing.Point(133, 15);
+            this.lblMaintance.Name = "lblMaintance";
+            this.lblMaintance.Size = new System.Drawing.Size(103, 16);
+            this.lblMaintance.TabIndex = 12;
+            this.lblMaintance.Text = "Maintances Type";
+            // 
+            // lblDifficultyMeasure
+            // 
+            this.lblDifficultyMeasure.AutoSize = true;
+            this.lblDifficultyMeasure.Location = new System.Drawing.Point(133, 77);
+            this.lblDifficultyMeasure.Name = "lblDifficultyMeasure";
+            this.lblDifficultyMeasure.Size = new System.Drawing.Size(106, 16);
+            this.lblDifficultyMeasure.TabIndex = 13;
+            this.lblDifficultyMeasure.Text = "Difficult Measure";
+            // 
+            // lblPrices
+            // 
+            this.lblPrices.AutoSize = true;
+            this.lblPrices.Location = new System.Drawing.Point(138, 122);
+            this.lblPrices.Name = "lblPrices";
+            this.lblPrices.Size = new System.Drawing.Size(42, 16);
+            this.lblPrices.TabIndex = 14;
+            this.lblPrices.Text = "Prices";
+            // 
+            // lblFrequency
+            // 
+            this.lblFrequency.AutoSize = true;
+            this.lblFrequency.Location = new System.Drawing.Point(138, 172);
+            this.lblFrequency.Name = "lblFrequency";
+            this.lblFrequency.Size = new System.Drawing.Size(67, 16);
+            this.lblFrequency.TabIndex = 15;
+            this.lblFrequency.Text = "Frequency";
+            // 
+            // lblTask
+            // 
+            this.lblTask.AutoSize = true;
+            this.lblTask.Location = new System.Drawing.Point(138, 222);
+            this.lblTask.Name = "lblTask";
+            this.lblTask.Size = new System.Drawing.Size(34, 16);
+            this.lblTask.TabIndex = 16;
+            this.lblTask.Text = "Task";
+            // 
+            // lblDesciption
+            // 
+            this.lblDesciption.AutoSize = true;
+            this.lblDesciption.Location = new System.Drawing.Point(138, 276);
+            this.lblDesciption.Name = "lblDesciption";
+            this.lblDesciption.Size = new System.Drawing.Size(72, 16);
+            this.lblDesciption.TabIndex = 17;
+            this.lblDesciption.Text = "Description";
+            this.lblDesciption.Click += new System.EventHandler(this.lblDesciption_Click);
+            // 
+            // lblTools
+            // 
+            this.lblTools.AutoSize = true;
+            this.lblTools.Location = new System.Drawing.Point(138, 322);
+            this.lblTools.Name = "lblTools";
+            this.lblTools.Size = new System.Drawing.Size(116, 16);
+            this.lblTools.TabIndex = 18;
+            this.lblTools.Text = "Tools and materials";
+            // 
+            // cbdifficult
+            // 
+            this.cbdifficult.FormattingEnabled = true;
+            this.cbdifficult.Items.AddRange(new object[] {
+            "Easy",
+            "Medium ",
+            "Hard"});
+            this.cbdifficult.Location = new System.Drawing.Point(136, 95);
+            this.cbdifficult.Name = "cbdifficult";
+            this.cbdifficult.Size = new System.Drawing.Size(319, 24);
+            this.cbdifficult.TabIndex = 19;
+            // 
+            // cbMaintances
+            // 
+            this.cbMaintances.FormattingEnabled = true;
+            this.cbMaintances.Items.AddRange(new object[] {
+            "Preventive",
+            "Corrective ",
+            "Predetermined ",
+            "Condition-Based ",
+            "Predictive "});
+            this.cbMaintances.Location = new System.Drawing.Point(136, 33);
+            this.cbMaintances.Name = "cbMaintances";
+            this.cbMaintances.Size = new System.Drawing.Size(319, 24);
+            this.cbMaintances.TabIndex = 20;
+            // 
+            // cbfrequency
+            // 
+            this.cbfrequency.FormattingEnabled = true;
+            this.cbfrequency.Items.AddRange(new object[] {
+            "M",
+            "Y",
+            "D"});
+            this.cbfrequency.Location = new System.Drawing.Point(136, 195);
+            this.cbfrequency.Name = "cbfrequency";
+            this.cbfrequency.Size = new System.Drawing.Size(319, 24);
+            this.cbfrequency.TabIndex = 21;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(136, 146);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(319, 23);
+            this.txtPrice.TabIndex = 22;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.Location = new System.Drawing.Point(141, 295);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(319, 23);
+            this.lblDescription.TabIndex = 23;
+            // 
+            // txttools
+            // 
+            this.txttools.Location = new System.Drawing.Point(141, 341);
+            this.txttools.Name = "txttools";
+            this.txttools.Size = new System.Drawing.Size(319, 23);
+            this.txttools.TabIndex = 24;
+            // 
+            // btnSubmitService
+            // 
+            this.btnSubmitService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitService.Location = new System.Drawing.Point(222, 380);
+            this.btnSubmitService.Name = "btnSubmitService";
+            this.btnSubmitService.Size = new System.Drawing.Size(134, 29);
+            this.btnSubmitService.TabIndex = 25;
+            this.btnSubmitService.Text = "Submit";
+            this.btnSubmitService.UseVisualStyleBackColor = true;
+            this.btnSubmitService.Click += new System.EventHandler(this.btnSubmitService_Click);
+            // 
+            // txttask
+            // 
+            this.txttask.Location = new System.Drawing.Point(136, 241);
+            this.txttask.Name = "txttask";
+            this.txttask.Size = new System.Drawing.Size(319, 23);
+            this.txttask.TabIndex = 25;
+            // 
             // frmPackages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -328,6 +639,7 @@ namespace SEN371_Project
             this.pnlWork.ResumeLayout(false);
             this.pnlWork.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -365,6 +677,34 @@ namespace SEN371_Project
         private System.Windows.Forms.BindingSource serviceinPackagesBindingSource;
         //private PremierServiceSolutionsDataSetTableAdapters.ServiceinPackagesTableAdapter serviceinPackagesTableAdapter;
         private System.Windows.Forms.BindingSource packagesBindingSource;
+        private System.Windows.Forms.Label lblSLAID;
+        private System.Windows.Forms.Label lblDiscount;
+        private System.Windows.Forms.Label lblAvailablity;
+        private System.Windows.Forms.Label lblPackagesName;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.ComboBox cbSALID;
+        private System.Windows.Forms.TextBox txtDiscount;
+        private System.Windows.Forms.TextBox txtAvailability;
+        private System.Windows.Forms.TextBox txtPackageName;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnAddServices;
+        private System.Windows.Forms.Label lblPackages;
+        private System.Windows.Forms.CheckedListBox clbServices;
+        private System.Windows.Forms.Label lblTools;
+        private System.Windows.Forms.Label lblDesciption;
+        private System.Windows.Forms.Label lblTask;
+        private System.Windows.Forms.Label lblFrequency;
+        private System.Windows.Forms.Label lblPrices;
+        private System.Windows.Forms.Label lblDifficultyMeasure;
+        private System.Windows.Forms.Label lblMaintance;
+        private System.Windows.Forms.TextBox txttools;
+        private System.Windows.Forms.TextBox lblDescription;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.ComboBox cbfrequency;
+        private System.Windows.Forms.ComboBox cbMaintances;
+        private System.Windows.Forms.ComboBox cbdifficult;
+        private System.Windows.Forms.Button btnSubmitService;
+        private System.Windows.Forms.TextBox txttask;
         //private PremierServiceSolutionsDataSetTableAdapters.PackagesTableAdapter packagesTableAdapter;
     }
 }
