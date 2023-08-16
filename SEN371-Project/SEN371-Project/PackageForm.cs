@@ -161,7 +161,7 @@ namespace SEN371_Project
             foreach (var item in contract.defineServices())
             {
                 List<string> itembreakdown = item.Split(',').ToList();
-                dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[6], itembreakdown[7], itembreakdown[8]);
+                dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7]);
             }
         }
 
