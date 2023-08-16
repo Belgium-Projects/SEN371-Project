@@ -32,8 +32,7 @@ namespace SEN371_Project
             {
                 TimeSpan duration = DateTime.Now - startTime;
 
-                MessageBox.Show($"Call ended. Call duration: {duration.TotalMilliseconds} ms", "Call Ended", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show($"Call ended. Call duration: {duration.TotalSeconds} s", "Call Ended", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 frmCallCentre a = new frmCallCentre();
                 a.Show();

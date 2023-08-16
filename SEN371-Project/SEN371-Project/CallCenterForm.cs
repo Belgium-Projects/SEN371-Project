@@ -282,8 +282,10 @@ namespace SEN371_Project
               frmSimulator a=new   frmSimulator();
                a.Show();
                this.Hide();
+               obj.endCall(int.Parse(txtCustomerID.Text), int.Parse(obj2.EmpId));
             }
-       
+            
+
         }
 
       
