@@ -138,7 +138,7 @@ namespace SEN371_Project.FunctionalAreas
                 Reader = Command.ExecuteReader();
                 while(Reader.Read())
                 {
-                    calllogs.Add($"{Reader[0]},{Reader[1]},{Reader[2]},,{Reader[3]},{Reader[4]},{Reader[5]},{Reader[6]}");
+                    calllogs.Add($"{Reader[0]},{Reader[1]},{Reader[2]},{Reader[3]},{Reader[4]},{Reader[5]},{Reader[6]}");
                 }
                 return calllogs;
             }

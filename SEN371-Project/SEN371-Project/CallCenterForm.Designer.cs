@@ -38,7 +38,6 @@ namespace SEN371_Project
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pngCall = new System.Windows.Forms.PictureBox();
             this.CBService1 = new System.Windows.Forms.ComboBox();
             this.btnredirect = new System.Windows.Forms.Button();
             this.lblRedirect = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@ namespace SEN371_Project
             this.lblServie = new System.Windows.Forms.Label();
             this.lblNote = new System.Windows.Forms.Label();
             this.lblPriority = new System.Windows.Forms.Label();
-            this.lbServices = new System.Windows.Forms.ListBox();
             this.cbRedirect = new System.Windows.Forms.ComboBox();
             this.lbCustomer = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -57,25 +55,25 @@ namespace SEN371_Project
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmpName = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnViewServices = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.btnCallSimulation = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCallSimulation = new System.Windows.Forms.Button();
+            this.dgvHistory = new System.Windows.Forms.DataGridView();
             this.pnlWork.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pngCall)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // btnWork
@@ -148,34 +146,22 @@ namespace SEN371_Project
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.pngCall);
             this.panel3.Controls.Add(this.CBService1);
             this.panel3.Controls.Add(this.btnredirect);
             this.panel3.Controls.Add(this.lblRedirect);
             this.panel3.Controls.Add(this.btnSubmit);
             this.panel3.Controls.Add(this.CBPriority);
-            this.panel3.Controls.Add(this.txtNote);
             this.panel3.Controls.Add(this.lblServie);
             this.panel3.Controls.Add(this.lblNote);
             this.panel3.Controls.Add(this.lblPriority);
-            this.panel3.Controls.Add(this.lbServices);
             this.panel3.Controls.Add(this.cbRedirect);
             this.panel3.Controls.Add(this.lbCustomer);
+            this.panel3.Controls.Add(this.dgvHistory);
+            this.panel3.Controls.Add(this.txtNote);
             this.panel3.Location = new System.Drawing.Point(18, 55);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(729, 416);
             this.panel3.TabIndex = 3;
-            // 
-            // pngCall
-            // 
-            this.pngCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pngCall.Image = ((System.Drawing.Image)(resources.GetObject("pngCall.Image")));
-            this.pngCall.Location = new System.Drawing.Point(124, 103);
-            this.pngCall.Name = "pngCall";
-            this.pngCall.Size = new System.Drawing.Size(79, 51);
-            this.pngCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pngCall.TabIndex = 64;
-            this.pngCall.TabStop = false;
             // 
             // CBService1
             // 
@@ -200,11 +186,12 @@ namespace SEN371_Project
             // 
             this.lblRedirect.AutoSize = true;
             this.lblRedirect.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRedirect.Location = new System.Drawing.Point(240, 103);
+            this.lblRedirect.Location = new System.Drawing.Point(187, 104);
             this.lblRedirect.Name = "lblRedirect";
             this.lblRedirect.Size = new System.Drawing.Size(104, 20);
             this.lblRedirect.TabIndex = 9;
             this.lblRedirect.Text = "Redirect Call";
+            this.lblRedirect.Click += new System.EventHandler(this.lblRedirect_Click);
             // 
             // btnSubmit
             // 
@@ -259,30 +246,22 @@ namespace SEN371_Project
             this.lblPriority.TabIndex = 0;
             this.lblPriority.Text = "Priority";
             // 
-            // lbServices
-            // 
-            this.lbServices.FormattingEnabled = true;
-            this.lbServices.ItemHeight = 16;
-            this.lbServices.Location = new System.Drawing.Point(11, 10);
-            this.lbServices.Name = "lbServices";
-            this.lbServices.Size = new System.Drawing.Size(719, 388);
-            this.lbServices.TabIndex = 8;
-            // 
             // cbRedirect
             // 
             this.cbRedirect.FormattingEnabled = true;
-            this.cbRedirect.Location = new System.Drawing.Point(215, 132);
+            this.cbRedirect.Location = new System.Drawing.Point(188, 132);
             this.cbRedirect.Name = "cbRedirect";
             this.cbRedirect.Size = new System.Drawing.Size(213, 24);
             this.cbRedirect.TabIndex = 10;
             // 
             // lbCustomer
             // 
+            this.lbCustomer.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCustomer.FormattingEnabled = true;
-            this.lbCustomer.ItemHeight = 16;
+            this.lbCustomer.ItemHeight = 31;
             this.lbCustomer.Location = new System.Drawing.Point(11, 10);
             this.lbCustomer.Name = "lbCustomer";
-            this.lbCustomer.Size = new System.Drawing.Size(719, 388);
+            this.lbCustomer.Size = new System.Drawing.Size(719, 376);
             this.lbCustomer.TabIndex = 7;
             // 
             // btnLogOut
@@ -301,7 +280,6 @@ namespace SEN371_Project
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblEmpName);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.btnViewServices);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Location = new System.Drawing.Point(19, 79);
@@ -311,7 +289,7 @@ namespace SEN371_Project
             // 
             // btnCustomer
             // 
-            this.btnCustomer.Location = new System.Drawing.Point(37, 411);
+            this.btnCustomer.Location = new System.Drawing.Point(37, 332);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(159, 43);
             this.btnCustomer.TabIndex = 13;
@@ -321,7 +299,7 @@ namespace SEN371_Project
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(37, 332);
+            this.button3.Location = new System.Drawing.Point(37, 258);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 43);
             this.button3.TabIndex = 12;
@@ -349,23 +327,13 @@ namespace SEN371_Project
             this.lblEmpName.TabIndex = 10;
             this.lblEmpName.Text = "Peter Jones";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(37, 256);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 43);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Assign Job";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // btnViewServices
             // 
             this.btnViewServices.Location = new System.Drawing.Point(37, 96);
             this.btnViewServices.Name = "btnViewServices";
             this.btnViewServices.Size = new System.Drawing.Size(159, 43);
             this.btnViewServices.TabIndex = 8;
-            this.btnViewServices.Text = "View Services";
+            this.btnViewServices.Text = "Call history";
             this.btnViewServices.UseVisualStyleBackColor = true;
             this.btnViewServices.Click += new System.EventHandler(this.btnViewServices_Click);
             // 
@@ -409,6 +377,20 @@ namespace SEN371_Project
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // btnCallSimulation
+            // 
+            this.btnCallSimulation.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCallSimulation.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCallSimulation.FlatAppearance.BorderSize = 0;
+            this.btnCallSimulation.ForeColor = System.Drawing.Color.Black;
+            this.btnCallSimulation.Location = new System.Drawing.Point(642, 4);
+            this.btnCallSimulation.Name = "btnCallSimulation";
+            this.btnCallSimulation.Size = new System.Drawing.Size(119, 43);
+            this.btnCallSimulation.TabIndex = 55;
+            this.btnCallSimulation.Text = "Call Simulation";
+            this.btnCallSimulation.UseVisualStyleBackColor = false;
+            this.btnCallSimulation.Click += new System.EventHandler(this.btnCallSimulation_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -451,19 +433,16 @@ namespace SEN371_Project
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
-            // btnCallSimulation
+            // dgvHistory
             // 
-            this.btnCallSimulation.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCallSimulation.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCallSimulation.FlatAppearance.BorderSize = 0;
-            this.btnCallSimulation.ForeColor = System.Drawing.Color.Black;
-            this.btnCallSimulation.Location = new System.Drawing.Point(642, 4);
-            this.btnCallSimulation.Name = "btnCallSimulation";
-            this.btnCallSimulation.Size = new System.Drawing.Size(119, 43);
-            this.btnCallSimulation.TabIndex = 55;
-            this.btnCallSimulation.Text = "Call Simulation";
-            this.btnCallSimulation.UseVisualStyleBackColor = false;
-            this.btnCallSimulation.Click += new System.EventHandler(this.btnCallSimulation_Click);
+            this.dgvHistory.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistory.Location = new System.Drawing.Point(11, 10);
+            this.dgvHistory.Name = "dgvHistory";
+            this.dgvHistory.RowHeadersWidth = 51;
+            this.dgvHistory.RowTemplate.Height = 24;
+            this.dgvHistory.Size = new System.Drawing.Size(716, 387);
+            this.dgvHistory.TabIndex = 13;
             // 
             // frmCallCentre
             // 
@@ -492,13 +471,13 @@ namespace SEN371_Project
             this.pnlWork.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pngCall)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -516,7 +495,6 @@ namespace SEN371_Project
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmpName;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnViewServices;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
@@ -538,9 +516,8 @@ namespace SEN371_Project
         private System.Windows.Forms.ComboBox CBService1;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lbServices;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pngCall;
         private System.Windows.Forms.Button btnCallSimulation;
+        private System.Windows.Forms.DataGridView dgvHistory;
     }
 }

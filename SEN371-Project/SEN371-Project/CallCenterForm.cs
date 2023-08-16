@@ -32,11 +32,11 @@ namespace SEN371_Project
             CBPriority.Hide();
             btnSubmit.Hide();
             lbCustomer.Hide();
-            lbServices.Hide();
+            dgvHistory.Hide();
             cbRedirect.Hide();
             lblRedirect.Hide();
             btnredirect.Hide();
-            pngCall.Hide();
+            //pngCall.Hide();
         }
         public void comboboxinit()
         {
@@ -55,12 +55,8 @@ namespace SEN371_Project
                     foreach (var item in obj.returnServices(txtCustomerID.Text))
                     {
                         CBService1.Items.Add(item);
-                        lbServices.Items.Add(item);
-                        cbRedirect.Items.Add(item);
                     }
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -165,14 +161,51 @@ namespace SEN371_Project
                     lbCustomer.Items.Add($"Customer Surname: {customer[0].CusPhonenumber}");
 
                 }
+                lbCustomer.Items.Add("Services in customers packages:");
+                if (txtCustomerID.Text != null)
+                {
+                    foreach (var item in obj.returnServices(txtCustomerID.Text))
+                    {
+                        lbCustomer.Items.Add(item);
+                    }
+                }
+
             }
         }
         //View Services
         private void btnViewServices_Click(object sender, EventArgs e)
         {
             pannelClose();
-            lblTitle.Text = "View Services";
-            lbServices.Show();
+            lblTitle.Text = "View Call History:";
+            dgvHistory.Show();
+            if(txtCustomerID.Text !=null || txtCustomerID.Text != "")
+            {
+           
+                     dgvHistory.ColumnCount = 7;
+                     dgvHistory.ColumnHeadersVisible = true;
+
+                // Set the column header style.
+                DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+
+                columnHeaderStyle.BackColor = Color.Beige;
+                columnHeaderStyle.Font = new Font("Verdana", 10, FontStyle.Bold);
+                     dgvHistory.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+
+                     dgvHistory.Columns[0].Name = "Customer ID";
+                     dgvHistory.Columns[1].Name = "Customer";
+                     dgvHistory.Columns[2].Name = "Employee ID";
+                     dgvHistory.Columns[3].Name = "Employee";
+                     dgvHistory.Columns[4].Name = "Start time";
+                     dgvHistory.Columns[5].Name = "End time";
+                     dgvHistory.Columns[6].Name = "Duration ";
+
+                foreach (var item in obj.callHistory(int.Parse(txtCustomerID.Text)))
+                {
+                    
+                    List<string> itembreakDown = item.Split(',').ToList();
+                    dgvHistory.Rows.Add(itembreakDown[0], itembreakDown[1], itembreakDown[2], itembreakDown[3], itembreakDown[4], itembreakDown[5], itembreakDown[6]+"s");
+                }
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -196,14 +229,14 @@ namespace SEN371_Project
             cbRedirect.Show();
             lblRedirect.Show();
             btnredirect.Show();
-            pngCall.Show();
+            //pngCall.Show();
         }
 
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             pannelClose();
-            pngCall.Show();
+            //pngCall.Show();
             lblTitle.Text = "Customer view";
             lbCustomer.Show();
         }
@@ -268,22 +301,22 @@ namespace SEN371_Project
             cbRedirect.SelectedIndex = -1;
             lblEmpName.Text = obj2.EmpName;
             //MessageBox.Show(obj.returnall()[0]);
-
         }
 
         private void chkSimulateCall_CheckedChanged(object sender, EventArgs e)
         {           
-
-           
         }
 
         private void btnCallSimulation_Click(object sender, EventArgs e)
         {
-            
                 frmSimulator a = new frmSimulator();
                 a.Show();
                 //this.Hide();
-            
+        }
+
+        private void lblRedirect_Click(object sender, EventArgs e)
+        {
+
         }
     } 
 }

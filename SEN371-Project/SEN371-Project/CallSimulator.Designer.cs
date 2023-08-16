@@ -53,10 +53,10 @@ namespace SEN371_Project
             btnAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnAnswer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnAnswer.ForeColor = System.Drawing.Color.Coral;
-            btnAnswer.Location = new System.Drawing.Point(30, 121);
+            btnAnswer.Location = new System.Drawing.Point(12, 151);
             btnAnswer.Margin = new System.Windows.Forms.Padding(4);
             btnAnswer.Name = "btnAnswer";
-            btnAnswer.Size = new System.Drawing.Size(126, 126);
+            btnAnswer.Size = new System.Drawing.Size(100, 98);
             btnAnswer.TabIndex = 0;
             btnAnswer.UseVisualStyleBackColor = false;
             btnAnswer.Click += new System.EventHandler(this.button1_Click);
@@ -93,9 +93,9 @@ namespace SEN371_Project
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(250, 120);
+            this.button1.Location = new System.Drawing.Point(294, 151);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 126);
+            this.button1.Size = new System.Drawing.Size(111, 97);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -114,7 +114,7 @@ namespace SEN371_Project
             // 
             this.lbltimer.AutoSize = true;
             this.lbltimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(32, 56);
+            this.lbltimer.Location = new System.Drawing.Point(131, 54);
             this.lbltimer.Name = "lbltimer";
             this.lbltimer.Size = new System.Drawing.Size(0, 32);
             this.lbltimer.TabIndex = 1;
@@ -124,11 +124,12 @@ namespace SEN371_Project
             // 
             this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuration.Location = new System.Drawing.Point(25, 6);
+            this.lblDuration.Location = new System.Drawing.Point(118, 4);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(155, 39);
             this.lblDuration.TabIndex = 0;
             this.lblDuration.Text = "Duration:";
+            this.lblDuration.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // duration
             // 
