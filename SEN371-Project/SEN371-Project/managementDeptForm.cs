@@ -103,6 +103,9 @@ namespace SEN371_Project
                         case 3:
                             panel.BackColor = Color.FromArgb(150, 217, 217, 217);
                             break;
+                        case 4:
+                            panel.BackColor = Color.FromArgb(150, 217, 217, 217);
+                            break;
                         default:
                             break;
                     }

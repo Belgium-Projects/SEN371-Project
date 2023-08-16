@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.btndepartment = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlBR4 = new System.Windows.Forms.Panel();
             this.pnlContent1 = new System.Windows.Forms.Panel();
+            this.lblLine1 = new System.Windows.Forms.Label();
             this.btnViewReports = new System.Windows.Forms.Button();
             this.btnViewEmployee = new System.Windows.Forms.Button();
             this.btnViewServices = new System.Windows.Forms.Button();
@@ -46,14 +48,17 @@
             this.pnlContent3 = new System.Windows.Forms.Panel();
             this.pnlBR1 = new System.Windows.Forms.Panel();
             this.pnlBR2 = new System.Windows.Forms.Panel();
-            this.lblLine1 = new System.Windows.Forms.Label();
+            this.picbUserLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlBR4.SuspendLayout();
             this.pnlContent1.SuspendLayout();
             this.pnlContent2.SuspendLayout();
             this.pnlBR3.SuspendLayout();
             this.pnlBR1.SuspendLayout();
             this.pnlBR2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbUserLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -61,70 +66,84 @@
             this.pnlHeader.AutoSize = true;
             this.pnlHeader.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(90)))), ((int)(((byte)(112)))));
+            this.pnlHeader.Controls.Add(this.picbUserLogo);
+            this.pnlHeader.Controls.Add(this.btnLogOut);
             this.pnlHeader.Controls.Add(this.btnWork);
             this.pnlHeader.Controls.Add(this.btnClient);
             this.pnlHeader.Controls.Add(this.btndepartment);
             this.pnlHeader.Controls.Add(this.btnHome);
-            this.pnlHeader.Controls.Add(this.pictureBox1);
+            this.pnlHeader.Controls.Add(this.pnlBR4);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Padding = new System.Windows.Forms.Padding(3);
-            this.pnlHeader.Size = new System.Drawing.Size(1924, 124);
+            this.pnlHeader.Size = new System.Drawing.Size(1924, 119);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(1719, 37);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(166, 55);
+            this.btnLogOut.TabIndex = 5;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
             // 
             // btnWork
             // 
+            this.btnWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWork.Location = new System.Drawing.Point(1145, 37);
             this.btnWork.Name = "btnWork";
             this.btnWork.Size = new System.Drawing.Size(138, 55);
             this.btnWork.TabIndex = 4;
             this.btnWork.Text = "Work";
-            this.btnWork.UseVisualStyleBackColor = true;
+            this.btnWork.UseVisualStyleBackColor = false;
             // 
             // btnClient
             // 
+            this.btnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient.Location = new System.Drawing.Point(968, 37);
             this.btnClient.Name = "btnClient";
             this.btnClient.Size = new System.Drawing.Size(143, 55);
             this.btnClient.TabIndex = 3;
             this.btnClient.Text = "Client";
-            this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.UseVisualStyleBackColor = false;
             // 
             // btndepartment
             // 
+            this.btndepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btndepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndepartment.Location = new System.Drawing.Point(744, 37);
+            this.btndepartment.Location = new System.Drawing.Point(735, 37);
             this.btndepartment.Name = "btndepartment";
-            this.btndepartment.Size = new System.Drawing.Size(192, 55);
+            this.btndepartment.Size = new System.Drawing.Size(210, 55);
             this.btndepartment.TabIndex = 2;
             this.btndepartment.Text = "Department";
-            this.btndepartment.UseVisualStyleBackColor = true;
+            this.btndepartment.UseVisualStyleBackColor = false;
             // 
             // btnHome
             // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Location = new System.Drawing.Point(556, 37);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(152, 55);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pnlBR4
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.Premier_Service_Solutions_540_110_px_Final;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(502, 102);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pnlBR4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR4.Controls.Add(this.pictureBox1);
+            this.pnlBR4.Location = new System.Drawing.Point(9, 9);
+            this.pnlBR4.Name = "pnlBR4";
+            this.pnlBR4.Padding = new System.Windows.Forms.Padding(7);
+            this.pnlBR4.Size = new System.Drawing.Size(526, 102);
+            this.pnlBR4.TabIndex = 7;
             // 
             // pnlContent1
             // 
@@ -142,45 +161,57 @@
             this.pnlContent1.Size = new System.Drawing.Size(328, 710);
             this.pnlContent1.TabIndex = 1;
             // 
+            // lblLine1
+            // 
+            this.lblLine1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lblLine1.Location = new System.Drawing.Point(78, 92);
+            this.lblLine1.Name = "lblLine1";
+            this.lblLine1.Size = new System.Drawing.Size(180, 4);
+            this.lblLine1.TabIndex = 5;
+            // 
             // btnViewReports
             // 
+            this.btnViewReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnViewReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewReports.Location = new System.Drawing.Point(29, 606);
             this.btnViewReports.Name = "btnViewReports";
             this.btnViewReports.Size = new System.Drawing.Size(270, 70);
             this.btnViewReports.TabIndex = 4;
             this.btnViewReports.Text = "View Reports";
-            this.btnViewReports.UseVisualStyleBackColor = true;
+            this.btnViewReports.UseVisualStyleBackColor = false;
             // 
             // btnViewEmployee
             // 
+            this.btnViewEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnViewEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewEmployee.Location = new System.Drawing.Point(29, 474);
             this.btnViewEmployee.Name = "btnViewEmployee";
             this.btnViewEmployee.Size = new System.Drawing.Size(270, 70);
             this.btnViewEmployee.TabIndex = 3;
             this.btnViewEmployee.Text = "View Employee";
-            this.btnViewEmployee.UseVisualStyleBackColor = true;
+            this.btnViewEmployee.UseVisualStyleBackColor = false;
             // 
             // btnViewServices
             // 
+            this.btnViewServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnViewServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewServices.Location = new System.Drawing.Point(29, 340);
             this.btnViewServices.Name = "btnViewServices";
             this.btnViewServices.Size = new System.Drawing.Size(270, 70);
             this.btnViewServices.TabIndex = 3;
             this.btnViewServices.Text = "View Services";
-            this.btnViewServices.UseVisualStyleBackColor = true;
+            this.btnViewServices.UseVisualStyleBackColor = false;
             // 
             // btnPerformance
             // 
+            this.btnPerformance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnPerformance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerformance.Location = new System.Drawing.Point(29, 205);
             this.btnPerformance.Name = "btnPerformance";
             this.btnPerformance.Size = new System.Drawing.Size(270, 70);
             this.btnPerformance.TabIndex = 2;
             this.btnPerformance.Text = "View Performance";
-            this.btnPerformance.UseVisualStyleBackColor = true;
+            this.btnPerformance.UseVisualStyleBackColor = false;
             // 
             // lblContent2
             // 
@@ -251,13 +282,29 @@
             this.pnlBR2.Size = new System.Drawing.Size(1459, 800);
             this.pnlBR2.TabIndex = 6;
             // 
-            // lblLine1
+            // picbUserLogo
             // 
-            this.lblLine1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.lblLine1.Location = new System.Drawing.Point(78, 92);
-            this.lblLine1.Name = "lblLine1";
-            this.lblLine1.Size = new System.Drawing.Size(180, 4);
-            this.lblLine1.TabIndex = 5;
+            this.picbUserLogo.Image = global::SEN371_Project.Properties.Resources.Profile_Pic_1;
+            this.picbUserLogo.Location = new System.Drawing.Point(1608, 13);
+            this.picbUserLogo.Name = "picbUserLogo";
+            this.picbUserLogo.Size = new System.Drawing.Size(100, 100);
+            this.picbUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbUserLogo.TabIndex = 6;
+            this.picbUserLogo.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::SEN371_Project.Properties.Resources.Premier_Service_Solutions_540_110_px_Final;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(512, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmManagementDept
             // 
@@ -276,13 +323,15 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManagementDept_Load);
             this.pnlHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlBR4.ResumeLayout(false);
             this.pnlContent1.ResumeLayout(false);
             this.pnlContent1.PerformLayout();
             this.pnlContent2.ResumeLayout(false);
             this.pnlBR3.ResumeLayout(false);
             this.pnlBR1.ResumeLayout(false);
             this.pnlBR2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picbUserLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,5 +358,8 @@
         private System.Windows.Forms.Panel pnlBR2;
         private System.Windows.Forms.Panel pnlBR3;
         private System.Windows.Forms.Label lblLine1;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.PictureBox picbUserLogo;
+        private System.Windows.Forms.Panel pnlBR4;
     }
 }

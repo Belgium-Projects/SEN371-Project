@@ -94,12 +94,23 @@
     <Compile Include="CallSimulator.Designer.cs">
       <DependentUpon>CallSimulator.cs</DependentUpon>
     </Compile>
+	<Compile Include="dataHandler\Validation.cs" />
     <Compile Include="dataHandler\Validation.cs" />
     <Compile Include="managementDeptForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="managementDeptForm.Designer.cs">
       <DependentUpon>managementDeptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+	<Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ServicesForm.cs">
       <SubType>Form</SubType>
@@ -167,10 +178,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
+	<Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -240,6 +252,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\accept_icon-icons.com_71800.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile Pic 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile Pic 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile Pic 3.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\awnsercall.png" />
