@@ -57,7 +57,7 @@ namespace SEN371_Project
         {
             dgvServies.Show();
             dgvServies.Rows.Clear();
-            dgvServies.ColumnCount = 8;
+            dgvServies.ColumnCount = 9;
             dgvServies.ColumnHeadersVisible = true;
 
             // Set the column header style.
@@ -75,6 +75,7 @@ namespace SEN371_Project
             dgvServies.Columns[5].Name = "ExpireDate";
             dgvServies.Columns[6].Name = "StartDate";
             dgvServies.Columns[7].Name = "Status";
+            dgvServies.Columns[8].Name = "Tools";
 
             foreach (var item in contract.definepackages())
             {
@@ -122,18 +123,37 @@ namespace SEN371_Project
         {
 
         }
-
+        int row = 0;
         private void dgvServies_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int row = dgvServies.CurrentRow.Index+1;
-            dgvServies.Rows.Insert(row, "Service ID", "Maintances Type", "Difficulty", "Prices", "Frequency", "Task", "Description", "Tools Materials");
-            foreach (var item in contract.serviesinPackages(dgvServies.CurrentRow.Cells[0].ToString()))
+            try
             {
-                row++;
-                List<string> itembreakdown = item.Split(',').ToList();
-                dgvServies.Rows.Insert(row, itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7]);
+                row = dgvServies.CurrentRow.Index + 1;
+                dgvServies.Rows.Clear();
+           
+                foreach (var item in contract.definepackages())
+                {
+                    List<string> itembreakdown = item.Split(',').ToList();
+                    dgvServies.Rows.Add(itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7]);
+                }
+                dgvServies.Rows[row-1].Selected = true;
+                dgvServies.Rows.Insert(row,null, "Service ID", "Maintances Type", "Difficulty", "Prices", "Frequency", "Task", "Description", "Tools Materials");
+                //MessageBox.Show(dgvServies.Rows[row-1].Cells[0].Value.ToString()/*);*/
+                foreach (var item in contract.serviesinPackages(dgvServies.Rows[row - 1].Cells[0].Value.ToString()))
+                {
+                    row++;
+                    List<string> itembreakdown = item.Split(',').ToList();
+                    dgvServies.Rows.Insert(row,null, itembreakdown[0], itembreakdown[1], itembreakdown[2], itembreakdown[3], itembreakdown[4], itembreakdown[5], itembreakdown[6], itembreakdown[7]);
+                }
+                dgvServies.Rows.Insert(row + 1, null, null, null, null, null, null, null, null,null);
             }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+            
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -144,6 +164,11 @@ namespace SEN371_Project
         private void dgvServies_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvServies_RowLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

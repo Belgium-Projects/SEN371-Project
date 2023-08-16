@@ -89,25 +89,17 @@ namespace SEN371_Project.FunctionalAreas
             string getServies = $"select * from Service s inner join ServiceinPackages sp on s.ServicesID =sp.ServicesID inner join Packages p on sp.packagesID = p.PackagesID where p.packagesID = {packagesID}";
             Connection();
             List<string> servicesInpackages = new List<string>();
-            try
-            {
+           
                 Command = new System.Data.SqlClient.SqlCommand(getServies, Connection1);
                 Reader = Command.ExecuteReader();
                 while (Reader.Read())
                 {
                     servicesInpackages.Add($"{Reader[0]},{Reader[1]},{Reader[2]},{Reader[3]},{Reader[4]},{Reader[5]},{Reader[6]},{Reader[7]}");
                 }
-                return servicesInpackages;
-            }
-            catch (Exception ex)
-            {
-               MessageBox.Show(ex.Message +"ServicesinPackages");
-            }
-            finally
-            {
-                Disconnect();
-            }
+            Disconnect();
             return servicesInpackages;
+          
+           
         }
         //View performance of contract types
         public void contractPerformnace() {
