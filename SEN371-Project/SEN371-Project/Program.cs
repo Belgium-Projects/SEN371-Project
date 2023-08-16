@@ -18,7 +18,7 @@ namespace SEN371_Project
          
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPackages());
+            Application.Run(new frmCallCentre());
         }
           
     }

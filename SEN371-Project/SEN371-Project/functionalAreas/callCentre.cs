@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Twilio.TwiML.Voice;
+using Twilio.Types;
 
 namespace SEN371_Project.FunctionalAreas
 {
@@ -39,12 +40,13 @@ namespace SEN371_Project.FunctionalAreas
             catch (Exception)
             {
 
-                throw;
+             
             }
             finally
             {
                 Disconnect();
             }
+            return returnService;
         }
         //save service JOB to db if employee is not linked will send sms to tech 
         public  void logJob(int customerID,int employeeid,string notes,string datestart , int servicesID,string priority)
@@ -100,7 +102,7 @@ namespace SEN371_Project.FunctionalAreas
         public List<string> cusAgreement(string id)
         {
             Connection();
-            string custom = $"select * from cusAgreement where customerid =2";
+            string custom = $"select * from cusAgreement where customerid = 2";
            List<string> CusAgreementlist = new List<string>();
             try
             {
@@ -108,20 +110,21 @@ namespace SEN371_Project.FunctionalAreas
                 Reader = Command.ExecuteReader();
                 while (Reader.Read())
                 {
-                    CusAgreementlist.Add($"{int.Parse(Reader[1].ToString())}, {Reader[2].ToString()}, {Reader[3].ToString()},{int.Parse( Reader[4].ToString())},{int.Parse( Reader[5].ToString())},{Reader[6].ToString()},{Reader[7].ToString()}, {Reader[8].ToString()}");
-                    return CusAgreementlist;
+                    CusAgreementlist.Add($"{Reader[0].ToString()},{Reader[1].ToString()}, {Reader[2].ToString()}, {Reader[3].ToString()},{Reader[4].ToString()} ,{Reader[5].ToString()},{Reader[6].ToString()},{Reader[7].ToString()}, {Reader[8].ToString()}");
+                    
                 }
+                return CusAgreementlist;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+"1");
             }
             finally
             {
                 Disconnect();
               
             }
-            return null;
+            return CusAgreementlist;
            
         }
         //Return customer call logs
@@ -145,7 +148,7 @@ namespace SEN371_Project.FunctionalAreas
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + "2");
             }
             finally
             {
@@ -179,7 +182,7 @@ namespace SEN371_Project.FunctionalAreas
             }                //MessageBox.Show("Inserted");
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + "3");
             }
             finally
             {
@@ -234,6 +237,21 @@ namespace SEN371_Project.FunctionalAreas
             {
                 Disconnect();
             }
+        }
+        public List<string> BUsinessRep(string customerid)
+        {
+            Connection();
+            string getRep = $"Select * from BusinessRole br inner join BusinessCustomer bc on br.BusinessRoleID = bc.BusinessRoleID where CustomerID ={customerid}";
+            Command = new SqlCommand(getRep, Connection1);
+            Reader = Command.ExecuteReader();
+            List<string> businessRep = new List<string>();
+            while (Reader.Read())
+            {
+                businessRep.Add($"{Reader[0]},{Reader[1]},{Reader[2]},{Reader[3]},{Reader[4]}");
+
+            }
+            Disconnect();
+            return businessRep;
         }
         public override List<client> selectFromDB(int clientID)
         {

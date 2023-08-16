@@ -113,7 +113,7 @@ namespace SEN371_Project
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox6.Image = global::SEN371_Project.Properties.Resources.download__1_1;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 382);
+            this.pictureBox6.Location = new System.Drawing.Point(3, 332);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(60, 44);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +124,7 @@ namespace SEN371_Project
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.Image = global::SEN371_Project.Properties.Resources.download__3_;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 306);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 248);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(60, 43);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@ namespace SEN371_Project
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(37, 382);
+            this.button4.Location = new System.Drawing.Point(37, 332);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(177, 44);
             this.button4.TabIndex = 9;
@@ -184,7 +184,7 @@ namespace SEN371_Project
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(37, 306);
+            this.button5.Location = new System.Drawing.Point(37, 248);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(177, 43);
             this.button5.TabIndex = 7;

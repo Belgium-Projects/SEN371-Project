@@ -60,6 +60,7 @@ namespace SEN371_Project
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.Message);
             }
 
@@ -151,10 +152,11 @@ namespace SEN371_Project
                         lbCustomer.Items.Add($"Business Name: {customer[0].CusSurname}");
                         //listBox1.Items.Add($"Packages ID {customer[0].packagesID}");
                         lbCustomer.Items.Add($"Street: {customer[0].CusService}");
-                        //foreach (var item in customer[0].CusRepresentativeName)
-                        //{
-                        //    listBox1.Items.Add(item);
-                        //}
+
+                        foreach (var item in obj.BUsinessRep(txtCustomerID.Text))
+                        {
+                            lbCustomer.Items.Add(item);
+                        }
                     }
                     else
                     {
@@ -173,25 +175,25 @@ namespace SEN371_Project
                         }
                     }
                     lbCustomer.Items.Add("customer agreement:");
-                    //if(txtCustomerID.Text != null)
-                    //{
-                    //    foreach (var item in obj.cusAgreement(txtCustomerID.Text))
-                    //    {
-                    //        List<string> itemBreakdown = item.Split(',').ToList();
-                    //        lbCustomer.Items.Add("PackagesID:"+itemBreakdown[1]);
-                    //        lbCustomer.Items.Add("Packages Name:" + itemBreakdown[2]);
-                    //        lbCustomer.Items.Add("Start Date:" + itemBreakdown[7]);
-                    //        lbCustomer.Items.Add("End Date:" + itemBreakdown[6]);
-                    //        lbCustomer.Items.Add("Status:" + itemBreakdown[8]);
+                    if (txtCustomerID.Text != null)
+                    {
+                        foreach (var item in obj.cusAgreement(txtCustomerID.Text))
+                        {
+                            List<string> itemBreakdown = item.Split(',').ToList();
+                            lbCustomer.Items.Add("PackagesID:" + itemBreakdown[1]);
+                            lbCustomer.Items.Add("Packages Name:" + itemBreakdown[2]);
+                            lbCustomer.Items.Add("Start Date:" + itemBreakdown[7]);
+                            lbCustomer.Items.Add("End Date:" + itemBreakdown[6]);
+                            lbCustomer.Items.Add("Status:" + itemBreakdown[8]);
 
-                    //    }
+                        }
 
-                   // }
+                    }
 
                 }
                 catch (Exception ex)
                 {
-
+                    //MessageBox.Show(ex.Message);
                     MessageBox.Show("No Customer with that ID is there");
                 }
                 
@@ -232,9 +234,9 @@ namespace SEN371_Project
                         dgvHistory.Rows.Add(itembreakDown[0], itembreakDown[1], itembreakDown[2], itembreakDown[3], itembreakDown[4], itembreakDown[5], itembreakDown[6] + "s");
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-
+                    
                     MessageBox.Show("Ensure that customer id is filled in");
                 }
                
@@ -339,7 +341,7 @@ namespace SEN371_Project
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show(ex.Message);
                 }
 
             }
