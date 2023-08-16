@@ -3,17 +3,21 @@
 <head>
     <title>Client Portal</title>
     <link rel="stylesheet" href="../CSS Files/portal.css">
+    <link rel="stylesheet" href="Web Font Kit/Hermeneus One Font/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="Web Font Kit/Hepta Slab Font/stylesheet.css" type="text/css" charset="utf-8" />
+ 
     <!--<link rel="stylesheet" href="../Web Font Kit/stylesheet.css" type="text/css" charset="utf-8" />-->
 </head>
 <body>
-  <nav class="sidebar">
-    <ul>
-      <li><a href="#view-account">View Account</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#delete-account">Delete Account</a></li>
+  <nav class="top-nav">
+    <ul class="top-nav-left">
+        <li><img src="../Website Images/Business Images/PSS Logo.png" id="PSSLogo" /></li>
+        <li id="Nav1" class="current"><a href="../index.html">Home</a></li>
+        <li id="Nav2"><a href="register.html">Register</a></li>
+        <li id="Nav3"><a href="login.html">Login</a></li>
+        <li id="Nav4"><a href="chatbot.html">Chatbot</a></li>
     </ul>
-  </nav>
-  
+</nav>
   <div class="container">
     <h2>Welcome to the Client Portal</h2>
     <form id="client-details-form">
@@ -23,6 +27,10 @@
 
       <label for="surname">Surname:</label>
       <input type="text" id="surname" required>
+      <br>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
       <br>
 
       <label for="phone">Phone Number:</label>
@@ -50,5 +58,10 @@
   </div>
 
   <script src="../Javascript Files/portal.js"></script>
+  <footer class="Footer">
+    <ul class="Footer-Content">
+        <li id="Nav4">Copyright © Premier Service Solutions 2023</li>
+    </ul>
+</footer> 
 </body>
 </html>
