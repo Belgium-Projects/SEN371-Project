@@ -36,26 +36,9 @@
     <div class="container">
       <div id="inner-container">
         <h2>Welcome to the Client Portal</h2>
-        <a href="/business">Are you a business? Click me if you are.</a>
-        <form id="client-details-form" method="Post" action="/add">
-          <label for="firstname">First Name:</label>
-          <input type="text" id="firstname" required name="firstname" />
-          <br />
-
-          <label for="surname">Surname:</label>
+        <form id="client-details-form" method="Post" action="/addbusinesS">
+          <label for="surname">Business :</label>
           <input type="text" id="surname" required name="surname" />
-          <br />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" required name="email" />
-          <br />
-
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" required name="phone" />
-          <br />
-
-          <label for="dob">Date of Birth:</label>
-          <input type="date" id="dob" required name="date" />
           <br />
 
           <label for="address">Address:</label>
@@ -75,6 +58,24 @@
           <br />
 
           <button type="submit" id="save-details">Save Details</button>
+        </form>
+        <form method="Post" action="/addBusinessRole">
+          <label for="name">Rep name :</label>
+          <input type="text" id="surname" required name="name" />
+          <br />
+          <label for="surname">Rep last name :</label>
+          <input type="text" id="surname" required name="surname" />
+          <br />
+
+          <label for="phone">Rep phone number:</label>
+          <input type="text" id="phone" required name="phone" />
+          <br />
+
+          <label for="role">Rep Role</label>
+          <input type="text" id="role" required name="role" />
+          <br />
+
+          <button type="submit" id="save-details">Person</button>
         </form>
       </div>
     </div>
