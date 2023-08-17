@@ -207,6 +207,7 @@
             this.btnViewReports.TabIndex = 4;
             this.btnViewReports.Text = "View Reports";
             this.btnViewReports.UseVisualStyleBackColor = false;
+            this.btnViewReports.Click += new System.EventHandler(this.btnViewReports_Click);
             // 
             // btnViewEmployee
             // 

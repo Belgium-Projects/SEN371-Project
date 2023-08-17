@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -60,6 +61,20 @@ namespace SEN371_Project
             this.Hide();
             frmServices frm =new frmServices();
             frm.Show();
+        }
+
+        private void btnViewReports_Click(object sender, EventArgs e)
+        {
+            string htmlFilePath = "https://app.powerbi.com/view?r=eyJrIjoiYzFiZWFhOWMtYzZjMi00NWZjLWFhZGUtZjQyYTk4M2VkMzZiIiwidCI6ImVhMWE5MDliLTY2MDAtNGEyNS04MmE1LTBjNmVkN2QwNTEzYiIsImMiOjl9";
+
+            try
+            {
+                Process.Start(htmlFilePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
