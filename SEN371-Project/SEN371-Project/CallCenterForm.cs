@@ -14,11 +14,12 @@ namespace SEN371_Project
 {
     public partial class frmCallCentre : Form
     {
+        
         public static string CustomerID;
         public frmCallCentre()
         {
             InitializeComponent();
-
+            lblEmpName.Text = obj2.EmpName+"Speek";
         }
         callCentre obj = new callCentre();
         employee obj2 = new employee();

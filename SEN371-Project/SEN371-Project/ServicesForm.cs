@@ -150,7 +150,7 @@ namespace SEN371_Project
         private void btnClient_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmClient a = new frmClient();
+            frmCallCentre a = new frmCallCentre();
             a.Show();
         }
 
@@ -367,6 +367,20 @@ namespace SEN371_Project
         private void txtCustomerID_TextChanged(object sender, EventArgs e)
         {
             comboboxinit();
+        }
+
+        private void btnWork_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmPackages frm = new frmPackages();
+            frm.Show();
+        }
+
+        private void btnDepartment_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmManagementDept frm = new frmManagementDept();
+            frm.Show();
         }
     }
 }

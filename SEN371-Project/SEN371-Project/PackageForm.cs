@@ -14,9 +14,11 @@ namespace SEN371_Project
 {
     public partial class frmPackages : Form
     {
+        employee obj = new employee();
         public frmPackages()
         {
             InitializeComponent();
+            lblEmpName.Text = obj.EmpName + "Speek";
         }
         public void innit()
         {
@@ -88,7 +90,7 @@ namespace SEN371_Project
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmClient a = new frmClient();
+            frmCallCentre a = new frmCallCentre();
             a.Show();
         }
 
@@ -329,6 +331,10 @@ namespace SEN371_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            frmServices frm = new frmServices();
+
+            frm.Show();
 
         }
 
@@ -336,6 +342,13 @@ namespace SEN371_Project
         {
             contract.insertservices(cbMaintances.Text, cbdifficult.Text, txtPrice.Text, cbfrequency.Text, txttask.Text, lblDescription.Text, txttools.Text);
        
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmManagementDept frm = new frmManagementDept();
+            frm.Show();
         }
     }
 }

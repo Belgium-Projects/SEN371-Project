@@ -105,12 +105,13 @@
             // 
             this.btnWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWork.Location = new System.Drawing.Point(1145, 33);
+            this.btnWork.Location = new System.Drawing.Point(1197, 33);
             this.btnWork.Name = "btnWork";
             this.btnWork.Size = new System.Drawing.Size(138, 55);
             this.btnWork.TabIndex = 4;
-            this.btnWork.Text = "Work";
+            this.btnWork.Text = "Service";
             this.btnWork.UseVisualStyleBackColor = false;
+            this.btnWork.Click += new System.EventHandler(this.btnWork_Click);
             // 
             // btnClient
             // 
@@ -118,10 +119,11 @@
             this.btnClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient.Location = new System.Drawing.Point(968, 33);
             this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(143, 55);
+            this.btnClient.Size = new System.Drawing.Size(193, 55);
             this.btnClient.TabIndex = 3;
-            this.btnClient.Text = "Client";
+            this.btnClient.Text = "Call Centre";
             this.btnClient.UseVisualStyleBackColor = false;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btndepartment
             // 
@@ -131,8 +133,9 @@
             this.btndepartment.Name = "btndepartment";
             this.btndepartment.Size = new System.Drawing.Size(210, 55);
             this.btndepartment.TabIndex = 2;
-            this.btndepartment.Text = "Department";
+            this.btndepartment.Text = "Management";
             this.btndepartment.UseVisualStyleBackColor = false;
+            this.btndepartment.Click += new System.EventHandler(this.btndepartment_Click);
             // 
             // btnHome
             // 
@@ -144,6 +147,7 @@
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pnlBR4
             // 
@@ -236,6 +240,7 @@
             this.btnPerformance.TabIndex = 2;
             this.btnPerformance.Text = "View Performance";
             this.btnPerformance.UseVisualStyleBackColor = false;
+            this.btnPerformance.Click += new System.EventHandler(this.btnPerformance_Click);
             // 
             // lblContent2
             // 
