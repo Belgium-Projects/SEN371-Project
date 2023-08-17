@@ -11,10 +11,10 @@ app.set("view engine", "ejs");
 const connectionstring =
   "server=DESKTOP-P3PTCL8\\SQLEXPRESS;Database=PremierServiceSolutions;Trusted_Connection=Yes;Driver={SQL Server Native Client 11.0}";
 
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
-});
-app.get("/register", (req, res) => {
+// app.get("/", function (req, res) {
+//   res.sendFile(__dirname + "/index.html");
+// });
+app.get("/", (req, res) => {
   res.sendFile(__dirname + "/Website Pages/portal.html");
 });
 app.get("/business", (req, res) => {
