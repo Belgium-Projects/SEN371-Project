@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>ChatBot</title>
-    <link rel="stylesheet" href="../CSS Files/chatbot.css">
-    <link rel="stylesheet" href="Web Font Kit/Hermeneus One Font/stylesheet.css" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="Web Font Kit/Hepta Slab Font/stylesheet.css" type="text/css" charset="utf-8" />
- 
+    <link rel="stylesheet" href="../CSS Files/chatbot.css" />
+    <link
+      rel="stylesheet"
+      href="Web Font Kit/Hermeneus One Font/stylesheet.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="Web Font Kit/Hepta Slab Font/stylesheet.css"
+      type="text/css"
+      charset="utf-8"
+    />
+
     <!--<link rel="stylesheet" href="../Web Font Kit/stylesheet.css" type="text/css" charset="utf-8" />-->
-</head>
-<body>
-  <nav class="top-nav">
-    <ul class="top-nav-left">
-        <li><img src="../Website Images/Business Images/PSS Logo.png" id="PSSLogo" /></li>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <ul class="top-nav-left">
+        <li>
+          <img
+            src="../Website Images/Business Images/PSS Logo.png"
+            id="PSSLogo"
+          />
+        </li>
         <li id="Nav1" class="current"><a href="../index.html">Home</a></li>
         <li id="Nav2"><a href="register.html">Register</a></li>
-        <li><img src="../Website Images/Profile Images/Profile Pic 2.jpg" id="UserLogo" /></li>
+        <li>
+          <img
+            src="../Website Images/Profile Images/Profile Pic 2.jpg"
+            id="UserLogo"
+          />
+        </li>
         <li id="Nav3"><a href="../index.html">Log Out</a></li>
-        
-    </ul>
-</nav>
-<div class="chatbot-container">
+      </ul>
+    </nav>
+    <div class="chatbot-container">
+      <div id="chat-bot-box">
+        <h2>Welcome to the ChatBot</h2>
+        <div class="chat-log" id="chat-log">
+          <!-- Chat log will be populated here -->
+        </div>
 
-<div id="chat-bot-box"> 
-
-    <h2>Welcome to the ChatBot</h2>
-    <div class="chat-log" id="chat-log">
-        <!-- Chat log will be populated here -->
+        <div class="user-input">
+          <input
+            type="text"
+            id="user-input-field"
+            placeholder="Type your message..."
+          />
+          <button id="send-button">Send</button>
+        </div>
+      </div>
     </div>
-    
-    <div class="user-input">
-        <input type="text" id="user-input-field" placeholder="Type your message...">
-        <button id="send-button">Send</button>
-    </div> 
-</div>   
-</div>
-</body>
-<script src="../Javascript Files/chatbot.js"></script>
+  </body>
+  <script src="../Javascript Files/chatbot.js"></script>
   <footer class="Footer">
     <ul class="Footer-Content">
-        <li id="Nav4">Copyright © Premier Service Solutions 2023</li>
+      <li id="Nav4">Copyright © Premier Service Solutions 2023</li>
     </ul>
-</footer> 
+  </footer>
 </html>
