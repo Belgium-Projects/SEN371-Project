@@ -33,12 +33,12 @@ namespace SEN371_Project
             this.btnWork = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.btnDepartment = new System.Windows.Forms.Button();
-            this.pnlWork = new System.Windows.Forms.Panel();
+            this.pnlContent2 = new System.Windows.Forms.Panel();
             this.btnCallSimulation = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlContent3 = new System.Windows.Forms.Panel();
             this.CBService1 = new System.Windows.Forms.ComboBox();
             this.btnredirect = new System.Windows.Forms.Button();
             this.lblRedirect = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace SEN371_Project
             this.dgvHistory = new System.Windows.Forms.DataGridView();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlContent1 = new System.Windows.Forms.Panel();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,16 +64,25 @@ namespace SEN371_Project
             this.button9 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlWork.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pnlBR4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlBR1 = new System.Windows.Forms.Panel();
+            this.pnlBR2 = new System.Windows.Forms.Panel();
+            this.pnlBR3 = new System.Windows.Forms.Panel();
+            this.pnlContent2.SuspendLayout();
+            this.pnlContent3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlContent1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlHeader.SuspendLayout();
+            this.pnlBR4.SuspendLayout();
+            this.pnlBR1.SuspendLayout();
+            this.pnlBR2.SuspendLayout();
+            this.pnlBR3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnWork
@@ -103,25 +112,26 @@ namespace SEN371_Project
             this.btnDepartment.Text = "Department";
             this.btnDepartment.UseVisualStyleBackColor = true;
             // 
-            // pnlWork
+            // pnlContent2
             // 
-            this.pnlWork.Controls.Add(this.btnCallSimulation);
-            this.pnlWork.Controls.Add(this.label2);
-            this.pnlWork.Controls.Add(this.txtCustomerID);
-            this.pnlWork.Controls.Add(this.lblTitle);
-            this.pnlWork.Controls.Add(this.panel3);
-            this.pnlWork.Location = new System.Drawing.Point(265, 79);
-            this.pnlWork.Name = "pnlWork";
-            this.pnlWork.Size = new System.Drawing.Size(777, 508);
-            this.pnlWork.TabIndex = 48;
-            this.pnlWork.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlWork_Paint);
+            this.pnlContent2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(104)))), ((int)(((byte)(104)))));
+            this.pnlContent2.Controls.Add(this.btnCallSimulation);
+            this.pnlContent2.Controls.Add(this.label2);
+            this.pnlContent2.Controls.Add(this.txtCustomerID);
+            this.pnlContent2.Controls.Add(this.lblTitle);
+            this.pnlContent2.Controls.Add(this.pnlBR3);
+            this.pnlContent2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent2.Location = new System.Drawing.Point(10, 10);
+            this.pnlContent2.Name = "pnlContent2";
+            this.pnlContent2.Size = new System.Drawing.Size(1439, 780);
+            this.pnlContent2.TabIndex = 48;
+            this.pnlContent2.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlWork_Paint);
             // 
             // btnCallSimulation
             // 
-            this.btnCallSimulation.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCallSimulation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnCallSimulation.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCallSimulation.FlatAppearance.BorderSize = 0;
-            this.btnCallSimulation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCallSimulation.ForeColor = System.Drawing.Color.Black;
             this.btnCallSimulation.Location = new System.Drawing.Point(655, 7);
             this.btnCallSimulation.Name = "btnCallSimulation";
@@ -136,7 +146,7 @@ namespace SEN371_Project
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(35, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 16);
+            this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 53;
             this.label2.Text = "Customer ID:";
             // 
@@ -144,7 +154,7 @@ namespace SEN371_Project
             // 
             this.txtCustomerID.Location = new System.Drawing.Point(125, 24);
             this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(121, 23);
+            this.txtCustomerID.Size = new System.Drawing.Size(121, 22);
             this.txtCustomerID.TabIndex = 5;
             this.txtCustomerID.TextChanged += new System.EventHandler(this.initalizeVars);
             // 
@@ -158,25 +168,27 @@ namespace SEN371_Project
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Call Centre";
             // 
-            // panel3
+            // pnlContent3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.CBService1);
-            this.panel3.Controls.Add(this.btnredirect);
-            this.panel3.Controls.Add(this.lblRedirect);
-            this.panel3.Controls.Add(this.btnSubmit);
-            this.panel3.Controls.Add(this.CBPriority);
-            this.panel3.Controls.Add(this.lblServie);
-            this.panel3.Controls.Add(this.lblNote);
-            this.panel3.Controls.Add(this.lblPriority);
-            this.panel3.Controls.Add(this.cbRedirect);
-            this.panel3.Controls.Add(this.lbCustomer);
-            this.panel3.Controls.Add(this.dgvHistory);
-            this.panel3.Controls.Add(this.txtNote);
-            this.panel3.Location = new System.Drawing.Point(18, 55);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(729, 416);
-            this.panel3.TabIndex = 3;
+            this.pnlContent3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
+            this.pnlContent3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlContent3.Controls.Add(this.CBService1);
+            this.pnlContent3.Controls.Add(this.btnredirect);
+            this.pnlContent3.Controls.Add(this.lblRedirect);
+            this.pnlContent3.Controls.Add(this.btnSubmit);
+            this.pnlContent3.Controls.Add(this.CBPriority);
+            this.pnlContent3.Controls.Add(this.lblServie);
+            this.pnlContent3.Controls.Add(this.lblNote);
+            this.pnlContent3.Controls.Add(this.lblPriority);
+            this.pnlContent3.Controls.Add(this.cbRedirect);
+            this.pnlContent3.Controls.Add(this.lbCustomer);
+            this.pnlContent3.Controls.Add(this.dgvHistory);
+            this.pnlContent3.Controls.Add(this.txtNote);
+            this.pnlContent3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent3.Location = new System.Drawing.Point(10, 10);
+            this.pnlContent3.Name = "pnlContent3";
+            this.pnlContent3.Size = new System.Drawing.Size(1360, 528);
+            this.pnlContent3.TabIndex = 3;
             // 
             // CBService1
             // 
@@ -231,7 +243,7 @@ namespace SEN371_Project
             this.lblServie.AutoSize = true;
             this.lblServie.Location = new System.Drawing.Point(121, 179);
             this.lblServie.Name = "lblServie";
-            this.lblServie.Size = new System.Drawing.Size(49, 16);
+            this.lblServie.Size = new System.Drawing.Size(53, 16);
             this.lblServie.TabIndex = 2;
             this.lblServie.Text = "Service";
             // 
@@ -240,7 +252,7 @@ namespace SEN371_Project
             this.lblNote.AutoSize = true;
             this.lblNote.Location = new System.Drawing.Point(121, 66);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(34, 16);
+            this.lblNote.Size = new System.Drawing.Size(36, 16);
             this.lblNote.TabIndex = 1;
             this.lblNote.Text = "Note";
             // 
@@ -249,7 +261,7 @@ namespace SEN371_Project
             this.lblPriority.AutoSize = true;
             this.lblPriority.Location = new System.Drawing.Point(121, 256);
             this.lblPriority.Name = "lblPriority";
-            this.lblPriority.Size = new System.Drawing.Size(49, 16);
+            this.lblPriority.Size = new System.Drawing.Size(48, 16);
             this.lblPriority.TabIndex = 0;
             this.lblPriority.Text = "Priority";
             // 
@@ -263,23 +275,25 @@ namespace SEN371_Project
             // 
             // lbCustomer
             // 
+            this.lbCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbCustomer.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCustomer.FormattingEnabled = true;
             this.lbCustomer.ItemHeight = 31;
-            this.lbCustomer.Location = new System.Drawing.Point(11, 10);
+            this.lbCustomer.Location = new System.Drawing.Point(0, 0);
             this.lbCustomer.Name = "lbCustomer";
-            this.lbCustomer.Size = new System.Drawing.Size(719, 376);
+            this.lbCustomer.Size = new System.Drawing.Size(1356, 524);
             this.lbCustomer.TabIndex = 7;
             // 
             // dgvHistory
             // 
             this.dgvHistory.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistory.Location = new System.Drawing.Point(11, 10);
+            this.dgvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHistory.Location = new System.Drawing.Point(0, 0);
             this.dgvHistory.Name = "dgvHistory";
             this.dgvHistory.RowHeadersWidth = 51;
             this.dgvHistory.RowTemplate.Height = 24;
-            this.dgvHistory.Size = new System.Drawing.Size(716, 387);
+            this.dgvHistory.Size = new System.Drawing.Size(1356, 524);
             this.dgvHistory.TabIndex = 13;
             // 
             // txtNote
@@ -292,148 +306,158 @@ namespace SEN371_Project
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(836, 2);
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnLogOut.Location = new System.Drawing.Point(1719, 33);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(114, 52);
+            this.btnLogOut.Size = new System.Drawing.Size(152, 55);
             this.btnLogOut.TabIndex = 53;
             this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // panel1
+            // pnlContent1
             // 
-            this.panel1.Controls.Add(this.btnCustomer);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblEmpName);
-            this.panel1.Controls.Add(this.btnViewServices);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Location = new System.Drawing.Point(19, 79);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 471);
-            this.panel1.TabIndex = 57;
+            this.pnlContent1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.pnlContent1.Controls.Add(this.label3);
+            this.pnlContent1.Controls.Add(this.btnCustomer);
+            this.pnlContent1.Controls.Add(this.button3);
+            this.pnlContent1.Controls.Add(this.label1);
+            this.pnlContent1.Controls.Add(this.lblEmpName);
+            this.pnlContent1.Controls.Add(this.btnViewServices);
+            this.pnlContent1.Controls.Add(this.button5);
+            this.pnlContent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent1.Location = new System.Drawing.Point(10, 10);
+            this.pnlContent1.Name = "pnlContent1";
+            this.pnlContent1.Size = new System.Drawing.Size(328, 710);
+            this.pnlContent1.TabIndex = 57;
             // 
             // btnCustomer
             // 
-            this.btnCustomer.Location = new System.Drawing.Point(37, 332);
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnCustomer.Location = new System.Drawing.Point(30, 608);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(159, 43);
+            this.btnCustomer.Size = new System.Drawing.Size(270, 70);
             this.btnCustomer.TabIndex = 13;
             this.btnCustomer.Text = "View Customer";
-            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.UseVisualStyleBackColor = false;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(37, 258);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.button3.Location = new System.Drawing.Point(30, 474);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 43);
+            this.button3.Size = new System.Drawing.Size(270, 70);
             this.button3.TabIndex = 12;
             this.button3.Text = "Tranfer Call";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 51);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.Location = new System.Drawing.Point(117, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 26);
+            this.label1.Size = new System.Drawing.Size(97, 29);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Options:";
+            this.label1.Text = "Options";
             // 
             // lblEmpName
             // 
             this.lblEmpName.AutoSize = true;
-            this.lblEmpName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpName.Location = new System.Drawing.Point(50, 24);
+            this.lblEmpName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lblEmpName.Location = new System.Drawing.Point(83, 52);
             this.lblEmpName.Name = "lblEmpName";
-            this.lblEmpName.Size = new System.Drawing.Size(131, 26);
+            this.lblEmpName.Size = new System.Drawing.Size(173, 36);
             this.lblEmpName.TabIndex = 10;
             this.lblEmpName.Text = "Peter Jones";
             // 
             // btnViewServices
             // 
-            this.btnViewServices.Location = new System.Drawing.Point(37, 96);
+            this.btnViewServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.btnViewServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnViewServices.Location = new System.Drawing.Point(30, 205);
             this.btnViewServices.Name = "btnViewServices";
-            this.btnViewServices.Size = new System.Drawing.Size(159, 43);
+            this.btnViewServices.Size = new System.Drawing.Size(270, 70);
             this.btnViewServices.TabIndex = 8;
-            this.btnViewServices.Text = "Call history";
-            this.btnViewServices.UseVisualStyleBackColor = true;
+            this.btnViewServices.Text = "Call History";
+            this.btnViewServices.UseVisualStyleBackColor = false;
             this.btnViewServices.Click += new System.EventHandler(this.btnViewServices_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(37, 170);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.button5.Location = new System.Drawing.Point(30, 340);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(159, 43);
+            this.button5.Size = new System.Drawing.Size(270, 70);
             this.button5.TabIndex = 7;
             this.button5.Text = "Log Issue";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(375, 1);
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.button7.Location = new System.Drawing.Point(840, 33);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(104, 51);
+            this.button7.Size = new System.Drawing.Size(190, 55);
             this.button7.TabIndex = 60;
             this.button7.Text = "Services";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(265, 1);
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.button8.Location = new System.Drawing.Point(556, 33);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(104, 51);
+            this.button8.Size = new System.Drawing.Size(245, 55);
             this.button8.TabIndex = 59;
             this.button8.Text = "Management";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(485, 1);
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.button9.Location = new System.Drawing.Point(1069, 33);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(104, 51);
+            this.button9.Size = new System.Drawing.Size(209, 55);
             this.button9.TabIndex = 58;
             this.button9.Text = "Packages";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(965, 3);
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(90)))), ((int)(((byte)(112)))));
+            this.pictureBox5.Image = global::SEN371_Project.Properties.Resources.Profile_Pic_3;
+            this.pictureBox5.Location = new System.Drawing.Point(1608, 9);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(79, 51);
+            this.pictureBox5.Size = new System.Drawing.Size(100, 100);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 61;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(-2, 1);
+            this.pictureBox4.Location = new System.Drawing.Point(10, 10);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(246, 54);
+            this.pictureBox4.Size = new System.Drawing.Size(506, 82);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 50;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-2, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1051, 562);
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -445,41 +469,112 @@ namespace SEN371_Project
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlHeader
+            // 
+            this.pnlHeader.AutoSize = true;
+            this.pnlHeader.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(90)))), ((int)(((byte)(112)))));
+            this.pnlHeader.Controls.Add(this.pnlBR4);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlHeader.Size = new System.Drawing.Size(1924, 117);
+            this.pnlHeader.TabIndex = 62;
+            // 
+            // pnlBR4
+            // 
+            this.pnlBR4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR4.Controls.Add(this.pictureBox4);
+            this.pnlBR4.Location = new System.Drawing.Point(9, 9);
+            this.pnlBR4.Name = "pnlBR4";
+            this.pnlBR4.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBR4.Size = new System.Drawing.Size(526, 102);
+            this.pnlBR4.TabIndex = 63;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label3.Location = new System.Drawing.Point(78, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 4);
+            this.label3.TabIndex = 14;
+            // 
+            // pnlBR1
+            // 
+            this.pnlBR1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR1.Controls.Add(this.pnlContent1);
+            this.pnlBR1.Location = new System.Drawing.Point(25, 150);
+            this.pnlBR1.Name = "pnlBR1";
+            this.pnlBR1.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBR1.Size = new System.Drawing.Size(348, 730);
+            this.pnlBR1.TabIndex = 63;
+            // 
+            // pnlBR2
+            // 
+            this.pnlBR2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR2.Controls.Add(this.pnlContent2);
+            this.pnlBR2.Location = new System.Drawing.Point(426, 150);
+            this.pnlBR2.Name = "pnlBR2";
+            this.pnlBR2.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBR2.Size = new System.Drawing.Size(1459, 800);
+            this.pnlBR2.TabIndex = 64;
+            // 
+            // pnlBR3
+            // 
+            this.pnlBR3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlBR3.Controls.Add(this.pnlContent3);
+            this.pnlBR3.Location = new System.Drawing.Point(28, 205);
+            this.pnlBR3.Name = "pnlBR3";
+            this.pnlBR3.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBR3.Size = new System.Drawing.Size(1380, 548);
+            this.pnlBR3.TabIndex = 65;
+            // 
             // frmCallCentre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1054, 596);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::SEN371_Project.Properties.Resources.Wall_UnSat__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1924, 1000);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pnlWork);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.btnDepartment);
             this.Controls.Add(this.pictureBox1);
-            this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(this.pnlHeader);
+            this.Controls.Add(this.pnlBR1);
+            this.Controls.Add(this.pnlBR2);
+            this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.Name = "frmCallCentre";
             this.Text = "CallCentre";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCallCentre_Load);
-            this.pnlWork.ResumeLayout(false);
-            this.pnlWork.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlContent2.ResumeLayout(false);
+            this.pnlContent2.PerformLayout();
+            this.pnlContent3.ResumeLayout(false);
+            this.pnlContent3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlContent1.ResumeLayout(false);
+            this.pnlContent1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlBR4.ResumeLayout(false);
+            this.pnlBR1.ResumeLayout(false);
+            this.pnlBR2.ResumeLayout(false);
+            this.pnlBR3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -488,11 +583,10 @@ namespace SEN371_Project
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Button btnDepartment;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel pnlWork;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlContent2;
+        private System.Windows.Forms.Panel pnlContent3;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlContent1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmpName;
@@ -520,5 +614,11 @@ namespace SEN371_Project
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnCallSimulation;
         private System.Windows.Forms.DataGridView dgvHistory;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Panel pnlBR4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnlBR1;
+        private System.Windows.Forms.Panel pnlBR2;
+        private System.Windows.Forms.Panel pnlBR3;
     }
 }
