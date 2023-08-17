@@ -1,7 +1,6 @@
 {
   "name": "premier-service-solutions-website",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +12,6 @@
     "express": "^4.18.2",
     "msnodesqlv8": "^4.1.0",
     "popups": "^1.1.3"
-  }
+  },
+  "description": ""
 }

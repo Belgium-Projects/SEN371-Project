@@ -252,7 +252,7 @@ namespace SEN371_Project
         private void dgvServies_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             DialogResult dr = MessageBox.Show("Are you sure you want to update?",
-                      "Mood Test", MessageBoxButtons.YesNo);
+                      "Confirm Update", MessageBoxButtons.YesNo);
             switch (dr)
             {
                 case DialogResult.Yes:

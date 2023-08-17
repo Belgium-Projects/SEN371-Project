@@ -82,9 +82,9 @@ namespace SEN371_Project
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //frmClose a = new frmClose();
-            //a.Show();
+            this.Close();
+            frmClose a = new frmClose();
+            a.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

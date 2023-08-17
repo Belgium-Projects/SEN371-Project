@@ -1,9 +1,14 @@
 let slideIndex = 1;
 showSlides();
 registerClick();
+portalClick();
 
 function registerClick() {
     location.href = "Website Pages/register.html";
+}
+
+function portalClick() {
+    location.href = "../Website Pages/portal.html";
 }
 
 // Next/previous controls

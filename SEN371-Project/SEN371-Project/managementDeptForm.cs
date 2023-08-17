@@ -37,9 +37,9 @@ namespace SEN371_Project
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmLogin frm =new frmLogin();
-            frm.Show();
+            //this.Close();
+            //frmClose a = new frmClose();
+            //a.Show();
         }
 
         private void btndepartment_Click(object sender, EventArgs e)
@@ -75,6 +75,13 @@ namespace SEN371_Project
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmClose a = new frmClose();
+            a.Show();
         }
     }
 }
