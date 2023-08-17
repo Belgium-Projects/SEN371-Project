@@ -87,7 +87,7 @@ namespace SEN371_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmClient a = new frmClient();
             a.Show();
         }
