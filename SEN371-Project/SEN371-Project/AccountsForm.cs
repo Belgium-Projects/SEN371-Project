@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SEN371_Project
 {
-    public partial class AccountsForm : Form
+    public partial class ClientPortalForm : Form
     {
-        public AccountsForm()
+        public ClientPortalForm()
         {
             InitializeComponent();
         }
@@ -27,12 +27,7 @@ namespace SEN371_Project
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
 
         }

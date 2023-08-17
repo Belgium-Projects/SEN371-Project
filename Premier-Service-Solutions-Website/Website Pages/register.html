@@ -1,11 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Sign Up</title>
     <link rel="stylesheet" href="../CSS Files/login out.css">
-    <link rel="stylesheet" href="../Web Font Kit/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../Web Font Kit/Hermeneus One Font/stylesheet.css" type="text/css" charset="utf-8" />
+    <script src="../Javascript Files/script.js"></script>
 </head>
 <body>
+    <nav class="top-nav">
+        <ul class="top-nav-left">
+            <li><img src="../Website Images/Business Images/PSS Logo.png" id="PSSLogo" /></li>
+            <li id="Nav1"><a href="../index.html">Home</a></li>
+            <li id="Nav2" class="current"><a href="register.html">Register</a></li>
+            <li id="Nav3"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <form id="signup-form">
             <label for="name">Username:</label>
@@ -17,9 +27,15 @@
             <label for="password">Confirm Password:</label>
             <input type="password" id="password" required>
             <br>
-            <button type="submit">Register</button>
+            <button type="submit" onclick="portalClick()">Register</button>
         </form>
-        <p>Already have an account? <a href="login.html">Log In</a></p>
+        <p>Already have an account? <a href="login.html" class="redirect">Log In</a></p>
     </div>
+
+    <footer class="Footer">
+        <ul class="Footer-Content">
+            <li>Copyright © Premier Service Solutions 2023</li>
+        </ul>
+    </footer>
 </body>
 </html>

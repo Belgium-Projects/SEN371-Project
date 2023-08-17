@@ -11,7 +11,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Twilio.TwiML.Messaging;
 using Twilio.TwiML.Voice;
+using Twilio.Types;
 
 namespace SEN371_Project.FunctionalAreas
 {
@@ -20,7 +22,33 @@ namespace SEN371_Project.FunctionalAreas
         //CRUD operations 
         private string starttime;
        
-     
+     public List<string> returnServices(string customerid)
+        {
+            Connection();
+            List<string> returnService = new List<string>();
+            try
+            {
+                string Service = $"select s.ServicesID,s.Task from Customer c inner join Packages p on c.PackagesID = p.PackagesID inner join ServiceinPackages sp on p.PackagesID = sp.packagesID inner join Service s on sp.ServicesID = s.ServicesID where CustomerID ={customerid}";
+                Command = new SqlCommand(Service,Connection1);
+                Reader = Command.ExecuteReader();
+                while(Reader.Read())
+                {
+                    returnService.Add($"{Reader[0]} , {Reader[1]}");
+                }
+                return returnService;
+
+             }
+            catch (Exception)
+            {
+
+             
+            }
+            finally
+            {
+                Disconnect();
+            }
+            return returnService;
+        }
         //save service JOB to db if employee is not linked will send sms to tech 
         public  void logJob(int customerID,int employeeid,string notes,string datestart , int servicesID,string priority)
         {
@@ -61,6 +89,7 @@ namespace SEN371_Project.FunctionalAreas
                 Command = new System.Data.SqlClient.SqlCommand(jobs , Connection1);
                 Command.ExecuteNonQuery();
                 MessageBox.Show("Ticket saved ");
+               
             }
             catch (Exception ex)
             {
@@ -72,31 +101,32 @@ namespace SEN371_Project.FunctionalAreas
             }
         }
         //View customer agreement
-        public Services cusAgreement(int id)
+        public List<string> cusAgreement(string id)
         {
             Connection();
-            string custom = $"select * from cusAgreement where CustomerID = {id}";
-           
+            string custom = $"select * from cusAgreement where customerid = 2";
+           List<string> CusAgreementlist = new List<string>();
             try
             {
                 Command = new System.Data.SqlClient.SqlCommand(custom,Connection1);
                 Reader = Command.ExecuteReader();
                 while (Reader.Read())
                 {
-                    Services Service = new Services(int.Parse(Reader[1].ToString()), Reader[2].ToString(), Reader[3].ToString(),int.Parse( Reader[4].ToString()),int.Parse( Reader[5].ToString()), Reader[6].ToString(), Reader[7].ToString(), Reader[8].ToString());
-                    return Service;
+                    CusAgreementlist.Add($"{Reader[0].ToString()},{Reader[1].ToString()}, {Reader[2].ToString()}, {Reader[3].ToString()},{Reader[4].ToString()} ,{Reader[5].ToString()},{Reader[6].ToString()},{Reader[7].ToString()}, {Reader[8].ToString()}");
+                    
                 }
+                return CusAgreementlist;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+"1");
             }
             finally
             {
                 Disconnect();
               
             }
-            return null;
+            return CusAgreementlist;
            
         }
         //Return customer call logs
@@ -113,14 +143,14 @@ namespace SEN371_Project.FunctionalAreas
                 Reader = Command.ExecuteReader();
                 while(Reader.Read())
                 {
-                    calllogs.Add($"{Reader[0]},{Reader[1]},{Reader[2]},,{Reader[3]},{Reader[4]},{Reader[5]},{Reader[6]}");
+                    calllogs.Add($"{Reader[0]},{Reader[1]},{Reader[2]},{Reader[3]},{Reader[4]},{Reader[5]},{Reader[6]}");
                 }
                 return calllogs;
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + "2");
             }
             finally
             {
@@ -134,24 +164,27 @@ namespace SEN371_Project.FunctionalAreas
         //anwsers call
         public string anwsercall()
         {
-            this.starttime = DateTime.Now.ToString();
+            this.starttime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff");
             
             return starttime;
         }
         // end call
         public void endCall(int customerID, int employeeid)
+            
         {
-            string insert = $"insert into CallHistory(CustomerID,StartTime,Endtime,EmployeeID) values({customerID},'{starttime}','{DateTime.Now}',{employeeid})";
+            //MessageBox.Show(starttime + "   "+ DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff"));
+            string insert = $"insert into CallHistory(CustomerID,StartTime,Endtime,EmployeeID) values({customerID},'{starttime}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff")}',{employeeid})";
             Connection();
             try
             {
                 Command = new System.Data.SqlClient.SqlCommand(insert,Connection1);
                 Command.ExecuteNonQuery();
 
+
             }                //MessageBox.Show("Inserted");
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + "3");
             }
             finally
             {
@@ -207,6 +240,21 @@ namespace SEN371_Project.FunctionalAreas
                 Disconnect();
             }
         }
+        public List<string> BUsinessRep(string customerid)
+        {
+            Connection();
+            string getRep = $"Select * from BusinessRole br inner join BusinessCustomer bc on br.BusinessRoleID = bc.BusinessRoleID where CustomerID ={customerid}";
+            Command = new SqlCommand(getRep, Connection1);
+            Reader = Command.ExecuteReader();
+            List<string> businessRep = new List<string>();
+            while (Reader.Read())
+            {
+                businessRep.Add($"{Reader[0]}  ,  {Reader[1]},  {Reader[2]},  {Reader[3]}, {Reader[4]}");
+
+            }
+            Disconnect();
+            return businessRep;
+        }
         public override List<client> selectFromDB(int clientID)
         {
            
@@ -215,25 +263,14 @@ namespace SEN371_Project.FunctionalAreas
             {
                 if (isBusinessCustomer(clientID))
                 {
-                    //Is a business CLient 
-                    Connection();
-                    string getRep = $"Select * from BusinessRole br inner join BusinessCustomer bc on br.BusinessRoleID = bc.BusinessRoleID where CustomerID ={clientID}";
-                    Command =new SqlCommand(getRep, Connection1);
-                    Reader = Command.ExecuteReader();
                     List<string> businessRep = new List<string>();
-                    while (Reader.Read())
-                    {
-                        businessRep.Add($"{Reader[0]},{Reader[1]},{Reader[2]},{Reader[3]},{Reader[4]}");
-                        
-                    }
-                    Disconnect();
                     Connection();
                     string getclientInfo = $"Select * from customer where CustomerID ={clientID}";
                     Command = new SqlCommand(getclientInfo, Connection1);
                     Reader = Command.ExecuteReader();
                     while (Reader.Read())
                     {
-                        CustomerInfo.Add(new client(Reader[2].ToString(), businessRep, Reader[4].ToString(), Reader[0].ToString()));
+                        CustomerInfo.Add(new client(Reader[1].ToString(),Reader[2].ToString(), businessRep, Reader[4].ToString(), Reader[0].ToString()));
                     }
                     Disconnect();
                     return CustomerInfo;

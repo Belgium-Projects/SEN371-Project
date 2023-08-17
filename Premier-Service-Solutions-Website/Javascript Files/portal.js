@@ -1,29 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const saveButton = document.getElementById("save-details");
-    const firstnameInput = document.getElementById("firstname");
-    const surnameInput = document.getElementById("surname");
-    const phoneInput = document.getElementById("phone");
-    const dobInput = document.getElementById("dob");
-    const addressInput = document.getElementById("address");
-    const zipInput = document.getElementById("zip");
-    const businessNameInput = document.getElementById("business-name");
-  
-    saveButton.addEventListener("click", function() {
-      const formData = {
-        firstname: firstnameInput.value,
-        surname: surnameInput.value,
-        phone: phoneInput.value,
-        dob: dobInput.value,
-        address: addressInput.value,
-        zip: zipInput.value,
-        businessName: businessNameInput.value
-      };
-  
-      // Here you would typically send the formData to the server for processing and storage.
-      // You can use fetch() or an AJAX library for this purpose.
-  
-      // For demonstration, let's show an alert with the submitted data.
-      alert("Details saved!\n" + JSON.stringify(formData, null, 2));
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  const saveButton = document.getElementById("save-details");
+
+  saveButton.addEventListener("click", function () {
+    // Collect client details from the form
+    const firstName = document.getElementById("firstname").value;
+    const surname = document.getElementById("surname").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const dob = document.getElementById("dob").value;
+    const address = document.getElementById("address").value;
+    const zip = document.getElementById("zip").value;
+    const businessName = document.getElementById("business-name").value;
+
+    // Create an object to store the client details
+    const clientDetails = {
+      firstName: firstName,
+      surname: surname,
+      email: email,
+      phone: phone,
+      dob: dob,
+      address: address,
+      zip: zip,
+      businessName: businessName,
+    };
+
+    // Store the client details in localStorage
+    localStorage.setItem("clientDetails", JSON.stringify(clientDetails));
+    //alert("Details saved!\n" + JSON.stringify(formData, null, 2));
+  // Open the chatbot webpage
+  // window.location.href = "chatbot.html";
   });
-  
+});

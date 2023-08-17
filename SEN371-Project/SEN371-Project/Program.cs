@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEN371_Project.dataHandler;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,12 @@ namespace SEN371_Project
         [STAThread]
         static void Main()
         {
+         
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
         }
+          
     }
 }
+    

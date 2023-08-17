@@ -17,24 +17,24 @@ namespace SEN371_Project.Connection
     {
 
         string resourceURL;
-        string accessToken= "ACd526795df293545a79b4b8eba0ad52d4";
-        string tokenCredentials = "6eb99d5e0edf6ace80614ab6223fb68c";
-        string employeePhone = "+27818150525";
+         string accessToken= "ACd526795df293545a79b4b8eba0ad52d4";
+         string tokenCredentials = "6eb99d5e0edf6ace80614ab6223fb68c";
+         string employeePhone = "+27818150525";
         string applicationID;
         //Sends info to the employee if job not assigned
         public void smsAPIInvoke(string messagesend)
         {
             try
             {
-                ////Token and Credentials
-                //TwilioClient.Init(accessToken, tokenCredentials);
-                ////API info Header and body
-                //var messageOptions = new CreateMessageOptions(
-                //  new PhoneNumber(employeePhone));
-                //messageOptions.From = new PhoneNumber("+13135138498");
-                //messageOptions.Body = messagesend;
-                ////invoke API 
-                //var message = MessageResource.Create(messageOptions);
+                //Token and Credentials
+                TwilioClient.Init(accessToken, tokenCredentials);
+                //API info Header and body
+                var messageOptions = new CreateMessageOptions(
+                  new PhoneNumber(employeePhone));
+                messageOptions.From = new PhoneNumber("+13135138498");
+                messageOptions.Body = messagesend;
+                //invoke API 
+                var message = MessageResource.Create(messageOptions);
             }
             catch (Exception ex)
             {

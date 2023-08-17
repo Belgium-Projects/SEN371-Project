@@ -1,54 +1,308 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Client Portal</title>
-    <link rel="stylesheet" href="../CSS Files/portal.css">
-    <link rel="stylesheet" href="../Web Font Kit/stylesheet.css" type="text/css" charset="utf-8" />
-</head>
-<body>
-  <nav class="sidebar">
-    <ul>
-      <li><a href="#view-account">View Account</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#delete-account">Delete Account</a></li>
-    </ul>
-  </nav>
+    <link rel="stylesheet" href="../CSS Files/portal.css" />
+    <link
+      rel="stylesheet"
+      href="Web Font Kit/Hermeneus One Font/stylesheet.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="Web Font Kit/Hepta Slab Font/stylesheet.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <style>
+      /* General styles */
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+        color: #fff;
+        font-family: "hermeneus_oneregular", Arial, sans-serif;
+        background-image: url("../Website Images/Business Images/Wall UnSat.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .container {
+        text-align: center;
+        font-family: "hepta_slabextralight", Arial, sans-serif;
+        text-align: center;
+        font-family: "hepta_slabextralight", Arial, sans-serif;
+        background-color: #9a9a9a70;
+        border: 5px solid #d9d9d9;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      #inner-container {
+        background-color: #9a9a9a;
+        border: 5px solid #d9d9d9;
+        border-radius: 12px;
+        padding: 20px;
+      }
+      form {
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+        border: 2px solid rgba(255, 255, 255, 0.2); /* White with 20% opacity */
+        background-color: rgba(255, 255, 255, 0.1); /* White with 10% opacity */
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .sidebar {
+        background-color: #333;
+        color: #fff;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 20px;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 20px;
+      }
+
+      .sidebar a:hover {
+        background-color: #4caf50;
+      }
+
+      /* button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
-  <div class="container">
-    <h2>Welcome to the Client Portal</h2>
-    <form id="client-details-form">
-      <label for="firstname">First Name:</label>
-      <input type="text" id="firstname" required>
-      <br>
+  button:hover {
+    background-color: #45a049;
+  } */
+      button {
+        background-color: #11d80080;
+        color: #161616;
+        padding: 5px 35px;
+        margin-top: 30px;
+        font-size: 24px;
+        border: none;
+        border-radius: 10px;
+        border: 3px solid #d9d9d9;
+        cursor: pointer;
+      }
 
-      <label for="surname">Surname:</label>
-      <input type="text" id="surname" required>
-      <br>
+      .redirect {
+        color: #11d800;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 20px;
+      }
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" required>
-      <br>
+      .container {
+        text-align: center;
+        color: #161616;
+        margin-top: 1.5%;
+      }
 
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" required>
-      <br>
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+        }
+      }
 
-      <label for="address">Address:</label>
-      <input type="text" id="address" required>
-      <br>
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
 
-      <label for="zip">ZIP Code:</label>
-      <input type="text" id="zip" required>
-      <br>
+      #PSSLogo {
+        width: 265px;
+        height: 50px;
+        border: 3px solid #9a9a9a;
+        border-radius: 7px;
+        margin-left: -8%;
+        margin-right: 25px;
+        margin-top: -3px;
+      }
 
-      <label for="business-name">Business Name:</label>
-      <input type="text" id="business-name" required>
-      <br>
-      
-      <button type="button" id="save-details">Save Details</button>
-    </form>
-  </div>
+      #Nav1 {
+        margin-right: 50px;
+      }
 
-  <script src="portal.js"></script>
-</body>
+      #Nav3 {
+        float: right;
+        margin-left: auto;
+        margin-right: 20px;
+      }
+
+      .top-nav {
+        width: 100%;
+        height: 66px;
+        background-color: #3c5a70;
+        border-bottom: 4px solid #9a9a9a;
+        border-top: 4px solid #9a9a9a;
+        font-size: 26px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+      }
+
+      .top-nav-left {
+        list-style: none;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+      }
+
+      .top-nav a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        border: 3px solid #9a9a9a;
+        border-radius: 7px;
+        padding: 3px 5px 3px 5px;
+      }
+
+      .top-nav a:hover {
+        background-color: #d9d9d920;
+      }
+
+      .current a {
+        background-color: #9a9a9a70;
+      }
+
+      .Footer {
+        width: 100%;
+        height: 40px;
+        background-color: #3c5a70;
+        border-bottom: 4px solid #9a9a9a;
+        border-top: 4px solid #9a9a9a;
+        font-size: 18px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+      }
+
+      .Footer-Content {
+        list-style: none;
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+      }
+
+      html {
+        position: relative;
+        min-height: 100%;
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../Web Font Kit/stylesheet.css" type="text/css" charset="utf-8" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <ul class="top-nav-left">
+        <li>
+          <img
+            src="../Website Images/Business Images/PSS Logo.png"
+            id="PSSLogo"
+          />
+        </li>
+        <li id="Nav1" class="current"><a href="../index.html">Home</a></li>
+        <li id="Nav2"><a href="register.html">Register</a></li>
+        <li id="Nav3"><a href="login.html">Login</a></li>
+        <li id="Nav4"><a href="chatbot.html">Chatbot</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div id="inner-container">
+        <h2>Welcome to the Client Portal</h2>
+        <a id="Switch" href="/business">Are you a business? Click me if you are.</a>
+        <form id="client-details-form" method="Post" action="/add">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" required name="firstname" />
+          <br />
+
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname" required name="surname" />
+          <br />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required name="email" />
+          <br />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" required name="phone" />
+          <br />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" required name="date" />
+          <br />
+
+          <label for="address">Address:</label>
+          <input type="text" id="address" required name="address" />
+          <br />
+
+          <label for="zip">ZIP Code:</label>
+          <input type="text" id="zip" required name="zip" />
+          <br />
+
+          <label for="packagesID">Packages ID:</label>
+          <input type="text" id="packagesID" required name="packagesID" />
+          <br />
+
+          <!-- <label for="business-name">Business Name:</label>
+        <input type="text" id="business-name" required> -->
+          <br />
+
+          <button type="submit" id="save-details">Save Details</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../Javascript Files/portal.js"></script>
+    <footer class="Footer">
+      <ul class="Footer-Content">
+        <li id="Nav4">Copyright © Premier Service Solutions 2023</li>
+      </ul>
+    </footer>
+  </body>
 </html>

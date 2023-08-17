@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SEN371_Project.dataHandler;
+using SEN371_Project.FunctionalAreas;
+using SEN371_Project.userExperience;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,68 +16,75 @@ namespace SEN371_Project
 {
     public partial class frmLogin : Form
     {
-        private Employee emp;
         public frmLogin()
         {
+
             InitializeComponent();
-            emp = new Employee
-            {
-                Username = "sampleUser",
-                Salt = GenerateSalt(), // Generate a random salt for the user
-                HashedPassword = HashPassword("samplePassword", GenerateSalt()) // Hash the password with the salt
-            };
+            //    emp = new employee(
+            //    "EmployeeName",
+            //    "EmployeeID",
+            //    "EmployeeSurname",
+            //    "EmployeeRole",
+            //    "EmployeePhoneNumber",
+            //    "sampleUser",
+            //    HashPassword("samplePassword", GenerateSalt()) // Hash the password with the salt
+
+
+
+            //);
         }
 
-        // Helper method to generate a random salt
-        private static string GenerateSalt()
+        private string HashPassword(string v1, string v2)
         {
-            byte[] saltBytes = new byte[32];
-            using (var rng = new RNGCryptoServiceProvider())
-            {
-                rng.GetBytes(saltBytes);
-            }
-            return Convert.ToBase64String(saltBytes);
-        }
- 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            throw new NotImplementedException();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+
+        private void frmLogin_Load(object sender, EventArgs e)
         {
+            //employee obj1 = new employee();
+            //MessageBox.Show(obj1.HashPassword("123","123"));
+            formatUX format = new formatUX();
+            format.formattingRules(this);
+            //this.txtUsername.AutoSize = false;
+            //this.txtPassword.AutoSize = false;
+            //this.txtUsername.Size = new System.Drawing.Size(350, 40);
+            //this.txtPassword.Size = new System.Drawing.Size(350, 40);
+            //txtPassword.PasswordChar = '*';
+
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        int incorrectAttempts = 0;
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmRegister b = new frmRegister();
-            b.Show();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
+            employee emp = new employee();
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-
             bool isValid = emp.ValidateCredentials(username, password);
 
             if (isValid)
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                frmServices a = new frmServices();
+                this.Hide();
+                frmCallCentre a = new frmCallCentre();
                 a.Show();
-                }
+            }
             else
             {
-                MessageBox.Show("Invalid username or password. Login failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                incorrectAttempts++; // Increment the incorrect attempts counter
+                if (incorrectAttempts >= 3) // Check if maximum attempts reached
+                {
+                    MessageBox.Show("Too many incorrect login attempts. The application will now close.", "Error", MessageBoxButtons.OK);
+                    Application.Exit(); // Exit the application
+                }
+                else
+                {
+                    MessageBox.Show($"Invalid username or password. You have {3 - incorrectAttempts} attempts left.", "Error", MessageBoxButtons.OK);
+                    txtUsername.Clear();
+                    txtPassword.Clear();
+
+                }
             }
         }
     }
-  }
+}

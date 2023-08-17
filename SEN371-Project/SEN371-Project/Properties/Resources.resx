@@ -118,25 +118,79 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="wall-1846965_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-1846965_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1491254392-falsecrossrejectdecline_829511" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1491254392-falsecrossrejectdecline_829511.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="call_incoming_phone_icon_193514" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\call_incoming_phone_icon_193514.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1491254392-falsecrossrejectdecline_82951" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1491254392-falsecrossrejectdecline_82951.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wall_UnSat (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wall_UnSat (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Profile Pic 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Profile Pic 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Premier Service Solutions 540_110 px_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Premier Service Solutions 540_110 px_Final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accept_icon-icons.com_71800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accept_icon-icons.com_71800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8a720004f629af85320f020fa2627e6e-3608888290" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8a720004f629af85320f020fa2627e6e-3608888290.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accept_icon-icons.com_71800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accept_icon-icons.com_71800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Endcall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Endcall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Profile Pic 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Profile Pic 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Profile Pic 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Profile Pic 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="104300714-john-chambers-pindrop-3539755681" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\104300714-john-chambers-pindrop-3539755681.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="awnsercall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\awnsercall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Endcall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Endcall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="favpng_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\favpng_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="th-3744567738" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\th-3744567738.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tony-Hawk-137489040" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tony-Hawk-137489040.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="8a720004f629af85320f020fa2627e6e-3608888290" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8a720004f629af85320f020fa2627e6e-3608888290.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Premier Service Solutions 540_110 px_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Premier Service Solutions 540_110 px_Final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wall-1846965_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wall-1846965_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Wall_UnSat (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Wall_UnSat (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

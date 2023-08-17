@@ -18,39 +18,71 @@ namespace SEN371_Project.FunctionalAreas
         {
             throw new NotImplementedException();
         }
-        // capture and maintain details of client both individual clients
+        // capture and maintain details of individual clients
         public override void saveToDB()
         {
             throw new NotImplementedException();
         }
-        //Need to add SQL here
-        public void BusinessClient(string companyName,int packagesID,string phoneNumber ,string Email,string street , string city ,string zip)
+        //Adds BusinessCLient and all the reps 
+        public void BusinessClient(string companyName,int packagesID ,string street , string city ,string zip,List<string> bussinessRep)
         {
-            string newClient = $"";
+            //Add customer to customer Table
+            string newClient = $"insert into Customer(Name,Surname,Street,City,zip,PackagesID,PhoneNumber,Email,DOB)Values('Business','{companyName}','{street}','{city}','{zip}',{packagesID},'','','');";
             Connection();
             try
             {
+                int customerID =0;
+                //add business Customer to the db
                 Command = new System.Data.SqlClient.SqlCommand(newClient, Connection1);
                 Command.ExecuteNonQuery();
-                MessageBox.Show("Customer Entered");
+               
                 //Need way of adding Customer rep
                 Disconnect();
+                //Gets customer ID
                 Connection();
-                string Saverep = $"Select customerID from Customer where Name = '{companyName}'";
+                string Saverep = $"Select customerID from Customer where Surname = '{companyName}'";
                 Command = new System.Data.SqlClient.SqlCommand(Saverep, Connection1);
                 Reader = Command.ExecuteReader();
-                int customerID;
+                
                 while(Reader.Read() )
                 {
                     customerID =int.Parse( Reader[0].ToString());
                 }
                 Disconnect();
-                Connection();
-                string AddCustoemr = "";
-                Command = new System.Data.SqlClient.SqlCommand(AddCustoemr, Connection1);
-                Command.ExecuteNonQuery();
-                MessageBox.Show("Customer Saved");
-                Disconnect();
+
+                //Will add Bussiness rep
+                List<int> businessRoleID = new List<int>();
+                foreach (var item in bussinessRep)
+                {
+                    //BusinessRole,Name,Surname,ContactNumber
+                    List<string> Breakdown = item.Split(',').ToList();
+                    Connection();
+
+                    string addcustomerRep = $"insert into BusinessRole(BusinessRole,Name,Surname,ContactNumber) Values('{Breakdown[0]}','{Breakdown[1]}','{Breakdown[2]},','{Breakdown[3]}');";
+                    Command = new System.Data.SqlClient.SqlCommand(addcustomerRep, Connection1);
+                    Command.ExecuteNonQuery();
+                    
+                    Disconnect();
+                    Connection();
+                    string businessRole = $"Select BusinessRoleID from BusinessRole where BusinessRole = '{Breakdown[0]}' and Name = '{Breakdown[1]}' and Surname ='{Breakdown[2]},' and ContactNumber = '{Breakdown[3]}'";
+                    Command = new System.Data.SqlClient.SqlCommand(businessRole, Connection1);
+                    Reader = Command.ExecuteReader() ;
+                    while( Reader.Read() ) {
+                        businessRoleID.Add(int.Parse(Reader[0].ToString()));
+                    }
+                    Disconnect();
+                }
+                //Linking Business Role to Customer 
+                foreach (var item in businessRoleID)
+                {
+                    Connection();
+                    string BusinessCustomer = $"insert into BusinessCustomer(CustomerID,BusinessRoleID)Values({customerID},{item})";
+                   Command = new System.Data.SqlClient.SqlCommand(BusinessCustomer, Connection1);
+                    Command.ExecuteNonQuery();
+                   
+                    Disconnect();
+                }
+               
             }
             catch (Exception ex)
             {
@@ -63,9 +95,23 @@ namespace SEN371_Project.FunctionalAreas
             }
         }
       //Capture details of service agreements with client
-        public void serviceAgreement()
+        public void serviceAgreement(int customerID,int packagesID,string PackagesName,string availability,string expireDate,string startDate)
         {
-            throw new NotImplementedException();
+            Connection();
+            string insertPackages;
+            string insertSLA;
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
         //Capture management information about client
         public List<string> manamgnentInfo()

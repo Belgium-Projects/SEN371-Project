@@ -24,9 +24,10 @@ namespace SEN371_Project.dataHandler
             this.cusPhonenumber = cusPhonenumber;
             this.cusID = cusID;
         }
-        public client(string cusBussinessName, List<string> cusRepresentativeName, string cusPhonenumber, string cusID)
+        public client(string cusName, string cusSurname,List<string> cusRepresentativeName, string cusPhonenumber, string cusID)
         {
-            this.cusBussinessName = cusBussinessName;
+            this.cusName = cusName;
+            this.cusSurname = cusSurname;
             this.cusRepresentativeName = cusRepresentativeName;
             this.cusPhonenumber = cusPhonenumber;
             this.cusID = cusID;
