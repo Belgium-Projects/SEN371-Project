@@ -26,15 +26,15 @@ namespace SEN371_Project.Connection
         {
             try
             {
-                ////Token and Credentials
-                //TwilioClient.Init(accessToken, tokenCredentials);
-                ////API info Header and body
-                //var messageOptions = new CreateMessageOptions(
-                //  new PhoneNumber(employeePhone));
-                //messageOptions.From = new PhoneNumber("+13135138498");
-                //messageOptions.Body = messagesend;
-                ////invoke API 
-                //var message = MessageResource.Create(messageOptions);
+                //Token and Credentials
+                TwilioClient.Init(accessToken, tokenCredentials);
+                //API info Header and body
+                var messageOptions = new CreateMessageOptions(
+                  new PhoneNumber(employeePhone));
+                messageOptions.From = new PhoneNumber("+13135138498");
+                messageOptions.Body = messagesend;
+                //invoke API 
+                var message = MessageResource.Create(messageOptions);
             }
             catch (Exception ex)
             {

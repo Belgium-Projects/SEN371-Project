@@ -366,7 +366,7 @@ namespace SEN371_Project
             // 
             this.btnWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.btnWork.Location = new System.Drawing.Point(735, 33);
+            this.btnWork.Location = new System.Drawing.Point(801, 33);
             this.btnWork.Name = "btnWork";
             this.btnWork.Size = new System.Drawing.Size(199, 55);
             this.btnWork.TabIndex = 45;
@@ -380,7 +380,7 @@ namespace SEN371_Project
             this.btnClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.btnClient.Location = new System.Drawing.Point(556, 33);
             this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(152, 55);
+            this.btnClient.Size = new System.Drawing.Size(200, 55);
             this.btnClient.TabIndex = 44;
             this.btnClient.Text = "Call Centre";
             this.btnClient.UseVisualStyleBackColor = false;
@@ -402,7 +402,7 @@ namespace SEN371_Project
             // 
             this.btnDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(205)))));
             this.btnDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.btnDepartment.Location = new System.Drawing.Point(963, 33);
+            this.btnDepartment.Location = new System.Drawing.Point(1036, 33);
             this.btnDepartment.Name = "btnDepartment";
             this.btnDepartment.Size = new System.Drawing.Size(233, 55);
             this.btnDepartment.TabIndex = 42;

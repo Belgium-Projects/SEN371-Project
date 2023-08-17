@@ -20,7 +20,7 @@ namespace SEN371_Project
         public frmManagementDept()
         {
             InitializeComponent();
-            lblContent1.Text = obj.EmpName + "Speek";
+            lblContent1.Text = obj.EmpName + " Speek";
         }
 
         private void frmManagementDept_Load(object sender, EventArgs e)
