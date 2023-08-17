@@ -1,5 +1,6 @@
 ﻿using SEN371_Project.dataHandler;
 using SEN371_Project.FunctionalAreas;
+using SEN371_Project.userExperience;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Timer = System.Windows.Forms.Timer;
 
 namespace SEN371_Project
@@ -20,10 +22,20 @@ namespace SEN371_Project
         {
             InitializeComponent();
         }
+        public void ClearPannel()
+        {
+            pnDuration.Hide();
+            lblDuration.Hide();
+            lblTImer2.Hide();
+        }
+
         private int timeElapsed;
         private void Form1_Load(object sender, EventArgs e)
         {
-            pnDuration.Hide();
+            formatUX format = new formatUX();
+            format.formattingRules(this);
+
+            ClearPannel();
         }
         callCentre obj = new callCentre();
         private void button1_Click(object sender, EventArgs e)
@@ -32,6 +44,12 @@ namespace SEN371_Project
 
             //btnAnswer.Hide();
             pnDuration.Show();
+            lblDuration.Show();
+            lblTImer2.Show();
+
+            pictureBox3.Hide();
+            label1.Hide();
+
             obj.anwsercall();
             duration.Start();
 
@@ -93,13 +111,9 @@ namespace SEN371_Project
                 minElapsed++;
 
             }
-            lbltimer.Text =hour.ToString()+"h:"+minElapsed.ToString()+"min:"+ timeElapsed.ToString()+"s";
+            lblTImer2.Text =hour.ToString()+"h:"+minElapsed.ToString()+"min:"+ timeElapsed.ToString()+"s";
         }
 
-        private void lbltimer_Click(object sender, EventArgs e)
-        {
-
-        }
         employee employee = new employee();
         private void button1_Click_1(object sender, EventArgs e)
         {

@@ -23,6 +23,15 @@ namespace SEN371_Project.userExperience
                 form.WindowState = FormWindowState.Maximized;
             }
 
+            //if (!(form.Name == "frmSimulator"))
+            //{
+            //    Rectangle resolutionRect = System.Windows.Forms.Screen.FromControl(form).Bounds;
+            //    if (form.Width >= resolutionRect.Width || form.Height >= resolutionRect.Height)
+            //    {
+            //        form.WindowState = FormWindowState.Maximized;
+            //    }
+            //}
+
             //Variables for setting transparency
             int maxIndex = 0;
             int indexCount1 = 1;
