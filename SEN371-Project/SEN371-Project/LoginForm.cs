@@ -20,7 +20,18 @@ namespace SEN371_Project
         {
 
             InitializeComponent();
-           
+            //    emp = new employee(
+            //    "EmployeeName",
+            //    "EmployeeID",
+            //    "EmployeeSurname",
+            //    "EmployeeRole",
+            //    "EmployeePhoneNumber",
+            //    "sampleUser",
+            //    HashPassword("samplePassword", GenerateSalt()) // Hash the password with the salt
+
+
+
+            //);
         }
 
         private string HashPassword(string v1, string v2)
@@ -31,8 +42,16 @@ namespace SEN371_Project
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            //employee obj1 = new employee();
+            //MessageBox.Show(obj1.HashPassword("123","123"));
             formatUX format = new formatUX();
-            format.formattingRules(this);         
+            format.formattingRules(this);
+            //this.txtUsername.AutoSize = false;
+            //this.txtPassword.AutoSize = false;
+            //this.txtUsername.Size = new System.Drawing.Size(350, 40);
+            //this.txtPassword.Size = new System.Drawing.Size(350, 40);
+            //txtPassword.PasswordChar = '*';
+
 
         }
         int incorrectAttempts = 0;

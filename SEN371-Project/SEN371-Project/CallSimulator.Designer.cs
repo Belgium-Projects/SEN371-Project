@@ -53,9 +53,10 @@ namespace SEN371_Project
             btnAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnAnswer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnAnswer.ForeColor = System.Drawing.Color.Coral;
-            btnAnswer.Location = new System.Drawing.Point(9, 123);
+            btnAnswer.Location = new System.Drawing.Point(12, 151);
+            btnAnswer.Margin = new System.Windows.Forms.Padding(4);
             btnAnswer.Name = "btnAnswer";
-            btnAnswer.Size = new System.Drawing.Size(75, 80);
+            btnAnswer.Size = new System.Drawing.Size(100, 98);
             btnAnswer.TabIndex = 0;
             btnAnswer.UseVisualStyleBackColor = false;
             btnAnswer.Click += new System.EventHandler(this.button1_Click);
@@ -64,9 +65,10 @@ namespace SEN371_Project
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SEN371_Project.Properties.Resources.favpng_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(103, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(137, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(84, 67);
+            this.pictureBox3.Size = new System.Drawing.Size(112, 82);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -76,9 +78,10 @@ namespace SEN371_Project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(64, 74);
+            this.label1.Location = new System.Drawing.Point(85, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 19);
+            this.label1.Size = new System.Drawing.Size(245, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "You have an Incoming Call!!";
             // 
@@ -90,10 +93,9 @@ namespace SEN371_Project
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(220, 123);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(294, 151);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 79);
+            this.button1.Size = new System.Drawing.Size(111, 97);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -103,20 +105,18 @@ namespace SEN371_Project
             this.pnDuration.BackColor = System.Drawing.Color.Transparent;
             this.pnDuration.Controls.Add(this.lbltimer);
             this.pnDuration.Controls.Add(this.lblDuration);
-            this.pnDuration.Location = new System.Drawing.Point(9, 4);
-            this.pnDuration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnDuration.Location = new System.Drawing.Point(12, 5);
             this.pnDuration.Name = "pnDuration";
-            this.pnDuration.Size = new System.Drawing.Size(294, 90);
+            this.pnDuration.Size = new System.Drawing.Size(392, 111);
             this.pnDuration.TabIndex = 8;
             // 
             // lbltimer
             // 
             this.lbltimer.AutoSize = true;
             this.lbltimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(98, 44);
-            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltimer.Location = new System.Drawing.Point(131, 54);
             this.lbltimer.Name = "lbltimer";
-            this.lbltimer.Size = new System.Drawing.Size(0, 26);
+            this.lbltimer.Size = new System.Drawing.Size(0, 32);
             this.lbltimer.TabIndex = 1;
             this.lbltimer.Click += new System.EventHandler(this.lbltimer_Click);
             // 
@@ -124,12 +124,11 @@ namespace SEN371_Project
             // 
             this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuration.Location = new System.Drawing.Point(53, 5);
-            this.lblDuration.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDuration.Location = new System.Drawing.Point(118, 4);
             this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(179, 31);
+            this.lblDuration.Size = new System.Drawing.Size(155, 39);
             this.lblDuration.TabIndex = 0;
-            this.lblDuration.Text = "Call Duration:";
+            this.lblDuration.Text = "Duration:";
             this.lblDuration.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // duration
@@ -139,11 +138,11 @@ namespace SEN371_Project
             // 
             // frmSimulator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(313, 206);
+            this.ClientSize = new System.Drawing.Size(417, 254);
             this.Controls.Add(this.pnDuration);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -152,6 +151,7 @@ namespace SEN371_Project
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSimulator";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

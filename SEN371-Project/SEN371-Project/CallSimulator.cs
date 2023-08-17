@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
-using System.Runtime.InteropServices;
+
 namespace SEN371_Project
 {
     public partial class frmSimulator : Form
@@ -20,13 +20,9 @@ namespace SEN371_Project
         {
             InitializeComponent();
         }
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static extern bool FlashWindow(IntPtr hWnd, bool bInvert);
         private int timeElapsed;
         private void Form1_Load(object sender, EventArgs e)
         {
-            FlashWindow(Handle, true);
             pnDuration.Hide();
         }
         callCentre obj = new callCentre();
